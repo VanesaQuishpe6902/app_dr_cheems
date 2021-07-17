@@ -9,7 +9,13 @@ import android.view.View;
 import android.widget.Toast;
 
 import java.util.regex.Pattern;
-
+/*
+ * Autores: Vanesa Quishpe, Angel Tapia, Alex Vaca
+ * Creado: 17/07/2021
+ * Editado: 17/07/2021
+ * Descripción:
+ *
+ */
 public class usu_registro extends AppCompatActivity {
 
     @Override

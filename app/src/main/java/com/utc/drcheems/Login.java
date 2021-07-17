@@ -1,40 +1,34 @@
 package com.utc.drcheems;
-/* Cabecera */
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 
+
+/*
+ * Autores: Vanesa Quishpe, Angel Tapia, Alex Vaca
+ * Creado: 16/07/2021
+ * Editado: 16/07/2021
+ * Descripción: Creacion de Login
+ *
+ */
 
 public class Login extends AppCompatActivity {
-    // Componentes de la vista
-    /*
-     * TextView
-     * EditText
-     * ListView
-     * */
-// Componentes AUX
-    /*
-     * ArrayList
-     * Cursor ;
-     * */
-// La base de datos
-    /*
-     * Llamar la bdd
-     * */
-// Strings [OPC]
+   EditText inputCorreoLogin, inputClaveLogin;
+   BaseDatos bdd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
         // Mapeo
-        // Componentes de la vista
-        // Base datos
-        // Opc AUX [Traer datos de la anterior vista, GetSharePrerefences]
+        inputCorreoLogin = (EditText) findViewById(R.id.inputCorreoLogin);
+        inputClaveLogin = (EditText) findViewById(R.id.inputClaveLogin);
+
+        // Llamar a la Base datos
+        bdd = new BaseDatos(getApplicationContext());
 
     }
 

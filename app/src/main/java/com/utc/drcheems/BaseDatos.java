@@ -4,6 +4,13 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+/*
+        * Autores: Vanesa Quishpe, Angel Tapia, Alex Vaca
+        * Creado: 16/07/2021
+        * Editado: 16/07/2021
+        * Descripción: base de datos
+        *
+*/
 
 public class BaseDatos extends SQLiteOpenHelper {
     //definiendo el nombre de la bdd
