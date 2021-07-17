@@ -24,6 +24,7 @@ import java.util.ArrayList;
  *
  */
 public class cli_menu extends AppCompatActivity {
+    // Angel, por favor edita si es conveniente la informacion de los input, unicamente los copie de otro proyecto anterior
     BaseDatos bdd;
     EditText inputBuscarCliente;
     ListView lstClientes;
@@ -45,6 +46,7 @@ public class cli_menu extends AppCompatActivity {
         id_usu = prefs.getString("idUsu", "");
 
         obtenerDatosClientes();
+        listaEditable();
     }
 
     public void obtenerDatosClientes() {
