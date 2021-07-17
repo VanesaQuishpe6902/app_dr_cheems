@@ -5,5 +5,65 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".cli_menu">
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        android:padding="20dp">
 
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Menu clientes"
+            android:textSize="34sp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nuevo cliente" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="278dp"
+                android:layout_height="match_parent"
+                android:hint="Cliente buscar"
+                android:inputType="textPersonName" />
+
+            <android.widget.Button
+                android:id="@+id/btn_BuscarProfesor"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:backgroundTint="#3F51B5"
+                android:drawableTop="@android:drawable/ic_menu_search"
+                android:textColorHighlight="#3F51B5" />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Todos los clientes"
+            android:textSize="28sp"/>
+
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="188dp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VOLVER" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
