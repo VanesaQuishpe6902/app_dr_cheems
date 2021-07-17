@@ -1,10 +1,15 @@
 package com.utc.drcheems;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
 
 /*
@@ -16,8 +21,11 @@ import android.widget.EditText;
  */
 
 public class Login extends AppCompatActivity {
-   EditText inputCorreoLogin, inputClaveLogin;
-   BaseDatos bdd;
+    EditText inputCorreoLogin, inputClaveLogin;
+    CheckBox chbxSesion;
+    Cursor infoUser;
+    BaseDatos bdd;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,15 +34,16 @@ public class Login extends AppCompatActivity {
         // Mapeo
         inputCorreoLogin = (EditText) findViewById(R.id.inputCorreoLogin);
         inputClaveLogin = (EditText) findViewById(R.id.inputClaveLogin);
+        chbxSesion = (CheckBox) findViewById(R.id.chbxSesion);
 
         // Llamar a la Base datos
         bdd = new BaseDatos(getApplicationContext());
 
     }
 
-/*    public void iniciarSesion(View vista) {
-        String correo = txteEmailLogin.getText().toString(),
-                clave = txtPasswordLogin.getText().toString();
+    public void iniciarSesion(View vista) {
+        String correo = inputCorreoLogin.getText().toString(),
+                clave = inputClaveLogin.getText().toString();
         int error = 0;
         if (!correo.isEmpty() && !clave.isEmpty()) {
             infoUser = bdd.iniciarSesionUsuario(correo, clave);
@@ -49,7 +58,7 @@ public class Login extends AppCompatActivity {
                 editor.putString("idUsu", idUsu);
 
                 // Si se desea mantener la sesion abierta
-                if (estadoSesion.isChecked()) {
+                if (chbxSesion.isChecked()) {
                     //A traves del objeto editor establece la clave llamada estado sesion con un valor de 1
                     editor.putString("estadoSesion", "activo");
                 } else {
@@ -57,10 +66,11 @@ public class Login extends AppCompatActivity {
                 }
                 // Almacenar datos
                 editor.commit(); //Guardando el SharedPreferences
+                // Enviar al dashboard
             } else {
-                txtPasswordLogin.setText("");
-                Toast.makeText(this, "Correo o contraseña erroneos", Toast.LENGTH_SHORT).show();
+                inputClaveLogin.setText("");
+                Toast.makeText(this, "Correo o contraseña incorrectos", Toast.LENGTH_SHORT).show();
             }
         }
-    }*/
+    }
 }
