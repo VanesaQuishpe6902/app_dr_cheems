@@ -55,7 +55,7 @@ public class usu_registro extends AppCompatActivity {
         // Si no hay errores
         if (error == 0) {
             try {
-                bdd.agregarUsuario(apellido, nombre, "estudiante", email, clave, numTelefono);
+                bdd.agregarUsuario(apellido, nombre, email, clave, numTelefono);
             } catch (Exception ex) {
                 Toast.makeText(this, "Houston tenemos un problema...", Toast.LENGTH_SHORT).show();
             }

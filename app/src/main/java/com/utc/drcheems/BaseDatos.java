@@ -99,4 +99,21 @@ public class BaseDatos extends SQLiteOpenHelper {
         db.execSQL(addMascota);
         db.execSQL(addCita);
     }
+
+    // G E S T I O N  DE  U S U A R I O S
+    // Create
+    public boolean agregarUsuario(String apellido, String nombre, String correo, String clave, String wsp) {
+        SQLiteDatabase db = getWritableDatabase();
+        if (db != null) {
+            String newUsuario = "INSERT INTO usuario (apellido_usu, nombre_usu, correo_usu, clave_usu, wsp_usu) " +
+                    "VALUES ('" + apellido + "','" + nombre + "','" + correo + "','" + clave + "','" + wsp + "')";
+            db.execSQL(newUsuario);
+            db.close();
+            return true;
+        }
+        return false;
+    }
+    // Read
+    // Update
+    // Delete
 }
