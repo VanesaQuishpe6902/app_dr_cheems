@@ -59,7 +59,7 @@ public class BaseDatos extends SQLiteOpenHelper {
         db.execSQL(tablaCliente);
         db.execSQL(tablaMascota);
         db.execSQL(tablaCita);
-        semillas(null);
+        semillas(db);
     }
 
     @Override
@@ -74,7 +74,7 @@ public class BaseDatos extends SQLiteOpenHelper {
         db.execSQL(tablaCliente);
         db.execSQL(tablaMascota);
         db.execSQL(tablaCita);
-        semillas(null);
+        semillas(db);
     }
 
     // Semillas
