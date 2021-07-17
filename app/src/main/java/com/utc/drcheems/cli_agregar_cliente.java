@@ -31,11 +31,11 @@ public class cli_agregar_cliente extends AppCompatActivity {
         setContentView(R.layout.activity_cli_agregar_cliente);
 
         // Traer informacion del usuario
-        SharedPreferences prefs = getSharedPreferences("inicioSesion", Context.MODE_PRIVATE);
+        SharedPreferences prefs = getSharedPreferences("datosSesion", Context.MODE_PRIVATE);
         id_usu = prefs.getString("idUsu", "");
     }
 
-    public void agregarCliente(View vista) {
+/*    public void agregarCliente(View vista) {
         String ci = inputCiRegistroCliente.getText().toString(),
                 apellido = txtApellidoRegistrarProfesor.getText().toString(),
                 nombre = txtNombreRegistrarProfesor.getText().toString(),
@@ -80,7 +80,7 @@ public class cli_agregar_cliente extends AppCompatActivity {
                 Toast.makeText(this, "Huston, tenemos un problema...", Toast.LENGTH_SHORT).show();
             }
         }
-    }
+    }*/
 
     //Metodo para volver al la ventana ADMINISTRADOR:Listar profesore
     public void volverListarProfesores(View vista) {
