@@ -2,9 +2,13 @@ package com.utc.drcheems;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -21,10 +25,11 @@ import java.util.ArrayList;
  */
 public class cli_menu extends AppCompatActivity {
     BaseDatos bdd;
-    EditText txtBuscarProfesor;
-    ListView lstProfesores;
-    ArrayList<String> listaProfesores = new ArrayList<>();
-    Cursor datosProfesores;
+    EditText inputBuscarCliente;
+    ListView lstClientes;
+    ArrayList<String> listaClientes = new ArrayList<>();
+    Cursor datosClientes;
+    String id_usu;
 
 
     @Override
@@ -33,47 +38,65 @@ public class cli_menu extends AppCompatActivity {
         setContentView(R.layout.activity_cli_menu);
 
         bdd = new BaseDatos(getApplicationContext());
-        txtBuscarProfesor = (EditText) findViewById(R.id.txtBuscarProfesor);
-        lstProfesores = (ListView) findViewById(R.id.lstProfesores);
+        inputBuscarCliente = (EditText) findViewById(R.id.txtBuscarProfesor);
+        lstClientes = (ListView) findViewById(R.id.lstProfesores);
+        // Traer informacion del usuario
+        SharedPreferences prefs = getSharedPreferences("datosSesion", Context.MODE_PRIVATE);
+        id_usu = prefs.getString("idUsu", "");
+
         obtenerDatosClientes();
     }
 
     public void obtenerDatosClientes() {
-        listaProfesores.clear();
-        datosProfesores = bdd.listarProfesores();
-        if (datosProfesores != null) {
+        listaClientes.clear();
+        datosClientes = bdd.listarClientes(id_usu);
+        if (datosClientes != null) {
             do {
-                String id = datosProfesores.getString(0),
-                        nombre = datosProfesores.getString(2),
-                        apellido = datosProfesores.getString(1);
-                listaProfesores.add(apellido + " " + nombre);
-                ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listaProfesores);
-                lstProfesores.setAdapter(adapter);
-            } while (datosProfesores.moveToNext());
+                String id = datosClientes.getString(0),
+                        nombre = datosClientes.getString(2),
+                        apellido = datosClientes.getString(1);
+                listaClientes.add(apellido + " " + nombre);
+                ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listaClientes);
+                lstClientes.setAdapter(adapter);
+            } while (datosClientes.moveToNext());
         } else {
             Toast.makeText(this, "Sin registros aun", Toast.LENGTH_SHORT).show();
         }
     }
 
     public void buscarCliente(View vista) {
-        String buscador = txtBuscarProfesor.getText().toString();
+        String buscador = inputBuscarCliente.getText().toString();
         if (!buscador.equals("")) {
-            listaProfesores.clear();
-            datosProfesores = bdd.buscarProfesoresNombre(buscador);
-            if (datosProfesores != null) {
+            listaClientes.clear();
+            datosClientes = bdd.buscarCliente(id_usu, buscador);
+            if (datosClientes != null) {
                 do {
-                    String id = datosProfesores.getString(0),
-                            nombre = datosProfesores.getString(2),
-                            apellido = datosProfesores.getString(1);
-                    listaProfesores.add(apellido + " " + nombre);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listaProfesores);
-                    lstProfesores.setAdapter(adapter);
-                } while (datosProfesores.moveToNext());
+                    String id = datosClientes.getString(0),
+                            nombre = datosClientes.getString(2),
+                            apellido = datosClientes.getString(1);
+                    listaClientes.add(apellido + " " + nombre);
+                    ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listaClientes);
+                    lstClientes.setAdapter(adapter);
+                } while (datosClientes.moveToNext());
             } else {
                 Toast.makeText(this, "No se encontraron registros", Toast.LENGTH_SHORT).show();
             }
         } else {
-            obtenerDatosProfesor();
+            obtenerDatosClientes();
         }
+    }
+
+    public void listaEditable() {
+        lstClientes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                datosClientes.moveToPosition(position);
+//                Intent editarCursoProfesor = new Intent(getApplicationContext(), EP_GestionCurso_Listar_MostrarInformacion.class);
+//                editarCursoProfesor.putExtra("idCurso", datosClientes.getString(0).toString());
+//                finish();
+//                startActivity(editarCursoProfesor);
+//                Toast.makeText(EP_GestionCurso.this, "ID: " + misCursosProfesor.getString(0), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

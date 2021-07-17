@@ -31,7 +31,7 @@ public class cli_agregar_cliente extends AppCompatActivity {
         setContentView(R.layout.activity_cli_agregar_cliente);
 
         // Traer informacion del usuario
-        SharedPreferences prefs = getSharedPreferences("inicioSesion", Context.MODE_PRIVATE);
+        SharedPreferences prefs = getSharedPreferences("datosSesion", Context.MODE_PRIVATE);
         id_usu = prefs.getString("idUsu", "");
     }
 
