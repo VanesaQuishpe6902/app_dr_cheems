@@ -9,6 +9,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DrCheems">
+        <activity android:name=".mas_ver_historial_mascota"></activity>
+        <activity android:name=".mas_editar_mascota" />
+        <activity android:name=".mas_ver_mascota" />
+        <activity android:name=".mas_agregar_mascota" />
+        <activity android:name=".cli_ver_mascota" />
+        <activity android:name=".usu_editar_perfil" />
+        <activity android:name=".usu_menu_perfil" />
+        <activity android:name=".soc_responder_comentario" />
+        <activity android:name=".soc_red_social" />
+        <activity android:name=".cit_descripcion_citas" />
+        <activity android:name=".cit_editar_citas" />
+        <activity android:name=".cit_ver_citas" />
+        <activity android:name=".cit_agregar_citas" />
+        <activity android:name=".cit_menu" />
+        <activity android:name=".cli_editar_cliente" />
+        <activity android:name=".cli_ver_cliente" />
+        <activity android:name=".cli_agregar_cliente" />
+        <activity android:name=".cli_menu" />
+        <activity android:name=".Login" />
+        <activity android:name=".Dashboard" />
+        <activity android:name=".Bienvenida" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
