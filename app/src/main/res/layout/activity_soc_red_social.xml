@@ -6,4 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".soc_red_social">
 
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/textView59"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Red social - comentarios"
+            android:textSize="34sp" />
+
+        <Button
+            android:id="@+id/button34"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="respondido" />
+
+        <Button
+            android:id="@+id/button35"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sin responder" />
+
+        <Button
+            android:id="@+id/button33"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Todos" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="343dp" />
+
+        <Button
+            android:id="@+id/button36"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VOLVER" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

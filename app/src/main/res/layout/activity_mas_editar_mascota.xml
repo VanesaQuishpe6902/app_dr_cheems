@@ -94,7 +94,7 @@
                 android:textSize="18sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtFechaNacimientoEditar" />
+                app:layout_constraintTop_toBottomOf="@+id/txtFechaNacimientoMascotaEditar" />
         </LinearLayout>
 
         <TextView

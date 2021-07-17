@@ -120,7 +120,7 @@
                 android:textSize="20sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txttxtFechaHistorialMascota"/>
+                app:layout_constraintTop_toBottomOf="@+id/txtFechaHistorialMascota"/>
         </LinearLayout>
 
         <ListView

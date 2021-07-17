@@ -6,4 +6,77 @@
     android:layout_height="match_parent"
     tools:context=".usu_registro">
 
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/textView58"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agregar usuario"
+            android:textSize="34sp"/>
+
+        <EditText
+            android:id="@+id/editTextTextPersonName13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="apellido"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="nombre"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/editTextTextEmailAddress2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="ejemplo@gmail.com"
+            android:textSize="18sp"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="********"
+            android:textSize="18sp"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/editTextPhone4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="numero de celular"
+            android:textSize="18sp"
+            android:inputType="phone" />
+
+        <Button
+            android:id="@+id/button31"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="registrar" />
+
+        <Button
+            android:id="@+id/button32"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="volver" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
