@@ -3,6 +3,8 @@ package com.utc.drcheems;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
@@ -35,55 +37,36 @@ public class Login extends AppCompatActivity {
         // Opc AUX [Traer datos de la anterior vista, GetSharePrerefences]
 
     }
-/*
-*
-*
-    public void iniciarSesion(View vista) {
+
+/*    public void iniciarSesion(View vista) {
         String correo = txteEmailLogin.getText().toString(),
                 clave = txtPasswordLogin.getText().toString();
         int error = 0;
         if (!correo.isEmpty() && !clave.isEmpty()) {
             infoUser = bdd.iniciarSesionUsuario(correo, clave);
             if (infoUser != null) {
-                // Comprobar si es un estudiante o profesor
+                // Obtener el ID del usuario
                 String idUsu = infoUser.getString(0).toString();
-                String tipoUsu = infoUser.getString(3).toString();
-//                Si se desea mantener la sesion abierta
+                // Guardar en un sharePreference
+                //instancia de clase y objeto por medio del metodo, nombre del archivo de preferencia
+                SharedPreferences prefs = getSharedPreferences("datosSesion", Context.MODE_PRIVATE);
+                //A traves del la clase SharedPreferences y del metodo de clase editor se instancia un objeto editor donde se editan las preferencias
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putString("idUsu", idUsu);
+
+                // Si se desea mantener la sesion abierta
                 if (estadoSesion.isChecked()) {
-                    // Guardar en un sharePreference
-                    //GUARDAR EN UN SHARED PREFERENCES
-                    //instancia de clase y objeto por medio del metodo, nombre del archivo de preferencia
-                    SharedPreferences prefs = getSharedPreferences("inicioSesion", Context.MODE_PRIVATE);
-                    //A traves del la clase SharedPreferences y del metodo de clase editor se instancia un objeto editor donde se editan las preferencias
-                    SharedPreferences.Editor editor = prefs.edit();
                     //A traves del objeto editor establece la clave llamada estado sesion con un valor de 1
-                    editor.putString("estadoSesion", "1");
-                    editor.putString("tipoUsu", tipoUsu);
-                    editor.putString("idUsu", idUsu);
-                    editor.commit(); //Guardando el SharedPreferences
+                    editor.putString("estadoSesion", "activo");
+                } else {
+                    editor.putString("estadoSesion", "inactivo");
                 }
-
-                if (tipoUsu.equals("adm")) {
-                    // Presentar menu administrador
-//                    Toast.makeText(this, tipoUsu, Toast.LENGTH_SHORT).show();
-                    abrirMenuAdmin();
-                }
-                if (tipoUsu.equals("profesor")) {
-//                    Toast.makeText(this, tipoUsu, Toast.LENGTH_SHORT).show();
-                    // Presentar menu profesor
-                    abrirMenuProfesor();
-                }
-                if (tipoUsu.equals("estudiante")) {
-//                    Toast.makeText(this, tipoUsu, Toast.LENGTH_SHORT).show();
-                    // Presentar menu estudiante
-                    abrirMenuAlumno();
-                }
-
+                // Almacenar datos
+                editor.commit(); //Guardando el SharedPreferences
             } else {
                 txtPasswordLogin.setText("");
                 Toast.makeText(this, "Correo o contraseña erroneos", Toast.LENGTH_SHORT).show();
             }
         }
-    }
-*/
+    }*/
 }
