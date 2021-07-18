@@ -16,8 +16,8 @@
         tools:layout_editor_absoluteY="0dp">
 
         <ImageView
-            android:layout_width="371dp"
-            android:layout_height="349dp"
+            android:layout_width="295dp"
+            android:layout_height="262dp"
             android:layout_marginBottom="20dp"
             app:srcCompat="@drawable/bienvenida" />
 
@@ -34,7 +34,7 @@
                 android:fontFamily="@font/baloo_chettan"
                 android:gravity="end"
                 android:text="Dr. Ch"
-                android:textColor="#4BC8BD"
+                android:textColor="#02567A"
                 android:textSize="60sp" />
 
             <TextView
@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/baloo_chettan"
                 android:text="eems"
-                android:textColor="#FF6524"
+                android:textColor="#04ABBD"
                 android:textSize="60sp" />
         </LinearLayout>
     </LinearLayout>
