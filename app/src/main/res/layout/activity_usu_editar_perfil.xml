@@ -71,14 +71,11 @@
             android:inputType="textEmailAddress" />
 
 
-        <EditText
-            android:id="@+id/editTextTextPassword2"
+        <Button
+            android:id="@+id/button39"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="*********"
-            android:textSize="18sp"
-            android:inputType="textPassword" />
+            android:text="Cambiar contraseña" />
 
         <EditText
             android:id="@+id/editTextPhone3"

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DrCheems">
-        <activity android:name=".usu_registro"></activity>
+        <activity android:name=".usu_cambiar_contrasena"></activity>
+        <activity android:name=".usu_registro" />
         <activity android:name=".mas_ver_historial_mascota" />
         <activity android:name=".mas_editar_mascota" />
         <activity android:name=".mas_ver_mascota" />
@@ -19,8 +20,6 @@
         <activity android:name=".usu_menu_perfil" />
         <activity android:name=".soc_responder_comentario" />
         <activity android:name=".soc_red_social" />
-        <activity android:name=".cit_descripcion_citas" />
-        <activity android:name=".cit_editar_citas" />
         <activity android:name=".cit_ver_citas" />
         <activity android:name=".cit_agregar_citas" />
         <activity android:name=".cit_menu" />
