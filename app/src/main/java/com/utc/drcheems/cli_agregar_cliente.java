@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.regex.Pattern;
@@ -16,14 +17,16 @@ import java.util.regex.Pattern;
 /*
  * Autores: Vanesa Quishpe, Angel Tapia, Alex Vaca
  * Creado: 17/07/2021
- * Editado: 17/07/2021
- * Descripción:
+ * Editado: 19/07/2021
+ * Descripción: agregar nuevos clientes
  *
  */
 public class cli_agregar_cliente extends AppCompatActivity {
-
+    EditText inputCedulaClienteAgregar, inputApellidoClienteAgregar, inputNombreClienteAgregar, inputWhastAppClienteAgregar, inputDireccionClienteAgregar;
 
     String id_usu;
+
+    BaseDatos bdd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,15 @@ public class cli_agregar_cliente extends AppCompatActivity {
         // Traer informacion del usuario
         SharedPreferences prefs = getSharedPreferences("datosSesion", Context.MODE_PRIVATE);
         id_usu = prefs.getString("idUsu", "");
+
+        inputCedulaClienteAgregar = (EditText)  findViewById(R.id.inputCelularRegistro);
+        inputApellidoClienteAgregar = (EditText)  findViewById(R.id.inputApellidoClienteAgregar);
+        inputNombreClienteAgregar = (EditText)  findViewById(R.id.inputNombreClienteAgregar);
+        inputWhastAppClienteAgregar = (EditText)  findViewById(R.id.inputWhastAppClienteAgregar);
+        inputDireccionClienteAgregar = (EditText)  findViewById(R.id.inputDireccionClienteAgregar);
+
+        bdd= new BaseDatos(getApplicationContext());
+
     }
 
 /*    public void agregarCliente(View vista) {

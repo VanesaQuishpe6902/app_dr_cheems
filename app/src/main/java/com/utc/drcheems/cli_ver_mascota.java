@@ -7,8 +7,7 @@ import android.os.Bundle;
  * Autores: Vanesa Quishpe, Angel Tapia, Alex Vaca
  * Creado: 17/07/2021
  * Editado: 17/07/2021
- * Descripción:
- *
+ * Descripción: Ver mascotas de cliente o agregar
  */
 public class cli_ver_mascota extends AppCompatActivity {
 

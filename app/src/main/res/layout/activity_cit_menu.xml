@@ -23,7 +23,7 @@
             android:textSize="34sp"/>
 
         <Button
-            android:id="@+id/button21"
+            android:id="@+id/btn_NuevaCita"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Nueva cita" />
@@ -55,7 +55,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/btn_VercitasMascota"
+                android:id="@+id/btn_SeleccionarFechaCita"
                 style="?android:spinnerStyle"
                 android:layout_width="154dp"
                 android:layout_height="wrap_content"

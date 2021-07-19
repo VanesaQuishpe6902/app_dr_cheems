@@ -22,19 +22,19 @@
             android:textSize="34sp" />
 
         <Button
-            android:id="@+id/button34"
+            android:id="@+id/btn_RespondidoRedSocial"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="respondido" />
 
         <Button
-            android:id="@+id/button35"
+            android:id="@+id/btn_SinResponderRedSocial"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sin responder" />
 
         <Button
-            android:id="@+id/button33"
+            android:id="@+id/btn_TodosRedSocial"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Todos" />
@@ -44,7 +44,7 @@
             android:layout_height="343dp" />
 
         <Button
-            android:id="@+id/button36"
+            android:id="@+id/bnt_VolverRedSocial"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="VOLVER" />

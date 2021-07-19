@@ -35,7 +35,7 @@
                 android:textSize="18sp"/>
 
             <TextView
-                android:id="@+id/textView57"
+                android:id="@+id/txtIdUsuarioEditar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -44,7 +44,7 @@
         </LinearLayout>
 
         <EditText
-            android:id="@+id/editTextTextPersonName11"
+            android:id="@+id/inputApellidoUsuarioEditar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -53,7 +53,7 @@
             android:textSize="18sp"/>
 
         <EditText
-            android:id="@+id/editTextTextPersonName12"
+            android:id="@+id/inputNombreUsuarioEditar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -62,7 +62,7 @@
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress"
+            android:id="@+id/inputCorreoUsuarioEditar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -72,13 +72,13 @@
 
 
         <Button
-            android:id="@+id/button39"
+            android:id="@+id/btn_CambiarClaveUsuarioEdita"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Cambiar contraseña" />
 
         <EditText
-            android:id="@+id/editTextPhone3"
+            android:id="@+id/inputCelularUsuarioEditar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -87,15 +87,15 @@
             android:inputType="phone" />
 
         <Button
-            android:id="@+id/button29"
+            android:id="@+id/btn_ActualizarUsuarioEditar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Actualizar" />
 
         <Button
-            android:id="@+id/button30"
+            android:id="@+id/btn_CancelarUsuarioEditar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="canelar" />
+            android:text="cancelar" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,14 +15,13 @@
         android:padding="20dp">
 
         <TextView
-            android:id="@+id/textView9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Agregar cliente"
             android:textSize="34sp" />
 
         <EditText
-            android:id="@+id/editTextNumber"
+            android:id="@+id/inputCedulaClienteAgregar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -30,7 +29,7 @@
             android:inputType="number" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/inputApellidoClienteAgregar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -38,7 +37,7 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName4"
+            android:id="@+id/inputNombreClienteAgregar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -47,7 +46,7 @@
 
 
         <EditText
-            android:id="@+id/editTextPhone"
+            android:id="@+id/inputWhastAppClienteAgregar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -55,7 +54,7 @@
             android:inputType="phone" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName5"
+            android:id="@+id/inputDireccionClienteAgregar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -63,13 +62,13 @@
             android:inputType="textPersonName" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/btn_RegistrarCliente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="registrar" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/btn_CancelarClienteAgregar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="cancelar" />

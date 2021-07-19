@@ -6,22 +6,35 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.regex.Pattern;
 /*
  * Autores: Vanesa Quishpe, Angel Tapia, Alex Vaca
  * Creado: 17/07/2021
- * Editado: 17/07/2021
- * Descripción:
+ * Editado: 19/07/2021
+ * Descripción: Logica de Registro de Usuarios
  *
  */
 public class usu_registro extends AppCompatActivity {
+    EditText inputApellidoRegistro, inputNombreRegistro, inputCorreoRegistro, inputClaveRegistro, inputCelularRegistro;
+    BaseDatos bdd;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_usu_registro);
+        //Mapear
+        inputApellidoRegistro = (EditText) findViewById(R.id.inputApellidoRegistro);
+        inputNombreRegistro = (EditText) findViewById(R.id.inputNombreRegistro);
+        inputCorreoRegistro = (EditText) findViewById(R.id.inputCorreoRegistro);
+        inputClaveRegistro = (EditText) findViewById(R.id.inputClaveRegistro);
+        inputCelularRegistro = (EditText) findViewById(R.id.inputCelularRegistro);
+        //Llamar base de datos
+        bdd = new BaseDatos(getApplicationContext());
+
     }
 
     public void registrarUsuario(View vista) {

@@ -105,13 +105,13 @@
             android:textSize="18sp"/>
 
         <Button
-            android:id="@+id/button19"
+            android:id="@+id/btn_ActualizarMascotaEditar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="ACTUALIZAR" />
 
         <Button
-            android:id="@+id/button20"
+            android:id="@+id/btn_VolverMascotaEditar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="VOLVER" />

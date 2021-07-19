@@ -22,7 +22,7 @@
             android:textSize="34sp" />
 
         <Button
-            android:id="@+id/button25"
+            android:id="@+id/btn_EditarCitaVer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="editar cita" />
@@ -41,7 +41,7 @@
                 android:textSize="18sp"/>
 
             <TextView
-                android:id="@+id/textView43"
+                android:id="@+id/txtFechaCitaVer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -64,7 +64,7 @@
                 android:textSize="18sp"/>
 
             <TextView
-                android:id="@+id/textView45"
+                android:id="@+id/txtServicioCitaVer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -86,17 +86,17 @@
                 android:textSize="18sp"/>
 
             <TextView
-                android:id="@+id/textView47"
+                android:id="@+id/txtSolucionCitaVer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="servicio dado"
+                android:hint="solucion dado"
                 android:textSize="18sp"/>
 
         </LinearLayout>
 
         <Button
-            android:id="@+id/button26"
+            android:id="@+id/btn_VolverCitaVer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Volver" />

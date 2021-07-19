@@ -22,7 +22,7 @@
             android:textSize="34sp"/>
 
         <Button
-            android:id="@+id/button12"
+            android:id="@+id/btn_AgregarMascotaCliente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="AGREGAR MASCOTA" />
@@ -34,11 +34,12 @@
             android:text="Macotas" />
 
         <ListView
+            android:id="@+id/lstMascotasCliente"
             android:layout_width="match_parent"
             android:layout_height="106dp" />
 
         <Button
-            android:id="@+id/button13"
+            android:id="@+id/bnt_VolverCliVerMascota"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="volver" />

@@ -22,7 +22,7 @@
             android:textSize="34sp"/>
 
         <EditText
-            android:id="@+id/editTextTextPassword3"
+            android:id="@+id/inputClaveAnterior"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -31,7 +31,7 @@
             android:inputType="textPassword" />
 
         <EditText
-            android:id="@+id/editTextTextPassword4"
+            android:id="@+id/inputClaveNueva"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -40,7 +40,7 @@
             android:textSize="18sp"/>
 
         <EditText
-            android:id="@+id/editTextNumberPassword"
+            android:id="@+id/inputConfirmarClaveNueva"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -49,13 +49,13 @@
             android:inputType="numberPassword" />
 
         <Button
-            android:id="@+id/button23"
+            android:id="@+id/btn_CambiarClave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Cambiar" />
 
         <Button
-            android:id="@+id/button24"
+            android:id="@+id/btn_CancelarClave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Volver" />

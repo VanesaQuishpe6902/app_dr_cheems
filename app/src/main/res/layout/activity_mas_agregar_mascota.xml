@@ -15,7 +15,7 @@
         android:padding="20dp">
 
         <TextView
-            android:id="@+id/textView21"
+            android:id="@+id/btn_RegistrarMascota"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Agregar mascota"
@@ -89,13 +89,13 @@
             android:hint="rasgos" />
 
         <Button
-            android:id="@+id/button14"
+            android:id="@+id/btn_RegistrarMascotaAgregar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="REGISTRAR" />
 
         <Button
-            android:id="@+id/button15"
+            android:id="@+id/btn_CancelarMascotaAgregar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Cancelar" />

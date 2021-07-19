@@ -22,48 +22,48 @@
             android:textSize="34sp"/>
 
         <Button
-            android:id="@+id/button27"
+            android:id="@+id/btn_EditarPerfilUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="EDITAR" />
 
         <TextView
-            android:id="@+id/textView50"
+            android:id="@+id/txtApellidoPerfilUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="apellido"
             android:textSize="18sp"/>
 
         <TextView
-            android:id="@+id/textView51"
+            android:id="@+id/txtNombrePerfilUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="nombre"
             android:textSize="18sp"/>
 
         <TextView
-            android:id="@+id/textView52"
+            android:id="@+id/txtCorreoPerfilUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="correo"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/textView53"
+            android:id="@+id/txtClavePerfilUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="clave"
             android:textSize="18sp"/>
 
         <TextView
-            android:id="@+id/textView54"
+            android:id="@+id/txtCelularPerfilUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="WhastApp"
             android:textSize="18sp" />
 
         <Button
-            android:id="@+id/button28"
+            android:id="@+id/btn_VolverPerfilUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Volver" />
