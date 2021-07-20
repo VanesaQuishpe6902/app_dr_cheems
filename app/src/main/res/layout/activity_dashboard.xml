@@ -71,6 +71,7 @@
                                 android:layout_width="200dp"
                                 android:layout_height="280dp"
                                 android:background="@drawable/tarjetacliente"
+                                android:onClick="irVentanaClientes"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -104,6 +105,7 @@
                                 android:layout_width="200dp"
                                 android:layout_height="280dp"
                                 android:background="@drawable/tarjetacitas"
+                                android:onClick="irVentanaCitas"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -137,6 +139,7 @@
                                 android:layout_width="200dp"
                                 android:layout_height="280dp"
                                 android:background="@drawable/tarjetapagina"
+                                android:onClick="irVentanaComentarios"
                                 android:orientation="vertical">
 
                                 <TextView

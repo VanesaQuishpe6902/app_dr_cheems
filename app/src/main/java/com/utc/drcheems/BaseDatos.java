@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 /*
  * Autores: Vanesa Quishpe, Angel Tapia, Alex Vaca
  * Creado: 16/07/2021
@@ -54,6 +55,19 @@ public class BaseDatos extends SQLiteOpenHelper {
             "solucion_cit TEXT," +
             "fk_id_mas INTEGER," +
             "FOREIGN KEY (fk_id_mas) REFERENCES mascota(id_mas));";
+    // Semillas
+    private static final String addUsuario = "INSERT INTO usuario (apellido_usu, nombre_usu, correo_usu, clave_usu, wsp_usu) " +
+            "VALUES ('Duran','Roger','admin@correo.com','clave1234','0987654321')";
+
+    private static final String addCliente = "INSERT INTO cliente (ci_cli, apellido_cli, nombre_cli, wsp_cli,dir_dom_cli, fk_id_usu) " +
+            "VALUES ('1718191415','Rooney','Billy','0912345678','Quito',1)";
+
+    private static final String addMascota = "INSERT INTO mascota (nick_mas, nombre_mas, tipo_mas, fecha_nac_mas, rasgos_mas, fk_id_cli) " +
+            "VALUES ('1415-chester','chester','canino','2021-01-01','Mestizo color cafe',1)";
+
+    private static final String addCita = "INSERT INTO cita (fecha_cit, servicio_cit, solucion_cit, fk_id_mas) " +
+            "VALUES ('2021-07-16 16:00:00','Revision general','',1)";
+
 
     //CONSTRUCTOR
     public BaseDatos(Context contexto) {
@@ -67,7 +81,16 @@ public class BaseDatos extends SQLiteOpenHelper {
         db.execSQL(tablaCliente);
         db.execSQL(tablaMascota);
         db.execSQL(tablaCita);
-        //semillas(db);
+        try {
+            db.execSQL(addUsuario);
+            db.execSQL(addCliente);
+            db.execSQL(addMascota);
+            db.execSQL(addCita);
+
+        } catch (Exception ex) {
+            System.out.println("No se inserto semillas: " + ex);
+
+        }
     }
 
     @Override
@@ -82,32 +105,18 @@ public class BaseDatos extends SQLiteOpenHelper {
         db.execSQL(tablaCliente);
         db.execSQL(tablaMascota);
         db.execSQL(tablaCita);
-        //semillas(db);
+        try {
+            db.execSQL(addUsuario);
+            db.execSQL(addCliente);
+            db.execSQL(addMascota);
+            db.execSQL(addCita);
+
+        } catch (Exception ex) {
+            System.out.println("No se inserto semillas: " + ex);
+
+        }
     }
 
-    // Semillas
-    public void semillas() {
-        SQLiteDatabase db = getWritableDatabase();
-        // Preparar semillas
-        String addUsuario = "INSERT INTO usuario (apellido_usu, nombre_usu, correo_usu, clave_usu, wsp_usu) " +
-                "VALUES ('Duran','Roger','admin@correo.com','clave1234','0987654321')";
-
-        String addCliente = "INSERT INTO cliente (ci_cli, apellido_cli, nombre_cli, wsp_cli,dir_dom_cli, fk_id_usu) " +
-                "VALUES ('1718191415','Rooney','Billy','0912345678','Quito',1)";
-
-        String addMascota = "INSERT INTO mascota (nick_mas, nombre_mas, tipo_mas, fecha_nac_mas, rasgos_mas, fk_id_cli) " +
-                "VALUES ('1415-chester','chester','canino','2021-01-01','Mestizo color cafe',1)";
-
-        String addCita = "INSERT INTO cita (fecha_cit, servicio_cit, solucion_cit, fk_id_mas) " +
-                "VALUES ('2021-07-16 16:00:00','Revision general','',1)";
-
-
-        // Ejecutar semillas
-        db.execSQL(addUsuario);
-        db.execSQL(addCliente);
-        db.execSQL(addMascota);
-        db.execSQL(addCita);
-    }
 
     // G E S T I O N  DE  U S U A R I O S
     // Create
