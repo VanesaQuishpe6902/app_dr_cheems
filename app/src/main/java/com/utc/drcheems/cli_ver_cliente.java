@@ -44,23 +44,33 @@ public class cli_ver_cliente extends AppCompatActivity {
         if (parametrosExtra != null) {
             try {
                 idCli = parametrosExtra.getString("idCli");
-                try {
-                    infoCli = bdd.verClientes(idCli);
-                    // Colocar datos
-
-                    txtCedulaClienteVer.setText(infoCli.getString(1).toString());
-                    txtApellidoClienteVer.setText(infoCli.getString(2).toString());
-                    txtNombreClienteVer.setText(infoCli.getString(3).toString());
-                    txtWhastAppClienteVer.setText(infoCli.getString(4).toString());
-                    txtDireccionClienteVer.setText(infoCli.getString(5).toString());
-                } catch (Exception ex) {
-                    Toast.makeText(this, "No se encontro el registro: " + ex, Toast.LENGTH_SHORT).show();
-                }
+                // Colocar datos
+                colocarDatos();
             } catch (Exception ex) {
                 Toast.makeText(getApplicationContext(), "Sin datos de la anterior acticidad. " + ex.toString(), Toast.LENGTH_LONG).show();
 
             }
         }
+    }
+
+    public void colocarDatos() {
+        try {
+            infoCli = bdd.verClientes(idCli);
+
+            txtCedulaClienteVer.setText(infoCli.getString(1).toString());
+            txtApellidoClienteVer.setText(infoCli.getString(2).toString());
+            txtNombreClienteVer.setText(infoCli.getString(3).toString());
+            txtWhastAppClienteVer.setText(infoCli.getString(4).toString());
+            txtDireccionClienteVer.setText(infoCli.getString(5).toString());
+        } catch (Exception ex) {
+            Toast.makeText(this, "No se encontro el registro: " + ex, Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        colocarDatos();
     }
 
     public void volver(View vista) {
@@ -69,6 +79,7 @@ public class cli_ver_cliente extends AppCompatActivity {
 
     public void editarCliente(View vista) {
         Intent editarCliente = new Intent(getApplicationContext(), cli_editar_cliente.class);
+        editarCliente.putExtra("idCli", idCli);
         startActivity(editarCliente);
     }
 

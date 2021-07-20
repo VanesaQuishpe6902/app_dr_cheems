@@ -39,12 +39,14 @@
             android:id="@+id/btn_EditarClienteVer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="editarCliente"
             android:text="Editar cliente" />
 
         <Button
             android:id="@+id/btn_MascotasClienteVer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="verMascotasa"
             android:text="MASCOTAS" />
 
         <TextView
