@@ -28,15 +28,15 @@
         <activity android:name=".cli_agregar_cliente" />
         <activity android:name=".cli_menu" />
         <activity android:name=".Login" />
-        <activity android:name=".Dashboard" >
+        <activity android:name=".Dashboard" />
+        <activity android:name=".Bienvenida" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Bienvenida" />
-        <activity android:name=".MainActivity"/>
 
         <meta-data
             android:name="preloaded_fonts"
