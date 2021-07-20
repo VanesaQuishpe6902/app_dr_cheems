@@ -43,6 +43,7 @@
                 android:background="@drawable/btncrear"
                 android:fontFamily="@font/montserrat_alternates_bold"
                 android:text="Nuevo cliente"
+                android:textSize="16sp"
                 android:textColor="@color/white" />
 
             <Space
@@ -61,13 +62,14 @@
                 android:layout_width="278dp"
                 android:layout_height="match_parent"
                 android:hint="Cliente buscar"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColor="@color/black"/>
 
             <android.widget.Button
                 android:id="@+id/btn_BuscarCliente"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:backgroundTint="#3F51B5"
+                android:backgroundTint="@color/primario"
                 android:drawableTop="@android:drawable/ic_menu_search"
                 android:textColorHighlight="#3F51B5" />
 
@@ -106,7 +108,8 @@
             android:text="VOLVER"
             android:background="@drawable/btncancelar"
             android:fontFamily="@font/montserrat_alternates_bold"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
     </LinearLayout>
 </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
