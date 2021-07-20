@@ -76,10 +76,10 @@
                         android:id="@+id/btn_BuscarCliente"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:backgroundTint="#3F51B5"
+                        android:backgroundTint="@color/primario"
                         android:drawableTop="@android:drawable/ic_menu_search"
                         android:onClick="buscarCliente"
-                        android:textColorHighlight="#3F51B5" />
+                        android:textColorHighlight="@color/primario" />
 
                 </LinearLayout>
 

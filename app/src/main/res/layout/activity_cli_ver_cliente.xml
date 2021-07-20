@@ -7,19 +7,33 @@
     tools:context=".cli_ver_cliente">
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp"
-        android:padding="20dp">
+        tools:ignore="MissingConstraints">
+
+
 
         <TextView
-            android:id="@+id/textView10"
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Información del cliente"
+                android:textColor="@color/primario"
+                android:fontFamily="@font/montserrat_alternates_bold"
+                android:textSize="28sp"/>
+
+
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:scaleType="centerCrop"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ver cliente"
-            android:textSize="34sp" />
+            android:layout_height="80dp"
+            android:src="@drawable/ic_wave2" />
+
 
         <Button
             android:id="@+id/btn_EditarClienteVer"
@@ -74,6 +88,8 @@
             android:layout_height="wrap_content"
             android:onClick="volver"
             android:text="volver" />
+
+
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
