@@ -19,7 +19,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Editar cliente"
-            android:textSize="34sp" />
+            android:hapticFeedbackEnabled="false"
+            android:paddingBottom="20dp"
+            android:gravity="center"
+            android:textColor="@color/primario"
+            android:fontFamily="@font/montserrat_alternates_bold"
+            android:textSize="28sp" />
 
         <LinearLayout
             android:layout_width="match_parent"

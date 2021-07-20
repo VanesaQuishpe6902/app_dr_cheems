@@ -82,7 +82,7 @@
 
                         <android.widget.Button
                             android:id="@+id/btn_EditarClienteVer"
-                            android:layout_width="160dp"
+                            android:layout_width="152dp"
                             android:layout_height="wrap_content"
                             android:background="@drawable/btncrear"
                             android:fontFamily="@font/montserrat_alternates_bold"
@@ -98,7 +98,7 @@
 
                         <android.widget.Button
                             android:id="@+id/btn_MascotasClienteVer"
-                            android:layout_width="160dp"
+                            android:layout_width="152dp"
                             android:layout_height="wrap_content"
                             android:background="@drawable/btncancelar"
                             android:fontFamily="@font/montserrat_alternates_bold"
