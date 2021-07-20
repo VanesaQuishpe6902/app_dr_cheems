@@ -45,6 +45,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/btncrear"
                     android:fontFamily="@font/montserrat_alternates_bold"
+                    android:onClick="nuevoCliente"
                     android:text="Nuevo cliente"
                     android:textColor="@color/white" />
 
@@ -92,7 +93,8 @@
                     android:layout_height="188dp"
                     android:layout_marginBottom="20dp"
                     android:background="@drawable/tarjetalistview"
-                    android:backgroundTint="@color/primario" />
+                    android:backgroundTint="@color/primario"
+                    android:cacheColorHint="#FFFFFF" />
 
 
             </LinearLayout>

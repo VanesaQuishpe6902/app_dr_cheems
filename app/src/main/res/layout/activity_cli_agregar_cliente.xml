@@ -65,12 +65,14 @@
             android:id="@+id/btn_RegistrarCliente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="agregarCliente"
             android:text="registrar" />
 
         <Button
             android:id="@+id/btn_CancelarClienteAgregar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="volverListarClientes"
             android:text="cancelar" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
