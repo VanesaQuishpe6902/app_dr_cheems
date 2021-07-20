@@ -26,6 +26,10 @@ public class cli_editar_cliente extends AppCompatActivity {
     TextView txtIdClienteEditar;
     EditText inputCedulaClienteEditar, inputApellidoClienteEditar, inputNombreClienteEditar, inputWhastAppClienteEditar, inputDireccionClienteEditar;
     BaseDatos bdd;
+
+    String idCli;
+    Cursor infoCli;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +44,15 @@ public class cli_editar_cliente extends AppCompatActivity {
 
         //Base de datos
         bdd = new BaseDatos(getApplicationContext());
+        Bundle parametrosExtra = getIntent().getExtras();
+        if (parametrosExtra != null) {
+            try {
+                idCli = parametrosExtra.getString("idCli");
+            } catch (Exception ex) {
+                Toast.makeText(getApplicationContext(), "Sin datos de la anterior acticidad. " + ex.toString(), Toast.LENGTH_LONG).show();
+
+            }
+        }
 
     }
 

@@ -109,10 +109,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/primario"
+                        android:capitalize="words"
                         android:ems="10"
                         android:hint="nombre"
-                        android:textColor="@color/black"
-                        android:inputType="textPersonName" />
+                        android:inputType="textPersonName"
+                        android:textColor="@color/black" />
 
 
                 </LinearLayout>
