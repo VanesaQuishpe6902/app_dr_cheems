@@ -83,8 +83,9 @@ public class cli_ver_cliente extends AppCompatActivity {
         startActivity(editarCliente);
     }
 
-    public void verMascotasa(View vista) {
+    public void verMascotas(View vista) {
         Intent verMascotas = new Intent(getApplicationContext(), cli_ver_mascota.class);
+        verMascotas.putExtra("idCli", idCli);
         startActivity(verMascotas);
     }
 }
