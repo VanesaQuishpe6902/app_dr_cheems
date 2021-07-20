@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">DrCheems</string>
     <string name="url_site_web">http://192.168.1.173/APIs/DrCheems/DrCheems/public/</string>
+    <string name="url_facebook">[LINK FAN PAGE]</string>
+    <string name="url_whatsapp">https://wa.me/593999824921</string>
+    <string name="url_github">https://github.com/VanesaQuishpe6902/app_dr_cheems</string>
 </resources>
