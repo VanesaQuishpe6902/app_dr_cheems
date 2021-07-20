@@ -41,8 +41,8 @@ public class usu_registro extends AppCompatActivity {
     }
 
     public void registrarUsuario(View vista) {
-        String nombre = inputApellidoRegistro.getText().toString(),
-                apellido = inputNombreRegistro.getText().toString(),
+        String apellido = inputApellidoRegistro.getText().toString(),
+                nombre = inputNombreRegistro.getText().toString(),
                 email = inputCorreoRegistro.getText().toString(),
                 clave = inputClaveRegistro.getText().toString(),
                 claveRepite = inputClaveRepiteRegistro.getText().toString(),

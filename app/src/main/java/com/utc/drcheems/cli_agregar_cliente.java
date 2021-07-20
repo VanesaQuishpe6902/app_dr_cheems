@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import java.util.regex.Pattern;
 
+
 /*
  * Autores: Vanesa Quishpe, Angel Tapia, Alex Vaca
  * Creado: 17/07/2021
@@ -21,7 +22,11 @@ import java.util.regex.Pattern;
  *
  */
 public class cli_agregar_cliente extends AppCompatActivity {
-    EditText inputCedulaClienteAgregar, inputApellidoClienteAgregar, inputNombreClienteAgregar, inputWhastAppClienteAgregar, inputDireccionClienteAgregar;
+    EditText inputCedulaClienteAgregar,
+            inputApellidoClienteAgregar,
+            inputNombreClienteAgregar,
+            inputWhastAppClienteAgregar,
+            inputDireccionClienteAgregar;
 
     String id_usu;
 
@@ -36,7 +41,7 @@ public class cli_agregar_cliente extends AppCompatActivity {
         SharedPreferences prefs = getSharedPreferences("datosSesion", Context.MODE_PRIVATE);
         id_usu = prefs.getString("idUsu", "");
 
-        inputCedulaClienteAgregar = (EditText) findViewById(R.id.inputCelularRegistro);
+        inputCedulaClienteAgregar = (EditText) findViewById(R.id.inputCedulaClienteAgregar);
         inputApellidoClienteAgregar = (EditText) findViewById(R.id.inputApellidoClienteAgregar);
         inputNombreClienteAgregar = (EditText) findViewById(R.id.inputNombreClienteAgregar);
         inputWhastAppClienteAgregar = (EditText) findViewById(R.id.inputWhastAppClienteAgregar);
@@ -47,8 +52,8 @@ public class cli_agregar_cliente extends AppCompatActivity {
     }
 
     public void agregarCliente(View vista) {
-        String ci = inputCedulaClienteAgregar.getText().toString(),
-                apellido = inputApellidoClienteAgregar.getText().toString(),
+        String ci = inputCedulaClienteAgregar.getText().toString();
+        String apellido = inputApellidoClienteAgregar.getText().toString(),
                 nombre = inputNombreClienteAgregar.getText().toString(),
                 wsp = inputWhastAppClienteAgregar.getText().toString(),
                 direccion = inputDireccionClienteAgregar.getText().toString();
@@ -113,9 +118,5 @@ public class cli_agregar_cliente extends AppCompatActivity {
         return Pattern.matches("^09.*[0-9]$", number);
     }
 
-    // validar que la contraseña tenga letras y numeros
-    private boolean isPassLetterNumber(String pass) {
-        return Pattern.matches(".*[a-zA-Z]+.*", pass) && Pattern.matches(".*[0-9]+.*", pass);
 
-    }
 }
