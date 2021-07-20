@@ -168,7 +168,7 @@
                                 android:layout_width="164dp"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/montserrat_alternates"
-                                android:hint="nombre"
+                                android:hint="Nombre"
                                 android:textColor="@color/black"
                                 android:textSize="18sp" />
                         </LinearLayout>
