@@ -44,7 +44,7 @@
             android:textSize="24sp" />
 
         <TextView
-            android:id="@+id/textView70"
+            android:id="@+id/txtNombreDashboard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"

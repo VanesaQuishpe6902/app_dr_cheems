@@ -4,30 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="registrarUsuario"
     tools:context=".usu_registro">
 
     <LinearLayout
         android:layout_width="409dp"
         android:layout_height="729dp"
         android:orientation="vertical"
+        android:padding="20dp"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
-        android:padding="20dp">
+        tools:layout_editor_absoluteY="1dp">
 
         <TextView
             android:id="@+id/textView58"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Agregar usuario"
-            android:textSize="34sp"/>
+            android:textSize="34sp" />
 
         <EditText
             android:id="@+id/inputApellidoRegistro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
             android:hint="apellido"
+            android:inputType="textPersonName"
             android:textSize="18sp" />
 
         <EditText
@@ -35,8 +36,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
             android:hint="nombre"
+            android:inputType="textPersonName"
             android:textSize="18sp" />
 
         <EditText
@@ -45,16 +46,24 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="ejemplo@gmail.com"
-            android:textSize="18sp"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/inputClaveRegistro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="********"
-            android:textSize="18sp"
+            android:hint="**********"
+            android:inputType="textPassword"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/inputClaveRepiteRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="**********"
             android:inputType="textPassword" />
 
         <EditText
@@ -63,8 +72,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="numero de celular"
-            android:textSize="18sp"
-            android:inputType="phone" />
+            android:inputType="phone"
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btn_RegistrarUsuario"
@@ -76,6 +85,7 @@
             android:id="@+id/btn_VolverRegistro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="volverVentanaLogin"
             android:text="volver" />
 
     </LinearLayout>

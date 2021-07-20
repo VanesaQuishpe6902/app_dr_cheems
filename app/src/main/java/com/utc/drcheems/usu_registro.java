@@ -2,6 +2,7 @@ package com.utc.drcheems;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
@@ -10,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.regex.Pattern;
+
 /*
  * Autores: Vanesa Quishpe, Angel Tapia, Alex Vaca
  * Creado: 17/07/2021
@@ -18,7 +20,7 @@ import java.util.regex.Pattern;
  *
  */
 public class usu_registro extends AppCompatActivity {
-    EditText inputApellidoRegistro, inputNombreRegistro, inputCorreoRegistro, inputClaveRegistro, inputCelularRegistro;
+    EditText inputApellidoRegistro, inputNombreRegistro, inputCorreoRegistro, inputClaveRegistro, inputClaveRepiteRegistro, inputCelularRegistro;
     BaseDatos bdd;
 
 
@@ -31,6 +33,7 @@ public class usu_registro extends AppCompatActivity {
         inputNombreRegistro = (EditText) findViewById(R.id.inputNombreRegistro);
         inputCorreoRegistro = (EditText) findViewById(R.id.inputCorreoRegistro);
         inputClaveRegistro = (EditText) findViewById(R.id.inputClaveRegistro);
+        inputClaveRepiteRegistro = (EditText) findViewById(R.id.inputClaveRepiteRegistro);
         inputCelularRegistro = (EditText) findViewById(R.id.inputCelularRegistro);
         //Llamar base de datos
         bdd = new BaseDatos(getApplicationContext());
@@ -38,37 +41,44 @@ public class usu_registro extends AppCompatActivity {
     }
 
     public void registrarUsuario(View vista) {
-/*        String nombre = txtNombreRegistro.getText().toString(),
-                apellido = txtApellidoRegistro.getText().toString(),
-                email = txtEmailRegistro.getText().toString(),
-                clave = txtClaveRegistro.getText().toString(),
-                numTelefono = txtTelefonoRegistro.getText().toString();
+        String nombre = inputApellidoRegistro.getText().toString(),
+                apellido = inputNombreRegistro.getText().toString(),
+                email = inputCorreoRegistro.getText().toString(),
+                clave = inputClaveRegistro.getText().toString(),
+                claveRepite = inputClaveRepiteRegistro.getText().toString(),
+                numTelefono = inputCelularRegistro.getText().toString();
         int error = 0;
         // Validar datos
-        if (nombre.isEmpty() || !isWord(nombre)) {
-            error++;
-            txtNombreRegistro.setError("Debes ingresar un nombre válido");
-            txtNombreRegistro.requestFocus();
-        }
         if (apellido.isEmpty() || !isWord(apellido)) {
             error++;
-            txtApellidoRegistro.setError("Debes ingresar un apellido válido");
-            txtApellidoRegistro.requestFocus();
+            inputApellidoRegistro.setError("Debes ingresar un apellido válido");
+            inputApellidoRegistro.requestFocus();
+        }
+        if (nombre.isEmpty() || !isWord(nombre)) {
+            error++;
+            inputNombreRegistro.setError("Debes ingresar un nombre válido");
+            inputNombreRegistro.requestFocus();
         }
         if (email.isEmpty() || !isValidEmail(email)) {
             error++;
-            txtEmailRegistro.setError("Debes ingresar un email válido");
-            txtEmailRegistro.requestFocus();
+            inputCorreoRegistro.setError("Debes ingresar un email válido");
+            inputCorreoRegistro.requestFocus();
         }
         if (clave.isEmpty() || !isPassLetterNumber(clave) || clave.length() < 8) {
             error++;
-            txtClaveRegistro.setError("Su contraseña debe tener mínimo 8 caracteres entre letras y números");
-            txtClaveRegistro.requestFocus();
+            inputClaveRegistro.setError("Su contraseña debe tener mínimo 8 caracteres entre letras y números");
+            inputClaveRegistro.requestFocus();
+        }
+        if (!claveRepite.equals(clave)) {
+            error++;
+            inputClaveRepiteRegistro.setText("");
+            inputClaveRepiteRegistro.setError("Las contraseñas no coinciden.");
+            inputClaveRepiteRegistro.requestFocus();
         }
         if (numTelefono.isEmpty() || !isNumberPhone(numTelefono) || numTelefono.length() != 10) {
             error++;
-            txtTelefonoRegistro.setError("Debe ingresar un número de telefono válido");
-            txtTelefonoRegistro.requestFocus();
+            inputCelularRegistro.setError("Debe ingresar un número de telefono válido");
+            inputCelularRegistro.requestFocus();
         }
 
         // Si no hay errores
@@ -78,12 +88,16 @@ public class usu_registro extends AppCompatActivity {
             } catch (Exception ex) {
                 Toast.makeText(this, "Houston tenemos un problema...", Toast.LENGTH_SHORT).show();
             }
-            this.volverVentanaLogin(vista);
+            this.volverVentanaLogin(null);
             Toast.makeText(this, "Listo! Estas registrado.", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(this, "Upss.. No se ha registrado tus datos", Toast.LENGTH_SHORT).show();
-        }*/
+        }
 
+    }
+
+    public void volverVentanaLogin(View vista) {
+        finish();
     }
 
     // Metodos de validacion

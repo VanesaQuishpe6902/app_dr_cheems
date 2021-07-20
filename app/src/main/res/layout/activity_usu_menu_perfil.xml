@@ -25,6 +25,7 @@
             android:id="@+id/btn_EditarPerfilUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="editarPerfil"
             android:text="EDITAR" />
 
         <TextView
@@ -49,13 +50,6 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/txtClavePerfilUsuario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="clave"
-            android:textSize="18sp"/>
-
-        <TextView
             android:id="@+id/txtCelularPerfilUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -66,6 +60,7 @@
             android:id="@+id/btn_VolverPerfilUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="volver"
             android:text="Volver" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

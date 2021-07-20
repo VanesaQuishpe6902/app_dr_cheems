@@ -3,6 +3,7 @@ package com.utc.drcheems;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -44,7 +45,6 @@ public class Login extends AppCompatActivity {
     public void iniciarSesion(View vista) {
         String correo = inputCorreoLogin.getText().toString(),
                 clave = inputClaveLogin.getText().toString();
-        int error = 0;
         if (!correo.isEmpty() && !clave.isEmpty()) {
             infoUser = bdd.iniciarSesionUsuario(correo, clave);
             if (infoUser != null) {
@@ -67,10 +67,20 @@ public class Login extends AppCompatActivity {
                 // Almacenar datos
                 editor.commit(); //Guardando el SharedPreferences
                 // Enviar al dashboard
+                Intent abrirDashboard = new Intent(getApplicationContext(), Dashboard.class);
+                finish();
+                startActivity(abrirDashboard);
             } else {
                 inputClaveLogin.setText("");
                 Toast.makeText(this, "Correo o contraseña incorrectos", Toast.LENGTH_SHORT).show();
             }
+        } else {
+            Toast.makeText(this, "Debes ingresar tu correo y contraseña!", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void registrarse(View vista) {
+        Intent abrirRegistro = new Intent(getApplicationContext(), usu_registro.class);
+        startActivity(abrirRegistro);
     }
 }
