@@ -60,20 +60,20 @@ public class cli_agregar_cliente extends AppCompatActivity {
 
         int error = 0;
         // Validaciones
-        if (ci.equals("") || ci.length() != 10) {
+        if (ci.equals("") || ci.length() != 10 || !containNumber(ci)) {
             error++;
             inputCedulaClienteAgregar.setError("CI inválida");
             inputCedulaClienteAgregar.requestFocus();
         }
-        if (nombre.equals("") || !isWord(nombre)) {
-            error++;
-            inputNombreClienteAgregar.setError("Nombre inválido");
-            inputNombreClienteAgregar.requestFocus();
-        }
-        if (apellido.equals("") || !isWord(apellido)) {
+        if (apellido.equals("") || containNumber(apellido)) {
             error++;
             inputApellidoClienteAgregar.setError("Apellido inválido");
             inputApellidoClienteAgregar.requestFocus();
+        }
+        if (nombre.equals("") || containNumber(nombre)) {
+            error++;
+            inputNombreClienteAgregar.setError("Nombre inválido");
+            inputNombreClienteAgregar.requestFocus();
         }
 
         if (wsp.equals("") || !isNumberPhone(wsp) || wsp.length() != 10) {
@@ -109,8 +109,8 @@ public class cli_agregar_cliente extends AppCompatActivity {
         return Pattern.matches(".*[ a-zA-Z-ñÑáéíóúÁÉÍÓÚ].*", word);
     }
 
-    public boolean isValidEmail(String email) {
-        return (!TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches());
+    private boolean containNumber(String word) {
+        return Pattern.matches(".*[0-9].*", word);
     }
 
     // Validar que solo contenga texto y espacios

@@ -79,12 +79,12 @@ public class usu_editar_perfil extends AppCompatActivity {
                 numTelefono = inputCelularUsuarioEditar.getText().toString();
         int error = 0;
         // Validar datos
-        if (apellido.isEmpty() || !isWord(apellido)) {
+        if (apellido.isEmpty() || containNumber(apellido)) {
             error++;
             inputApellidoUsuarioEditar.setError("Debes ingresar un apellido válido");
             inputApellidoUsuarioEditar.requestFocus();
         }
-        if (nombre.isEmpty() || !isWord(nombre)) {
+        if (nombre.isEmpty() || containNumber(nombre)) {
             error++;
             inputNombreUsuarioEditar.setError("Debes ingresar un nombre válido");
             inputNombreUsuarioEditar.requestFocus();
@@ -123,6 +123,10 @@ public class usu_editar_perfil extends AppCompatActivity {
 
     public boolean isValidEmail(String email) {
         return (!TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches());
+    }
+
+    private boolean containNumber(String word) {
+        return Pattern.matches(".*[0-9].*", word);
     }
 
     // Validar que solo contenga texto y espacios

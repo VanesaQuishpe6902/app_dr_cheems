@@ -2,9 +2,13 @@ package com.utc.drcheems;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /*
  * Autores: Vanesa Quishpe, Angel Tapia, Alex Vaca
@@ -15,10 +19,11 @@ import android.widget.TextView;
  */
 public class cli_ver_cliente extends AppCompatActivity {
 
-    TextView  txtCedulaClienteVer, txtApellidoClienteVer, txtNombreClienteVer, txtWhastAppClienteVer,txtDireccionClienteVer;
-    Button btn_EditarClienteVer, btn_MascotasClienteVer;
+    TextView txtCedulaClienteVer, txtApellidoClienteVer, txtNombreClienteVer, txtWhastAppClienteVer, txtDireccionClienteVer;
 
     BaseDatos bdd;
+    String idCli;
+    Cursor infoCli;
 
 
     @Override
@@ -28,12 +33,49 @@ public class cli_ver_cliente extends AppCompatActivity {
 
         txtCedulaClienteVer = (TextView) findViewById(R.id.txtCedulaClienteVer);
         txtApellidoClienteVer = (TextView) findViewById(R.id.txtApellidoClienteVer);
-        txtNombreClienteVer = (TextView) findViewById(R.id.txtNombreMascotaVer);
-        txtWhastAppClienteVer= (TextView) findViewById(R.id.txtWhastAppClienteVer);
+        txtNombreClienteVer = (TextView) findViewById(R.id.txtNombreClienteVer);
+        txtWhastAppClienteVer = (TextView) findViewById(R.id.txtWhastAppClienteVer);
         txtDireccionClienteVer = (TextView) findViewById(R.id.txtDireccionClienteVer);
 
         // Mapear
+        bdd = new BaseDatos(getApplicationContext());
 
+        Bundle parametrosExtra = getIntent().getExtras();
+        if (parametrosExtra != null) {
+            try {
+                idCli = parametrosExtra.getString("idCli");
+                try {
+                    infoCli = bdd.verClientes(idCli);
+                    // Colocar datos
 
+                    txtCedulaClienteVer.setText(infoCli.getString(1).toString());
+                    txtApellidoClienteVer.setText(infoCli.getString(2).toString());
+                    txtNombreClienteVer.setText(infoCli.getString(3).toString());
+                    txtWhastAppClienteVer.setText(infoCli.getString(4).toString());
+                    txtDireccionClienteVer.setText(infoCli.getString(5).toString());
+                } catch (Exception ex) {
+                    Toast.makeText(this, "No se encontro el registro: " + ex, Toast.LENGTH_SHORT).show();
+                }
+            } catch (Exception ex) {
+                Toast.makeText(getApplicationContext(), "Sin datos de la anterior acticidad. " + ex.toString(), Toast.LENGTH_LONG).show();
+
+            }
+        }
+    }
+
+    public void volver(View vista) {
+        finish();
+    }
+
+    public void editarCliente(View vista) {
+        Intent editarCliente = new Intent(getApplicationContext(), cli_editar_cliente.class);
+        startActivity(editarCliente);
+    }
+
+    public void verMascotasa(View vista) {
+        Intent verMascotas = new Intent(getApplicationContext(), cli_ver_mascota.class);
+        startActivity(verMascotas);
     }
 }
+
+

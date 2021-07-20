@@ -72,6 +72,7 @@
             android:id="@+id/btn_VolverClienteVer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="volver"
             android:text="volver" />
 
     </LinearLayout>

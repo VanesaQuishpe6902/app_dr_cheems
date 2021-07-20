@@ -49,12 +49,12 @@ public class usu_registro extends AppCompatActivity {
                 numTelefono = inputCelularRegistro.getText().toString();
         int error = 0;
         // Validar datos
-        if (apellido.isEmpty() || !isWord(apellido)) {
+        if (apellido.isEmpty() || containNumber(apellido)) {
             error++;
             inputApellidoRegistro.setError("Debes ingresar un apellido válido");
             inputApellidoRegistro.requestFocus();
         }
-        if (nombre.isEmpty() || !isWord(nombre)) {
+        if (nombre.isEmpty() || containNumber(nombre)) {
             error++;
             inputNombreRegistro.setError("Debes ingresar un nombre válido");
             inputNombreRegistro.requestFocus();
@@ -103,6 +103,10 @@ public class usu_registro extends AppCompatActivity {
     // Metodos de validacion
     private boolean isWord(String word) {
         return Pattern.matches(".*[ a-zA-Z-ñÑáéíóúÁÉÍÓÚ].*", word);
+    }
+
+    private boolean containNumber(String word) {
+        return Pattern.matches(".*[0-9].*", word);
     }
 
     public boolean isValidEmail(String email) {
