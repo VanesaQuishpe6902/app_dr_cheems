@@ -100,4 +100,25 @@ public class Dashboard extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }
+
+    public void verFacebook(View vista) {
+        String urlSitio = getString(R.string.url_facebook).toString();
+        Uri uri = Uri.parse(urlSitio);
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+
+    public void verWhatsapp(View vista) {
+        String urlSitio = getString(R.string.url_whatsapp).toString();
+        Uri uri = Uri.parse(urlSitio);
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+
+    public void verGithub(View vista) {
+        String urlSitio = getString(R.string.url_github).toString();
+        Uri uri = Uri.parse(urlSitio);
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
 }
