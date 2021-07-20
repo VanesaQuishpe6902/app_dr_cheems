@@ -5,10 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".usu_registro">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="@color/primario"
         android:orientation="vertical"
         android:padding="20dp"
@@ -35,49 +39,80 @@
                 android:paddingBottom="20dp"
                 android:text="Información básica"
                 android:textColor="@color/primario"
+                android:fontFamily="@font/montserrat_alternates_bold"
                 android:textSize="28sp" />
-
-            <TextView
-                android:id="@+id/textView13"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/montserrat_alternates"
-                android:text="Ingresar la información:"
-                android:textSize="16sp" />
+                android:orientation="horizontal"
+                android:layout_marginBottom="15dp">
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="130dp"
+                android:layout_height="160dp"
+                app:srcCompat="@drawable/bienvenida"
+                android:layout_gravity="center"
+                android:paddingRight="5dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_alternates"
+                        android:text="Ingresar el apellido:"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/inputApellidoRegistro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/primario"
+                        android:ems="10"
+                        android:textColor="@color/black"
+                        android:hint="Apellido"
+                        android:inputType="textPersonName"
+                        android:textSize="18sp"
+                        android:layout_marginBottom="15dp"/>
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_alternates"
+                        android:text="Ingresar el nombre:"
+                        android:textSize="16sp"/>
+
+                    <EditText
+                        android:id="@+id/inputNombreRegistro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/primario"
+                        android:ems="10"
+                        android:hint="nombre"
+                        android:textColor="@color/black"
+                        android:inputType="textPersonName"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:orientation="horizontal">
-
-                <EditText
-                    android:id="@+id/inputApellidoRegistro"
-                    android:layout_width="159dp"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/primario"
-                    android:ems="10"
-                    android:hint="Apellido"
-                    android:inputType="textPersonName"
-                    android:textSize="18sp" />
-
-                <EditText
-                    android:id="@+id/inputNombreRegistro"
-                    android:layout_width="159dp"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/primario"
-                    android:ems="10"
-                    android:hint="nombre"
-                    android:inputType="textPersonName"
-                    android:textSize="18sp" />
-            </LinearLayout>
+                android:orientation="vertical"
+                android:paddingBottom="15dp">
 
             <TextView
                 android:id="@+id/textView14"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_alternates"
-                android:text="Ingrese un correo:"
+                android:text="Ingresar un correo:"
                 android:textSize="16sp" />
 
             <EditText
@@ -87,15 +122,23 @@
                 android:backgroundTint="@color/primario"
                 android:ems="10"
                 android:hint="ejemplo@gmail.com"
+                android:textColor="@color/black"
                 android:inputType="textEmailAddress"
                 android:paddingBottom="15dp"
                 android:textSize="18sp" />
-
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="15dp">
             <TextView
                 android:id="@+id/textView15"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:fontFamily="@font/montserrat_alternates"
+                android:text="Ingresar una contraseña:"
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/inputClaveRegistro"
@@ -103,8 +146,22 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="**********"
+                android:textColor="@color/black"
                 android:inputType="textPassword"
                 android:textSize="18sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="15dp">
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_alternates"
+                android:text="Repetir contraseña:"
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/inputClaveRepiteRegistro"
@@ -112,33 +169,66 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="**********"
+                android:textColor="@color/black"
                 android:inputType="textPassword" />
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="20dp">
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_alternates"
+                android:text="Ingresar un número de celular:"
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/inputCelularRegistro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="numero de celular"
+                android:hint="09XXXXXXXX"
+                android:textColor="@color/black"
                 android:inputType="phone"
                 android:textSize="18sp" />
-
-            <Button
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+            <android.widget.Button
                 android:id="@+id/btn_RegistrarUsuario"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="154dp"
+                android:layout_height="55dp"
                 android:onClick="registrarUsuario"
-                android:text="registrar" />
+                android:fontFamily="@font/montserrat_alternates_bold"
+                android:text="registrar"
+                android:textColor="@color/white"
+                android:background="@drawable/btncrear"/>
 
-            <Button
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <android.widget.Button
                 android:id="@+id/btn_VolverRegistro"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="154dp"
+                android:layout_height="55dp"
                 android:onClick="volverVentanaLogin"
-                android:text="volver" />
+                android:text="volver"
+                    android:textColor="@color/white"
+                    android:background="@drawable/btncancelar"
+                    android:fontFamily="@font/montserrat_alternates_bold"/>
+
+            </LinearLayout>
 
 
         </LinearLayout>
 
     </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

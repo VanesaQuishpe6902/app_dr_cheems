@@ -5,33 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".cli_menu">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp"
-        android:padding="20dp">
+        android:padding="20dp"
+        android:background="@color/papeltapiz">
 
         <TextView
             android:id="@+id/btn_NuevoCliente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Menu clientes"
-            android:textSize="34sp" />
-
-        <Button
-            android:id="@+id/button2"
+            android:fontFamily="@font/montserrat_alternates_bold"
+            android:textSize="28dp"
+            android:textColor="@color/primario"
+            android:gravity="center"
+            android:layout_marginTop="15"
+            android:layout_marginBottom="15dp"/>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nuevo cliente" />
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@drawable/bg_card_login">
 
-        <LinearLayout
+            <android.widget.Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btncrear"
+                android:fontFamily="@font/montserrat_alternates_bold"
+                android:text="Nuevo cliente"
+                android:textColor="@color/white" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <LinearLayout
 
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginBottom="10dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+                android:paddingBottom="15dp">
 
             <EditText
                 android:id="@+id/inputBuscarCliente"
@@ -54,18 +77,36 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Todos los clientes"
-            android:textSize="28sp"/>
+            android:textSize="22sp"
+            android:fontFamily="@font/montserrat_alternates"
+            />
 
 
         <ListView
             android:id="@+id/lstClientes"
             android:layout_width="match_parent"
-            android:layout_height="188dp" />
+            android:layout_height="188dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/primario"
+            android:background="@drawable/tarjetalistview"/>
 
-        <Button
+
+
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <android.widget.Button
             android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="VOLVER" />
+            android:text="VOLVER"
+            android:background="@drawable/btncancelar"
+            android:fontFamily="@font/montserrat_alternates_bold"
+            android:textColor="@color/white"/>
     </LinearLayout>
+</ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

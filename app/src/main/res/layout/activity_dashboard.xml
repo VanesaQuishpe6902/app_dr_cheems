@@ -41,7 +41,6 @@
                     android:layout_marginBottom="20dp"
                     android:fontFamily="@font/baloo_bhai"
                     android:hint="Nombre Usuario"
-                    android:text="vaca"
                     android:textColor="@color/boton1"
                     android:textColorHint="@color/boton1"
                     android:textSize="32sp" />

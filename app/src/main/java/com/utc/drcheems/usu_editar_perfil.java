@@ -135,6 +135,146 @@ public class usu_editar_perfil extends AppCompatActivity {
 
     }
 
+    public void cambiarClave(View vista) {
+        Intent irCambiarClave = new Intent(getApplicationContext(), usu_cambiar_contrasena.class);
+        volver(null);
+        startActivity(irCambiarClave);
+    }
+
+    public void actualizarUsuario(View vista) {
+        String apellido = inputApellidoUsuarioEditar.getText().toString(),
+                nombre = inputNombreUsuarioEditar.getText().toString(),
+                email = inputCorreoUsuarioEditar.getText().toString(),
+                numTelefono = inputCelularUsuarioEditar.getText().toString();
+        int error = 0;
+        // Validar datos
+        if (apellido.isEmpty() || !isWord(apellido)) {
+            error++;
+            inputApellidoUsuarioEditar.setError("Debes ingresar un apellido válido");
+            inputApellidoUsuarioEditar.requestFocus();
+        }
+        if (nombre.isEmpty() || !isWord(nombre)) {
+            error++;
+            inputNombreUsuarioEditar.setError("Debes ingresar un nombre válido");
+            inputNombreUsuarioEditar.requestFocus();
+        }
+        if (email.isEmpty() || !isValidEmail(email)) {
+            error++;
+            inputCorreoUsuarioEditar.setError("Debes ingresar un email válido");
+            inputCorreoUsuarioEditar.requestFocus();
+        }
+        if (numTelefono.isEmpty() || !isNumberPhone(numTelefono) || numTelefono.length() != 10) {
+            error++;
+            inputCelularUsuarioEditar.setError("Debe ingresar un número de telefono válido");
+            inputCelularUsuarioEditar.requestFocus();
+        }
+
+        // Si no hay errores
+        if (error == 0) {
+            try {
+                bdd.actualizarUsuario(idUsu, apellido, nombre, email, numTelefono);
+                volver(null);
+            } catch (Exception ex) {
+                Toast.makeText(this, "Houston tenemos un problema...", Toast.LENGTH_SHORT).show();
+            }
+
+            Toast.makeText(this, "Listo! Datos actualizados.", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Upss.. No se ha actualizado tus datos", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    // Metodos de validacion
+    private boolean isWord(String word) {
+        return Pattern.matches(".*[ a-zA-Z-ñÑáéíóúÁÉÍÓÚ].*", word);
+    }
+
+    public boolean isValidEmail(String email) {
+        return (!TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches());
+    }
+
+    // Validar que solo contenga texto y espacios
+    private boolean isNumberPhone(String number) {
+        return Pattern.matches("^09.*[0-9]$", number);
+    }
+
+    // validar que la contraseña tenga letras y numeros
+    private boolean isPassLetterNumber(String pass) {
+        return Pattern.matches(".*[a-zA-Z]+.*", pass) && Pattern.matches(".*[0-9]+.*", pass);
+
+    }
+
+    public void cambiarClave(View vista) {
+        Intent irCambiarClave = new Intent(getApplicationContext(), usu_cambiar_contrasena.class);
+        volver(null);
+        startActivity(irCambiarClave);
+    }
+
+    public void actualizarUsuario(View vista) {
+        String apellido = inputApellidoUsuarioEditar.getText().toString(),
+                nombre = inputNombreUsuarioEditar.getText().toString(),
+                email = inputCorreoUsuarioEditar.getText().toString(),
+                numTelefono = inputCelularUsuarioEditar.getText().toString();
+        int error = 0;
+        // Validar datos
+        if (apellido.isEmpty() || !isWord(apellido)) {
+            error++;
+            inputApellidoUsuarioEditar.setError("Debes ingresar un apellido válido");
+            inputApellidoUsuarioEditar.requestFocus();
+        }
+        if (nombre.isEmpty() || !isWord(nombre)) {
+            error++;
+            inputNombreUsuarioEditar.setError("Debes ingresar un nombre válido");
+            inputNombreUsuarioEditar.requestFocus();
+        }
+        if (email.isEmpty() || !isValidEmail(email)) {
+            error++;
+            inputCorreoUsuarioEditar.setError("Debes ingresar un email válido");
+            inputCorreoUsuarioEditar.requestFocus();
+        }
+        if (numTelefono.isEmpty() || !isNumberPhone(numTelefono) || numTelefono.length() != 10) {
+            error++;
+            inputCelularUsuarioEditar.setError("Debe ingresar un número de telefono válido");
+            inputCelularUsuarioEditar.requestFocus();
+        }
+
+        // Si no hay errores
+        if (error == 0) {
+            try {
+                bdd.actualizarUsuario(idUsu, apellido, nombre, email, numTelefono);
+                volver(null);
+            } catch (Exception ex) {
+                Toast.makeText(this, "Houston tenemos un problema...", Toast.LENGTH_SHORT).show();
+            }
+
+            Toast.makeText(this, "Listo! Datos actualizados.", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Upss.. No se ha actualizado tus datos", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    // Metodos de validacion
+    private boolean isWord(String word) {
+        return Pattern.matches(".*[ a-zA-Z-ñÑáéíóúÁÉÍÓÚ].*", word);
+    }
+
+    public boolean isValidEmail(String email) {
+        return (!TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches());
+    }
+
+    // Validar que solo contenga texto y espacios
+    private boolean isNumberPhone(String number) {
+        return Pattern.matches("^09.*[0-9]$", number);
+    }
+
+    // validar que la contraseña tenga letras y numeros
+    private boolean isPassLetterNumber(String pass) {
+        return Pattern.matches(".*[a-zA-Z]+.*", pass) && Pattern.matches(".*[0-9]+.*", pass);
+
+    }
+
     public void volver(View vista) {
         finish();
     }

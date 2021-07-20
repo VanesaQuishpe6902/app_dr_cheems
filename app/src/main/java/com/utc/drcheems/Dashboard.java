@@ -51,6 +51,20 @@ public class Dashboard extends AppCompatActivity {
         obtenerDatosUsuario();
     }
 
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        obtenerDatosUsuario();
+    }
+
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        obtenerDatosUsuario();
+    }
+
     public void obtenerDatosUsuario() {
         usuario = bdd.obtenerUsuario(idUsu);
         txtNombreDashboard.setText(usuario.getString(2).toString());
