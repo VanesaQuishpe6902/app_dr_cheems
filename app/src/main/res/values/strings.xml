@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">DrCheems</string>
-    <string name="url_site_web">http://127.0.0.1:8000</string>
+    <string name="url_site_web">http://192.168.1.173/APIs/DrCheems/DrCheems/public/</string>
 </resources>

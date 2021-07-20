@@ -9,6 +9,8 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.UserDictionary;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -39,6 +41,13 @@ public class Dashboard extends AppCompatActivity {
         SharedPreferences prefs = getSharedPreferences("datosSesion", Context.MODE_PRIVATE);
         idUsu = prefs.getString("idUsu", "");
 
+        obtenerDatosUsuario();
+    }
+
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
         obtenerDatosUsuario();
     }
 

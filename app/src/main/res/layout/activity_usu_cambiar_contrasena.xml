@@ -45,19 +45,21 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Confirme contraseña nueva"
-            android:textSize="18sp"
-            android:inputType="numberPassword" />
+            android:inputType="textPassword"
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btn_CambiarClave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="cambiarContrasena"
             android:text="Cambiar" />
 
         <Button
             android:id="@+id/btn_CancelarClave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="volver"
             android:text="Volver" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

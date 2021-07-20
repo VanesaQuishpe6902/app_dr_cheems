@@ -43,13 +43,19 @@ public class usu_menu_perfil extends AppCompatActivity {
         obtenerDatosUsuario();
     }
 
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        obtenerDatosUsuario();
+    }
+
     public void obtenerDatosUsuario() {
         infoUsu = bdd.obtenerUsuario(idUsu);
         if (infoUsu != null) {
             txtApellidoPerfilUsuario.setText(infoUsu.getString(1).toString());
             txtNombrePerfilUsuario.setText(infoUsu.getString(2).toString());
             txtCorreoPerfilUsuario.setText(infoUsu.getString(3).toString());
-            txtCelularPerfilUsuario.setText(infoUsu.getString(4).toString());
+            txtCelularPerfilUsuario.setText(infoUsu.getString(5).toString());
         } else {
             Toast.makeText(this, "Huston, tenemos un problema.", Toast.LENGTH_SHORT).show();
             volver(null);

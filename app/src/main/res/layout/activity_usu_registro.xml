@@ -4,27 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:onClick="registrarUsuario"
     tools:context=".usu_registro">
 
     <LinearLayout
         android:layout_width="409dp"
         android:layout_height="729dp"
-        android:orientation="vertical"
         android:background="@color/primario"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
+        android:orientation="vertical"
+        android:padding="20dp"
         tools:ignore="MissingConstraints"
-        android:padding="20dp">
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:background="@drawable/bg_card_login"
-            android:paddingRight="20dp"
+            android:orientation="vertical"
             android:paddingLeft="20dp"
             android:paddingTop="30dp"
-            android:paddingEnd="30dp">
+            android:paddingEnd="30dp"
+            android:paddingRight="20dp">
 
             <TextView
                 android:id="@+id/textView58"
@@ -35,62 +35,61 @@
                 android:paddingBottom="20dp"
                 android:text="Información básica"
                 android:textColor="@color/primario"
-                android:textSize="28sp"
-                />
+                android:textSize="28sp" />
 
             <TextView
                 android:id="@+id/textView13"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_alternates"
                 android:text="Ingresar la información:"
-                android:textSize="16sp"
-                android:fontFamily="@font/montserrat_alternates"/>
+                android:textSize="16sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp">
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
 
                 <EditText
                     android:id="@+id/inputApellidoRegistro"
                     android:layout_width="159dp"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/primario"
                     android:ems="10"
                     android:hint="Apellido"
                     android:inputType="textPersonName"
-                    android:textSize="18sp"
-                    android:backgroundTint="@color/primario"/>
+                    android:textSize="18sp" />
 
                 <EditText
-            android:id="@+id/inputNombreRegistro"
-            android:layout_width="159dp"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="nombre"
-            android:inputType="textPersonName"
-            android:textSize="18sp"
-                    android:backgroundTint="@color/primario"/>
+                    android:id="@+id/inputNombreRegistro"
+                    android:layout_width="159dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/primario"
+                    android:ems="10"
+                    android:hint="nombre"
+                    android:inputType="textPersonName"
+                    android:textSize="18sp" />
             </LinearLayout>
 
             <TextView
                 android:id="@+id/textView14"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ingrese un correo:"
                 android:fontFamily="@font/montserrat_alternates"
-                android:textSize="16sp"/>
+                android:text="Ingrese un correo:"
+                android:textSize="16sp" />
 
             <EditText
-            android:id="@+id/inputCorreoRegistro"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="ejemplo@gmail.com"
-            android:inputType="textEmailAddress"
-            android:textSize="18sp"
+                android:id="@+id/inputCorreoRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/primario"
+                android:ems="10"
+                android:hint="ejemplo@gmail.com"
+                android:inputType="textEmailAddress"
                 android:paddingBottom="15dp"
-                android:backgroundTint="@color/primario"/>
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textView15"
@@ -99,44 +98,44 @@
                 android:text="TextView" />
 
             <EditText
-            android:id="@+id/inputClaveRegistro"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="**********"
-            android:inputType="textPassword"
-            android:textSize="18sp" />
+                android:id="@+id/inputClaveRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="**********"
+                android:inputType="textPassword"
+                android:textSize="18sp" />
 
-        <EditText
-            android:id="@+id/inputClaveRepiteRegistro"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="**********"
-            android:inputType="textPassword" />
+            <EditText
+                android:id="@+id/inputClaveRepiteRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="**********"
+                android:inputType="textPassword" />
 
-        <EditText
-            android:id="@+id/inputCelularRegistro"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="numero de celular"
-            android:inputType="phone"
-            android:textSize="18sp" />
+            <EditText
+                android:id="@+id/inputCelularRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="numero de celular"
+                android:inputType="phone"
+                android:textSize="18sp" />
 
-        <Button
-            android:id="@+id/btn_RegistrarUsuario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="registrar" />
+            <Button
+                android:id="@+id/btn_RegistrarUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="registrarUsuario"
+                android:text="registrar" />
 
-        <Button
-            android:id="@+id/btn_VolverRegistro"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="volverVentanaLogin"
-            android:text="volver" />
-
+            <Button
+                android:id="@+id/btn_VolverRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="volverVentanaLogin"
+                android:text="volver" />
 
 
         </LinearLayout>

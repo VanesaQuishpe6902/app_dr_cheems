@@ -2,9 +2,12 @@ package com.utc.drcheems;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.Toast;
 
 /*
  * Autores: Vanesa Quishpe, Angel Tapia, Alex Vaca
@@ -22,9 +25,16 @@ public class Bienvenida extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent ventantaInicio = new Intent(getApplicationContext(), Login.class);
-                startActivity(ventantaInicio);
+                SharedPreferences prefs = getSharedPreferences("datosSesion", Context.MODE_PRIVATE);
+                String estadoSesion = prefs.getString("estadoSesion", "").toString();
+                Intent ventantaInicio;
+                if (estadoSesion.equals("activo")) {
+                    ventantaInicio = new Intent(getApplicationContext(), Dashboard.class);
+                } else {
+                    ventantaInicio = new Intent(getApplicationContext(), Login.class);
+                }
                 finish();
+                startActivity(ventantaInicio);
             }
         }, 4000);
     }

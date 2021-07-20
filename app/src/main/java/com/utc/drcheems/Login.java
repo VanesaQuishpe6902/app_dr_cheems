@@ -62,7 +62,7 @@ public class Login extends AppCompatActivity {
                     //A traves del objeto editor establece la clave llamada estado sesion con un valor de 1
                     editor.putString("estadoSesion", "activo");
                 } else {
-                    editor.putString("estadoSesion", "inactivo");
+                    editor.putString("estadoSesion", "");
                 }
                 // Almacenar datos
                 editor.commit(); //Guardando el SharedPreferences

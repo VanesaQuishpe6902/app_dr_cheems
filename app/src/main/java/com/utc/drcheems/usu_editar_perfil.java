@@ -57,7 +57,7 @@ public class usu_editar_perfil extends AppCompatActivity {
             inputApellidoUsuarioEditar.setText(infoUsu.getString(1).toString());
             inputNombreUsuarioEditar.setText(infoUsu.getString(2).toString());
             inputCorreoUsuarioEditar.setText(infoUsu.getString(3).toString());
-            inputCelularUsuarioEditar.setText(infoUsu.getString(4).toString());
+            inputCelularUsuarioEditar.setText(infoUsu.getString(5).toString());
         } else {
             Toast.makeText(this, "Huston, tenemos un problema.", Toast.LENGTH_SHORT).show();
             volver(null);
@@ -72,8 +72,8 @@ public class usu_editar_perfil extends AppCompatActivity {
     }
 
     public void actualizarUsuario(View vista) {
-        String nombre = inputApellidoUsuarioEditar.getText().toString(),
-                apellido = inputNombreUsuarioEditar.getText().toString(),
+        String apellido = inputApellidoUsuarioEditar.getText().toString(),
+                nombre = inputNombreUsuarioEditar.getText().toString(),
                 email = inputCorreoUsuarioEditar.getText().toString(),
                 numTelefono = inputCelularUsuarioEditar.getText().toString();
         int error = 0;
@@ -103,6 +103,7 @@ public class usu_editar_perfil extends AppCompatActivity {
         if (error == 0) {
             try {
                 bdd.actualizarUsuario(idUsu, apellido, nombre, email, numTelefono);
+                volver(null);
             } catch (Exception ex) {
                 Toast.makeText(this, "Houston tenemos un problema...", Toast.LENGTH_SHORT).show();
             }

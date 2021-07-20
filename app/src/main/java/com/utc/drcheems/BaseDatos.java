@@ -20,12 +20,12 @@ public class BaseDatos extends SQLiteOpenHelper {
 
     // T A B L A S
     private static final String tablaUsuario = "CREATE TABLE usuario(" +
-            "id_usu integer PRIMARY KEY AUTOINCREMENT, " +
+            "id_usu INTEGER PRIMARY KEY AUTOINCREMENT, " +
             "apellido_usu TEXT, " +
             "nombre_usu TEXT, " +
             "correo_usu TEXT, " +
             "clave_usu TEXT, " +
-            "wsp_usu TEXT )";
+            "wsp_usu TEXT );";
 
     private static final String tablaCliente = " CREATE TABLE cliente(" +
             "id_cli INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -35,7 +35,7 @@ public class BaseDatos extends SQLiteOpenHelper {
             "wsp_cli TEXT," +
             "dir_dom_cli TEXT," +
             "fk_id_usu INTEGER," +
-            "FOREIGN KEY (fk_id_usu) REFERENCES usuario (id_usu))";
+            "FOREIGN KEY (fk_id_usu) REFERENCES usuario (id_usu));";
 
     private static final String tablaMascota = " CREATE TABLE mascota(" +
             "id_mas INTEGER PRIMARY KEY AUTOINCREMENT," +
@@ -45,7 +45,7 @@ public class BaseDatos extends SQLiteOpenHelper {
             "fecha_nac_mas DATE," +
             "rasgos_mas TEXT," +
             "fk_id_cli INTEGER," +
-            "FOREIGN KEY (fk_id_cli) REFERENCES cliente (id_cli))";
+            "FOREIGN KEY (fk_id_cli) REFERENCES cliente (id_cli));";
 
     private static final String tablaCita = " CREATE TABLE cite(" +
             "id_cit INTEGER PRIMARY KEY AUTOINCREMENT," +
@@ -53,7 +53,7 @@ public class BaseDatos extends SQLiteOpenHelper {
             "servicio_cit TEXT," +
             "solucion_cit TEXT," +
             "fk_id_mas INTEGER," +
-            "FOREIGN KEY (fk_id_mas) REFERENCES mascota(id_mas))";
+            "FOREIGN KEY (fk_id_mas) REFERENCES mascota(id_mas));";
 
     //CONSTRUCTOR
     public BaseDatos(Context contexto) {
@@ -67,7 +67,7 @@ public class BaseDatos extends SQLiteOpenHelper {
         db.execSQL(tablaCliente);
         db.execSQL(tablaMascota);
         db.execSQL(tablaCita);
-        semillas(db);
+        //semillas(db);
     }
 
     @Override
@@ -82,11 +82,12 @@ public class BaseDatos extends SQLiteOpenHelper {
         db.execSQL(tablaCliente);
         db.execSQL(tablaMascota);
         db.execSQL(tablaCita);
-        semillas(db);
+        //semillas(db);
     }
 
     // Semillas
-    public void semillas(SQLiteDatabase db) {
+    public void semillas() {
+        SQLiteDatabase db = getWritableDatabase();
         // Preparar semillas
         String addUsuario = "INSERT INTO usuario (apellido_usu, nombre_usu, correo_usu, clave_usu, wsp_usu) " +
                 "VALUES ('Duran','Roger','admin@correo.com','clave1234','0987654321')";
