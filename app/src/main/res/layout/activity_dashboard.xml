@@ -1,31 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-
     tools:context=".Dashboard">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="81dp"
-            android:background="@color/primario"
-            android:gravity="center_vertical"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/baloo_bhai"
-                android:gravity="center_horizontal|center_vertical"
-                android:text="INICIO"
-                android:textColor="@color/white"
-                android:textSize="32dp" />
-        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -41,7 +30,8 @@
             android:fontFamily="@font/baloo_chettan"
             android:text="Hola, bienvenido de nuevo"
             android:textColor="@color/primario"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:paddingTop="30dp"/>
 
         <TextView
             android:id="@+id/textView70"
@@ -65,108 +55,123 @@
             android:paddingEnd="20dp">
 
 
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="80dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="290dp"
-                android:orientation="horizontal">
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp">
 
                 <LinearLayout
-                    android:layout_width="200dp"
-                    android:layout_height="280dp"
-                    android:background="@drawable/tarjetacliente"
-                    android:orientation="vertical">
-                    <TextView
-                        android:id="@+id/textView3"
-                        android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="290dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="280dp"
+                        android:background="@drawable/tarjetacliente"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/montserrat_alternates"
+                            android:gravity="center"
+                            android:text="Clientes"
+                            android:textColor="@color/white"
+                            android:textSize="22sp"
+                            android:textStyle="bold"/>
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="180dp"
+                            android:layout_height="230dp"
+                            android:layout_gravity="center_horizontal"
+                            app:srcCompat="@drawable/cliente" />
+
+
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="25dp"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/quicksand_medium"
-                        android:gravity="center"
-                        android:text="Clientes"
-                        android:textColor="@color/white"
-                        android:textSize="22sp"
-                        android:textStyle="bold"
-                        android:layout_marginTop="10dp"/>
+                        android:layout_weight="1" />
 
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="180dp"
-                        android:layout_height="230dp"
-                        android:layout_gravity="center_horizontal"
-                        app:srcCompat="@drawable/cliente" />
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="280dp"
+                        android:background="@drawable/tarjetacitas"
+                        android:orientation="vertical">
 
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/montserrat_alternates"
+                            android:gravity="center"
+                            android:text="Citas"
+                            android:textColor="@color/white"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="180dp"
+                            android:layout_height="230dp"
+                            android:layout_gravity="center_horizontal"
+                            app:srcCompat="@drawable/citas" />
+
+
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="25dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="280dp"
+                        android:background="@drawable/tarjetapagina"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/montserrat_alternates"
+                            android:gravity="center"
+                            android:text="Página web"
+                            android:textColor="@color/white"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="180dp"
+                            android:layout_height="230dp"
+                            android:layout_gravity="center_horizontal"
+                            app:srcCompat="@drawable/redessociales" />
+
+
+                    </LinearLayout>
 
                 </LinearLayout>
+            </HorizontalScrollView>
 
-                <Space
-                    android:layout_width="25dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <LinearLayout
-                    android:layout_width="200dp"
-                    android:layout_height="280dp"
-                    android:background="@drawable/tarjetacitas"
-                    android:orientation="vertical">
-                    <TextView
-                        android:id="@+id/textView4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/quicksand_medium"
-                        android:gravity="center"
-                        android:text="Citas"
-                        android:textColor="@color/white"
-                        android:textSize="22sp"
-                        android:textStyle="bold"
-                        android:layout_marginTop="10dp"/>
-                    <ImageView
-                        android:id="@+id/imageView3"
-                        android:layout_width="180dp"
-                        android:layout_height="230dp"
-                        android:layout_gravity="center_horizontal"
-                        app:srcCompat="@drawable/citas" />
-
-
-                </LinearLayout>
-
-                <Space
-                    android:layout_width="25dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <LinearLayout
-                    android:layout_width="200dp"
-                    android:layout_height="280dp"
-                    android:background="@drawable/tarjetapagina"
-                    android:orientation="vertical">
-                    <TextView
-                        android:id="@+id/textView5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/quicksand_medium"
-                        android:gravity="center"
-                        android:text="Página web"
-                        android:layout_marginTop="10dp"
-                        android:textColor="@color/white"
-                        android:textSize="22sp"
-                        android:textStyle="bold" />
-                    <ImageView
-                        android:id="@+id/imageView4"
-                        android:layout_width="180dp"
-                        android:layout_height="230dp"
-                        android:layout_gravity="center_horizontal"
-                        app:srcCompat="@drawable/redessociales" />
-
-
-                </LinearLayout>
-
-            </LinearLayout>
-        </HorizontalScrollView>
-
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Servicios rápidos"
+                android:textSize="22sp"
+                android:textColor="@color/boton1"
+                android:paddingBottom="10dp"
+                android:fontFamily="@font/montserrat_alternates"
+                android:textStyle="bold"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -385,9 +390,13 @@
             </LinearLayout>
         </HorizontalScrollView>
 
+
+
+        </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
-    </LinearLayout>
 
 
-
-</LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
