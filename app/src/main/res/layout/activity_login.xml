@@ -140,8 +140,9 @@
                 android:layout_height="52dp"
                 android:layout_gravity="center"
                 android:background="@drawable/bt_login"
-                android:text="INGRESAR"
                 android:fontFamily="@font/montserrat_alternates_bold"
+                android:onClick="iniciarSesion"
+                android:text="INGRESAR"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
         </LinearLayout>

@@ -292,6 +292,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:onClick="irVentanaPerfil"
                     android:orientation="vertical">
 
                     <ImageView
@@ -318,6 +319,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:onClick="verVersionApp"
                     android:orientation="vertical">
 
                     <ImageView
@@ -332,7 +334,7 @@
                         android:id="@+id/textView7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="V 1.0.0" />
+                        android:text="Versión" />
                 </LinearLayout>
 
                 <Space
@@ -370,6 +372,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:onClick="cerrarSesion"
                     android:orientation="vertical">
 
                     <ImageView

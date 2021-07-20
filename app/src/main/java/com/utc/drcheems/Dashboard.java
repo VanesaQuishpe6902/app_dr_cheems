@@ -1,15 +1,18 @@
 package com.utc.drcheems;
 
+import androidx.annotation.StringDef;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /*
  * Autores: Vanesa Quishpe, Angel Tapia, Alex Vaca
@@ -65,4 +68,27 @@ public class Dashboard extends AppCompatActivity {
         startActivity(ventanaPerfil);
     }
 
+    public void verVersionApp(View vista) {
+        Toast.makeText(this, "Version App Dr.Cheems 1.0.0", Toast.LENGTH_SHORT).show();
+    }
+
+    public void cerrarSesion(View vista) {
+        Intent irLogin = new Intent(getApplicationContext(), Login.class);
+        // Borrar datos del sharepreferences
+        SharedPreferences prefs = getSharedPreferences("datosSesion", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("estadoSesion", "");
+        editor.putString("idUsu", "");
+        editor.commit();
+
+        finish();
+        startActivity(irLogin);
+    }
+
+    public void verSitioWeb(View vista) {
+        String urlSitio = getString(R.string.url_site_web).toString();
+        Uri uri = Uri.parse(urlSitio);
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
 }
