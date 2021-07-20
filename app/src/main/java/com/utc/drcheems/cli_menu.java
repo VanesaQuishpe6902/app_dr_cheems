@@ -38,9 +38,10 @@ public class cli_menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cli_menu);
 
-        bdd = new BaseDatos(getApplicationContext());
         inputBuscarCliente = (EditText) findViewById(R.id.inputBuscarCliente);
         lstClientes = (ListView) findViewById(R.id.lstClientes);
+
+        bdd = new BaseDatos(getApplicationContext());
         // Traer informacion del usuario
         SharedPreferences prefs = getSharedPreferences("datosSesion", Context.MODE_PRIVATE);
         id_usu = prefs.getString("idUsu", "");
@@ -51,7 +52,11 @@ public class cli_menu extends AppCompatActivity {
 
     public void obtenerDatosClientes() {
         listaClientes.clear();
-        datosClientes = bdd.listarClientes(id_usu);
+        try {
+            datosClientes = bdd.listarClientes(id_usu);
+        } catch (Exception ex) {
+            Toast.makeText(this, "Error: " + ex, Toast.LENGTH_SHORT).show();
+        }
         if (datosClientes != null) {
             do {
                 String id = datosClientes.getString(0),
@@ -100,5 +105,9 @@ public class cli_menu extends AppCompatActivity {
 //                Toast.makeText(EP_GestionCurso.this, "ID: " + misCursosProfesor.getString(0), Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    public void volver(View vista) {
+        finish();
     }
 }

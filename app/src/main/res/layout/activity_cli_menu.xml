@@ -5,111 +5,115 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".cli_menu">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
-        android:padding="20dp"
-        android:background="@color/papeltapiz">
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/btn_NuevoCliente"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Menu clientes"
-            android:fontFamily="@font/montserrat_alternates_bold"
-            android:textSize="28dp"
-            android:textColor="@color/primario"
-            android:gravity="center"
-            android:layout_marginTop="15"
-            android:layout_marginBottom="15dp"/>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/papeltapiz"
             android:orientation="vertical"
             android:padding="20dp"
-            android:background="@drawable/bg_card_login">
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp">
 
-            <android.widget.Button
-                android:id="@+id/button2"
+            <TextView
+                android:id="@+id/btn_NuevoCliente"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/btncrear"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
                 android:fontFamily="@font/montserrat_alternates_bold"
-                android:text="Nuevo cliente"
-                android:textSize="16sp"
-                android:textColor="@color/white" />
+                android:gravity="center"
+                android:text="Menu clientes"
+                android:textColor="@color/primario"
+                android:textSize="28dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_login"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <android.widget.Button
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btncrear"
+                    android:fontFamily="@font/montserrat_alternates_bold"
+                    android:text="Nuevo cliente"
+                    android:textColor="@color/white" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="15dp">
+
+                    <EditText
+                        android:id="@+id/inputBuscarCliente"
+                        android:layout_width="278dp"
+                        android:layout_height="match_parent"
+                        android:hint="Cliente buscar"
+                        android:inputType="textPersonName" />
+
+                    <android.widget.Button
+                        android:id="@+id/btn_BuscarCliente"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:backgroundTint="#3F51B5"
+                        android:drawableTop="@android:drawable/ic_menu_search"
+                        android:onClick="buscarCliente"
+                        android:textColorHighlight="#3F51B5" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_alternates"
+                    android:text="Todos los clientes"
+                    android:textSize="22sp" />
+
+
+                <ListView
+                    android:id="@+id/lstClientes"
+                    android:layout_width="match_parent"
+                    android:layout_height="188dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/tarjetalistview"
+                    android:backgroundTint="@color/primario" />
+
+
+            </LinearLayout>
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="15dp" />
-
-            <LinearLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-                android:paddingBottom="15dp">
-
-            <EditText
-                android:id="@+id/inputBuscarCliente"
-                android:layout_width="278dp"
-                android:layout_height="match_parent"
-                android:hint="Cliente buscar"
-                android:inputType="textPersonName"
-                android:textColor="@color/black"/>
+                android:layout_height="30dp" />
 
             <android.widget.Button
-                android:id="@+id/btn_BuscarCliente"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:backgroundTint="@color/primario"
-                android:drawableTop="@android:drawable/ic_menu_search"
-                android:textColorHighlight="#3F51B5" />
-
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btncancelar"
+                android:fontFamily="@font/montserrat_alternates_bold"
+                android:onClick="volver"
+                android:text="VOLVER"
+                android:textColor="@color/white" />
         </LinearLayout>
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Todos los clientes"
-            android:textSize="22sp"
-            android:fontFamily="@font/montserrat_alternates"
-            />
-
-
-        <ListView
-            android:id="@+id/lstClientes"
-            android:layout_width="match_parent"
-            android:layout_height="188dp"
-            android:layout_marginBottom="20dp"
-            android:backgroundTint="@color/primario"
-            android:background="@drawable/tarjetalistview"/>
-
-
-
-
-        </LinearLayout>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
-
-        <android.widget.Button
-            android:id="@+id/button3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="VOLVER"
-            android:background="@drawable/btncancelar"
-            android:fontFamily="@font/montserrat_alternates_bold"
-            android:textColor="@color/white"
-            android:textSize="16sp"/>
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

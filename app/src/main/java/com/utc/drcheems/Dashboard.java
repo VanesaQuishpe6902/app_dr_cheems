@@ -44,21 +44,6 @@ public class Dashboard extends AppCompatActivity {
         obtenerDatosUsuario();
     }
 
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        obtenerDatosUsuario();
-    }
-
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        obtenerDatosUsuario();
-    }
-
-
     @Override
     protected void onRestart() {
         super.onRestart();
