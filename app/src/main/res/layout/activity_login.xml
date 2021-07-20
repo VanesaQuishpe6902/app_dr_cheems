@@ -5,6 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Login">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,13 +37,13 @@
                 android:id="@+id/textView30"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Dr.Ch"
                 android:layout_gravity="center_vertical"
-                android:textSize="35sp"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat_alternates_bold"
                 android:gravity="end"
+                android:text="Dr.Ch"
                 android:textColor="@color/primario"
-                android:fontFamily="@font/baloo_chettan"/>
+                android:textSize="34sp" />
 
             <TextView
                 android:id="@+id/textView67"
@@ -49,8 +53,8 @@
                 android:textColor="@color/boton1"
                 android:text="eems"
                 android:layout_gravity="center_vertical"
-                android:textSize="35sp"
-                android:fontFamily="@font/baloo_chettan"/>
+                android:textSize="34sp"
+                android:fontFamily="@font/montserrat_alternates_bold"/>
         </LinearLayout>
 
         <ImageView
@@ -71,18 +75,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                android:fontFamily="@font/baloo_chettan"
+                android:fontFamily="@font/montserrat_alternates"
                 android:gravity="center"
                 android:text="¡Bienvenido!"
                 android:textColor="@color/white"
-                android:textSize="28sp" />
+                android:textSize="28sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView69"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                android:fontFamily="@font/baloo_chettan"
+                android:fontFamily="@font/montserrat_alternates"
                 android:gravity="center"
                 android:text="Ingrese sus datos para iniciar sesión"
                 android:textColor="@color/white"
@@ -101,10 +106,7 @@
                 android:hint="  Ingrese su correo"
                 android:inputType="textPersonName"
                 android:paddingLeft="20sp"
-                android:layout_marginBottom="20dp"/><![CDATA[
-"/>
-
-            ]]>
+                android:layout_marginBottom="20dp"/>
 
             <EditText
                 android:id="@+id/inputClaveLogin"
@@ -125,8 +127,9 @@
                 android:layout_width="161dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:fontFamily="@font/baloo_chettan"
+                android:fontFamily="@font/montserrat_alternates"
                 android:text="Recuerdame"
+                android:textStyle="bold"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
                 app:buttonTint="#FFFAFA" />
@@ -138,9 +141,10 @@
                 android:layout_gravity="center"
                 android:background="@drawable/bt_login"
                 android:text="INGRESAR"
+                android:fontFamily="@font/montserrat_alternates_bold"
                 android:textColor="@color/white"
-                android:textSize="16sp"
- />
+                android:textSize="16sp" />
         </LinearLayout>
     </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

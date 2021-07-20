@@ -2,6 +2,8 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/baloo_chettan</item>
+        <item>@font/montserrat_alternates</item>
+        <item>@font/montserrat_alternates_bold</item>
         <item>@font/quicksand_medium</item>
         <item>@font/raleway_light</item>
         <item>@font/raleway_medium</item>
