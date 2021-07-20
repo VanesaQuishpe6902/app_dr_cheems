@@ -6,92 +6,244 @@
     android:layout_height="match_parent"
     tools:context=".cli_ver_cliente">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
-        tools:ignore="MissingConstraints">
+        android:fillViewport="true">
 
-
-
-        <TextView
-                android:id="@+id/textView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Información del cliente"
-                android:textColor="@color/primario"
-                android:fontFamily="@font/montserrat_alternates_bold"
-                android:textSize="28sp"/>
-
-
-
-        <ImageView
-            android:id="@+id/imageView1"
-            android:scaleType="centerCrop"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:src="@drawable/ic_wave2" />
+            android:layout_height="match_parent"
+            android:background="@color/primario"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp">
 
 
-        <Button
-            android:id="@+id/btn_EditarClienteVer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="editarCliente"
-            android:text="Editar cliente" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="163dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
 
-        <Button
-            android:id="@+id/btn_MascotasClienteVer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="verMascotasa"
-            android:text="MASCOTAS" />
+                <ImageView
+                    android:id="@+id/imageView15"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    app:srcCompat="@drawable/bienvenida" />
 
-        <TextView
-            android:id="@+id/txtCedulaClienteVer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="cedula"
-            android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_alternates_bold"
+                    android:text="Información del cliente"
+                    android:textAlignment="center"
+                    android:textColor="@color/boton1"
+                    android:textSize="28sp" />
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/txtApellidoClienteVer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="apellido"
-            android:textSize="18sp"/>
-
-        <TextView
-            android:id="@+id/txtNombreClienteVer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="nombre"
-            android:textSize="18sp"/>
-
-        <TextView
-            android:id="@+id/txtWhastAppClienteVer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="WhatsApp"
-            android:textSize="18sp"/>
-
-        <TextView
-            android:id="@+id/txtDireccionClienteVer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="direccion"
-            android:textSize="18sp"/>
-
-        <Button
-            android:id="@+id/btn_VolverClienteVer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="volver"
-            android:text="volver" />
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_wave2" />
 
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
 
-    </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_card_login"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingBottom="20dp">
+
+                        <android.widget.Button
+                            android:id="@+id/btn_EditarClienteVer"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btncrear"
+                            android:fontFamily="@font/montserrat_alternates_bold"
+                            android:text="Editar cliente"
+                            android:textColor="@color/white" />
+
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <android.widget.Button
+                            android:id="@+id/btn_MascotasClienteVer"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btncancelar"
+                            android:fontFamily="@font/montserrat_alternates_bold"
+                            android:text="MASCOTAS"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView39"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_alternates"
+                            android:text="CI:   "
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtCedulaClienteVer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_alternates"
+                            android:hint="Número de cedula"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView50"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_alternates"
+                            android:text="Nombres completos"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txtApellidoClienteVer"
+                                android:layout_width="164dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_alternates"
+                                android:hint="Apellido"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/txtNombreClienteVer"
+                                android:layout_width="164dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_alternates"
+                                android:hint="nombre"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView52"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_alternates"
+                            android:text="Número de celular:    "
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtWhastAppClienteVer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_alternates"
+                            android:hint="WhatsApp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView53"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_alternates"
+                            android:text="Dirección:    "
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txtDireccionClienteVer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_alternates"
+                            android:hint="Dirección"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="vertical">
+
+                        <android.widget.Button
+                            android:id="@+id/btn_VolverClienteVer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btncancelar"
+                            android:fontFamily="@font/montserrat_alternates_bold"
+                            android:text="volver"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

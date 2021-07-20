@@ -62,7 +62,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:paddingBottom="15dp">
+                    android:paddingBottom="15dp"
+                    android:gravity="center">
 
                     <EditText
                         android:id="@+id/inputBuscarCliente"
@@ -70,6 +71,7 @@
                         android:layout_height="match_parent"
                         android:ems="12"
                         android:hint="Cliente buscar"
+                        android:layout_gravity="center"
                         android:inputType="textPersonName" />
 
                     <android.widget.Button
