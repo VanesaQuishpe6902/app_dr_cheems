@@ -14,7 +14,7 @@
         android:padding="20dp">
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/btn_NuevoCliente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Menu clientes"
@@ -34,13 +34,14 @@
             android:orientation="horizontal">
 
             <EditText
+                android:id="@+id/inputBuscarCliente"
                 android:layout_width="278dp"
                 android:layout_height="match_parent"
                 android:hint="Cliente buscar"
                 android:inputType="textPersonName" />
 
             <android.widget.Button
-                android:id="@+id/btn_BuscarProfesor"
+                android:id="@+id/btn_BuscarCliente"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:backgroundTint="#3F51B5"
@@ -57,6 +58,7 @@
 
 
         <ListView
+            android:id="@+id/lstClientes"
             android:layout_width="match_parent"
             android:layout_height="188dp" />
 

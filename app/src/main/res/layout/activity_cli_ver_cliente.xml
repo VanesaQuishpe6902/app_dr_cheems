@@ -22,54 +22,54 @@
             android:textSize="34sp" />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/btn_EditarClienteVer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Editar cliente" />
 
         <Button
-            android:id="@+id/button11"
+            android:id="@+id/btn_MascotasClienteVer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="MASCOTAS" />
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/txtCedulaClienteVer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="cedula"
             android:textSize="18sp"/>
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/txtApellidoClienteVer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="apellido"
             android:textSize="18sp"/>
 
         <TextView
-            android:id="@+id/textView14"
+            android:id="@+id/txtNombreClienteVer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="nombre"
             android:textSize="18sp"/>
 
         <TextView
-            android:id="@+id/textView15"
+            android:id="@+id/txtWhastAppClienteVer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="WhatsApp"
             android:textSize="18sp"/>
 
         <TextView
-            android:id="@+id/textView16"
+            android:id="@+id/txtDireccionClienteVer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="direccion"
             android:textSize="18sp"/>
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/btn_VolverClienteVer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="volver" />

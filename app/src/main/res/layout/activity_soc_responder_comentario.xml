@@ -22,28 +22,28 @@
             android:textSize="34sp"/>
 
         <TextView
-            android:id="@+id/textView60"
+            android:id="@+id/txtFechaResponder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Fecha"
             android:textSize="18sp"/>
 
         <TextView
-            android:id="@+id/textView61"
+            android:id="@+id/txtNombreResponder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nombre"
             android:textSize="18sp"/>
 
         <TextView
-            android:id="@+id/textView64"
+            android:id="@+id/txtWhatsAppResponder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="WhatsApp"
             android:textSize="18sp"/>
 
         <TextView
-            android:id="@+id/textView65"
+            android:id="@+id/txtComentarioResponder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Comentario"
@@ -51,7 +51,7 @@
 
 
         <TextView
-            android:id="@+id/textView62"
+            android:id="@+id/txtComentarioObtenidoWeb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="comentario traido de la app web"
@@ -66,7 +66,7 @@
             android:textSize="18sp"/>
 
         <EditText
-            android:id="@+id/editTextTextPersonName15"
+            android:id="@+id/inputResponderComentario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -74,13 +74,13 @@
              />
 
         <Button
-            android:id="@+id/button37"
+            android:id="@+id/btn_ResponderCometario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Responder" />
 
         <Button
-            android:id="@+id/button38"
+            android:id="@+id/btn_VolverResponderComentario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Volver" />

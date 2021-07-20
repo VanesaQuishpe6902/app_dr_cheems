@@ -29,13 +29,13 @@
             <TextView
                 android:id="@+id/textView36"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="Fecha:"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/textView37"
+                android:id="@+id/txtFechaCitaHistorialMas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -57,7 +57,7 @@
                 android:textSize="18sp"/>
 
             <TextView
-                android:id="@+id/textView39"
+                android:id="@+id/txtServicioHistorialMas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -80,7 +80,7 @@
                 android:textSize="18sp"/>
 
             <TextView
-                android:id="@+id/textView41"
+                android:id="@+id/txtSolucionHistorialMas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -88,7 +88,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/button18"
+            android:id="@+id/btn_VolverHistorialMas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="volver"

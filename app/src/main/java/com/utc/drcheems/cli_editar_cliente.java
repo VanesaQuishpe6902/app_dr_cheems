@@ -2,10 +2,13 @@ package com.utc.drcheems;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.database.Cursor;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.regex.Pattern;
@@ -14,15 +17,30 @@ import java.util.regex.Pattern;
  * Autores: Vanesa Quishpe, Angel Tapia, Alex Vaca
  * Creado: 17/07/2021
  * Editado: 17/07/2021
- * Descripción:
+ * Descripción: Editar un cliente existente
  *
  */
 public class cli_editar_cliente extends AppCompatActivity {
-
+    //String idCliente, apellido, nombre, whastapp, direccion;
+    //Cursor infoCliente;
+    TextView txtIdClienteEditar;
+    EditText inputCedulaClienteEditar, inputApellidoClienteEditar, inputNombreClienteEditar, inputWhastAppClienteEditar, inputDireccionClienteEditar;
+    BaseDatos bdd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cli_editar_cliente);
+        //Mapeo
+        txtIdClienteEditar = (TextView) findViewById(R.id.txtIdClienteEditar);
+        inputCedulaClienteEditar = (EditText) findViewById(R.id.inputCedulaClienteEditar);
+        inputApellidoClienteEditar = (EditText) findViewById(R.id.inputApellidoClienteEditar);
+        inputNombreClienteEditar = (EditText) findViewById(R.id.inputNombreClienteEditar);
+        inputWhastAppClienteEditar = (EditText) findViewById(R.id.inputWhastAppClienteEditar);
+        inputDireccionClienteEditar = (EditText) findViewById(R.id.inputDireccionClienteEditar);
+
+        //Base de datos
+        bdd = new BaseDatos(getApplicationContext());
+
     }
 
 /*    public void editarCliente(View vista) {

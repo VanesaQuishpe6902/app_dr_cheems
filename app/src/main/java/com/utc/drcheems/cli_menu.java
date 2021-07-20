@@ -24,7 +24,7 @@ import java.util.ArrayList;
  *
  */
 public class cli_menu extends AppCompatActivity {
-    // Angel, por favor edita si es conveniente la informacion de los input, unicamente los copie de otro proyecto anterior
+
     BaseDatos bdd;
     EditText inputBuscarCliente;
     ListView lstClientes;
@@ -39,8 +39,8 @@ public class cli_menu extends AppCompatActivity {
         setContentView(R.layout.activity_cli_menu);
 
         bdd = new BaseDatos(getApplicationContext());
-        inputBuscarCliente = (EditText) findViewById(R.id.txtBuscarProfesor);
-        lstClientes = (ListView) findViewById(R.id.lstProfesores);
+        inputBuscarCliente = (EditText) findViewById(R.id.inputBuscarCliente);
+        lstClientes = (ListView) findViewById(R.id.lstClientes);
         // Traer informacion del usuario
         SharedPreferences prefs = getSharedPreferences("datosSesion", Context.MODE_PRIVATE);
         id_usu = prefs.getString("idUsu", "");

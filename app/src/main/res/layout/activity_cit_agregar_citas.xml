@@ -38,7 +38,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/btn_AgregarCita"
+            android:id="@+id/btn_SeleccionarFechaCitaAgregar"
             style="?android:spinnerStyle"
             android:layout_width="154dp"
             android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
     </LinearLayout>
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/inputServicioAgregarCita"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -62,13 +62,13 @@
             android:textSize="18sp"/>
 
         <Button
-            android:id="@+id/button22"
+            android:id="@+id/btn_AgregarCita"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="agregar" />
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/btn_VolverCitaAgregar7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="volver" />

@@ -35,7 +35,7 @@
                 android:textSize="18sp"/>
 
             <TextView
-                android:id="@+id/textView18"
+                android:id="@+id/txtIdClienteEditar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -44,7 +44,7 @@
         </LinearLayout>
 
         <EditText
-            android:id="@+id/editTextNumber2"
+            android:id="@+id/inputCedulaClienteEditar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -52,7 +52,7 @@
             android:inputType="number" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName6"
+            android:id="@+id/inputApellidoClienteEditar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -60,7 +60,7 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName7"
+            android:id="@+id/inputNombreClienteEditar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -68,7 +68,7 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/editTextPhone2"
+            android:id="@+id/inputWhastAppClienteEditar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -76,7 +76,7 @@
             android:inputType="phone" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName8"
+            android:id="@+id/inputDireccionClienteEditar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -84,13 +84,13 @@
             android:inputType="textPersonName" />
 
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/btn_ActualizarClienteEditar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Actualizar" />
 
         <Button
-            android:id="@+id/button10"
+            android:id="@+id/btn_CancelarClienteEditar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="CANCELAR" />
