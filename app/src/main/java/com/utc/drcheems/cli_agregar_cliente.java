@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
@@ -37,66 +36,67 @@ public class cli_agregar_cliente extends AppCompatActivity {
         SharedPreferences prefs = getSharedPreferences("datosSesion", Context.MODE_PRIVATE);
         id_usu = prefs.getString("idUsu", "");
 
-        inputCedulaClienteAgregar = (EditText)  findViewById(R.id.inputCelularRegistro);
-        inputApellidoClienteAgregar = (EditText)  findViewById(R.id.inputApellidoClienteAgregar);
-        inputNombreClienteAgregar = (EditText)  findViewById(R.id.inputNombreClienteAgregar);
-        inputWhastAppClienteAgregar = (EditText)  findViewById(R.id.inputWhastAppClienteAgregar);
-        inputDireccionClienteAgregar = (EditText)  findViewById(R.id.inputDireccionClienteAgregar);
+        inputCedulaClienteAgregar = (EditText) findViewById(R.id.inputCelularRegistro);
+        inputApellidoClienteAgregar = (EditText) findViewById(R.id.inputApellidoClienteAgregar);
+        inputNombreClienteAgregar = (EditText) findViewById(R.id.inputNombreClienteAgregar);
+        inputWhastAppClienteAgregar = (EditText) findViewById(R.id.inputWhastAppClienteAgregar);
+        inputDireccionClienteAgregar = (EditText) findViewById(R.id.inputDireccionClienteAgregar);
 
-        bdd= new BaseDatos(getApplicationContext());
+        bdd = new BaseDatos(getApplicationContext());
 
     }
 
-/*    public void agregarCliente(View vista) {
-        String ci = inputCiRegistroCliente.getText().toString(),
-                apellido = txtApellidoRegistrarProfesor.getText().toString(),
-                nombre = txtNombreRegistrarProfesor.getText().toString(),
-                wsp = txtClaveRegistrarProfesor.getText().toString(),
-                direccion = txtClaveConfirmarRegistrarProfesor.getText().toString();
+    public void agregarCliente(View vista) {
+        String ci = inputCedulaClienteAgregar.getText().toString(),
+                apellido = inputApellidoClienteAgregar.getText().toString(),
+                nombre = inputNombreClienteAgregar.getText().toString(),
+                wsp = inputWhastAppClienteAgregar.getText().toString(),
+                direccion = inputDireccionClienteAgregar.getText().toString();
+
         int error = 0;
         // Validaciones
         if (ci.equals("") || ci.length() != 10) {
             error++;
-            inputCiRegistroCliente.setError("CI inválida");
-            inputCiRegistroCliente.requestFocus();
+            inputCedulaClienteAgregar.setError("CI inválida");
+            inputCedulaClienteAgregar.requestFocus();
         }
         if (nombre.equals("") || !isWord(nombre)) {
             error++;
-            txtNombreRegistrarProfesor.setError("Nombre inválido");
-            txtNombreRegistrarProfesor.requestFocus();
+            inputNombreClienteAgregar.setError("Nombre inválido");
+            inputNombreClienteAgregar.requestFocus();
         }
         if (apellido.equals("") || !isWord(apellido)) {
             error++;
-            txtApellidoRegistrarProfesor.setError("Apellido inválido");
-            txtApellidoRegistrarProfesor.requestFocus();
+            inputApellidoClienteAgregar.setError("Apellido inválido");
+            inputApellidoClienteAgregar.requestFocus();
         }
 
-        if (wsp.equals("") || !isNumberPhone(wsp)) {
+        if (wsp.equals("") || !isNumberPhone(wsp) || wsp.length() != 10) {
             error++;
-            txtTelefonoRegistrarProfesor.setError("Número de whatsapp inválido");
-            txtTelefonoRegistrarProfesor.requestFocus();
+            inputWhastAppClienteAgregar.setError("Número de whatsapp inválido");
+            inputWhastAppClienteAgregar.requestFocus();
         }
         if (direccion.equals("")) {
             error++;
-            txtClaveConfirmarRegistrarProfesor.setError("Direccion obligatoria");
-            txtClaveConfirmarRegistrarProfesor.requestFocus();
+            inputDireccionClienteAgregar.setError("Direccion obligatoria");
+            inputDireccionClienteAgregar.requestFocus();
         }
         //
         if (error == 0) {
             // Almacenamos el registro
             try {
                 bdd.agregarCliente(ci, apellido, nombre, wsp, direccion, id_usu);
-                volverListarProfesores(null);
-                Toast.makeText(this, "Profesor registrado con éxito!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Cliente registrado con éxito!", Toast.LENGTH_SHORT).show();
+                volverListarClientes(null);
             } catch (Exception ex) {
                 Toast.makeText(this, "Huston, tenemos un problema...", Toast.LENGTH_SHORT).show();
             }
         }
-    }*/
+    }
 
     //Metodo para volver al la ventana ADMINISTRADOR:Listar profesore
-    public void volverListarProfesores(View vista) {
-        finish();//cerrando ventana de nueva venta
+    public void volverListarClientes(View vista) {
+        finish();
     }
 
     // Metodos de validacion

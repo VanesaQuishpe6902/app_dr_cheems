@@ -49,6 +49,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/btncrear"
                     android:fontFamily="@font/montserrat_alternates_bold"
+                    android:onClick="nuevoCliente"
                     android:text="Nuevo cliente"
                     android:textColor="@color/white" />
 
@@ -65,8 +66,9 @@
 
                     <EditText
                         android:id="@+id/inputBuscarCliente"
-                        android:layout_width="278dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:ems="12"
                         android:hint="Cliente buscar"
                         android:inputType="textPersonName" />
 
@@ -96,7 +98,8 @@
                     android:layout_height="188dp"
                     android:layout_marginBottom="20dp"
                     android:background="@drawable/tarjetalistview"
-                    android:backgroundTint="@color/primario" />
+                    android:backgroundTint="@color/primario"
+                    android:cacheColorHint="#FFFFFF" />
 
 
             </LinearLayout>
