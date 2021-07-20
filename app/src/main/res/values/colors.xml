@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primero">#02567A</color>
-    <color name="segundo">#04ABBD</color>
-    <color name="tercero">#016388</color>
+    <color name="primario">#2EC1AC</color>
+    <color name="boton1">#FF6524</color>
+    <color name="papeltapiz">#E9F1F3</color>
     <color name="plomo">#483D45</color>
-    <color name="teal_700">#FF018786</color>
+    <color name="boton2">#099A97</color>
+    <color name="botoncancel">#01676B</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

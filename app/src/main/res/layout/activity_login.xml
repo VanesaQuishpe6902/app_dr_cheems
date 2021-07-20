@@ -7,58 +7,137 @@
     tools:context=".Login">
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primario"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
-        android:padding="20dp">
+        tools:layout_editor_absoluteY="1dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="216dp"
-            android:orientation="vertical">
+            android:layout_height="252dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:layout_width="180dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                app:srcCompat="@drawable/bienvenida" />
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Dr.Ch"
+                android:layout_gravity="center_vertical"
+                android:textSize="35sp"
+                android:gravity="end"
+                android:textColor="@color/primario"
+                android:fontFamily="@font/baloo_chettan"/>
+
+            <TextView
+                android:id="@+id/textView67"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/boton1"
+                android:text="eems"
+                android:layout_gravity="center_vertical"
+                android:textSize="35sp"
+                android:fontFamily="@font/baloo_chettan"/>
         </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_wave" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/textView63"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bienvenido!"
+                android:fontFamily="@font/raleway_semibold"
+                android:textSize="28sp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginBottom="20dp"/>
+            <TextView
+                android:id="@+id/textView69"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingrese sus datos para iniciar sesión"
+                android:fontFamily="@font/raleway_light"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginBottom="20dp"/>
 
             <EditText
                 android:id="@+id/inputCorreoLogin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="320dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bt_login2"
+                android:drawableLeft="@android:drawable/ic_dialog_email"
                 android:ems="10"
-                android:hint="Correo"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:hint="  Ingrese su correo"
                 android:inputType="textPersonName"
-                 />
+                android:paddingLeft="20sp"
+                android:layout_marginBottom="20dp"/><![CDATA[
+"/>
+
+            ]]>
 
             <EditText
                 android:id="@+id/inputClaveLogin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="320dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bt_login2"
+                android:drawableLeft="@android:drawable/ic_lock_idle_lock"
                 android:ems="10"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:hint="  Ingrese su contraseña"
                 android:inputType="textPersonName"
-                android:hint="Contraseña"/>
+                android:paddingLeft="20sp" />
 
             <CheckBox
                 android:id="@+id/chbxSesion"
-                android:layout_width="match_parent"
+                android:layout_width="161dp"
                 android:layout_height="wrap_content"
-                android:text="Recuerdame" />
+                android:layout_gravity="center_horizontal"
+                android:text="Recuerdame"
+                app:buttonTint="#FFFAFA" />
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="INGRESAR" />
+                android:layout_width="320dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bt_login"
+                android:text="INGRESAR"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+ />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

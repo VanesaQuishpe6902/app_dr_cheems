@@ -34,7 +34,7 @@
                 android:fontFamily="@font/baloo_chettan"
                 android:gravity="end"
                 android:text="Dr. Ch"
-                android:textColor="#02567A"
+                android:textColor="@color/primario"
                 android:textSize="60sp" />
 
             <TextView
@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/baloo_chettan"
                 android:text="eems"
-                android:textColor="#04ABBD"
+                android:textColor="@color/boton1"
                 android:textSize="60sp" />
         </LinearLayout>
     </LinearLayout>
