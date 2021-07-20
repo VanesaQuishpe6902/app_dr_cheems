@@ -92,12 +92,14 @@
             android:id="@+id/btn_ActualizarClienteEditar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="editarCliente"
             android:text="Actualizar" />
 
         <Button
             android:id="@+id/btn_CancelarClienteEditar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="volver"
             android:text="CANCELAR" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

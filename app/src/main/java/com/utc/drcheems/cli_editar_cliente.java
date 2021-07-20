@@ -48,6 +48,7 @@ public class cli_editar_cliente extends AppCompatActivity {
         if (parametrosExtra != null) {
             try {
                 idCli = parametrosExtra.getString("idCli");
+                colocarDatos();
             } catch (Exception ex) {
                 Toast.makeText(getApplicationContext(), "Sin datos de la anterior acticidad. " + ex.toString(), Toast.LENGTH_LONG).show();
 
@@ -56,66 +57,77 @@ public class cli_editar_cliente extends AppCompatActivity {
 
     }
 
-/*    public void editarCliente(View vista) {
-        String id = "",
-                ci = inputCiRegistroCliente.getText().toString(),
-                apellido = txtApellidoRegistrarProfesor.getText().toString(),
-                nombre = txtNombreRegistrarProfesor.getText().toString(),
-                wsp = txtClaveRegistrarProfesor.getText().toString(),
-                direccion = txtClaveConfirmarRegistrarProfesor.getText().toString();
+    public void colocarDatos() {
+        try {
+            infoCli = bdd.verClientes(idCli);
+
+            txtIdClienteEditar.setText(infoCli.getString(0));
+            inputCedulaClienteEditar.setText(infoCli.getString(1));
+            inputApellidoClienteEditar.setText(infoCli.getString(2));
+            inputNombreClienteEditar.setText(infoCli.getString(3));
+            inputWhastAppClienteEditar.setText(infoCli.getString(4));
+            inputDireccionClienteEditar.setText(infoCli.getString(5));
+
+        } catch (Exception ex) {
+            Toast.makeText(this, "No se pudo colocar los datos. " + ex, Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void editarCliente(View vista) {
+        String ci = inputCedulaClienteEditar.getText().toString(),
+                apellido = inputApellidoClienteEditar.getText().toString(),
+                nombre = inputNombreClienteEditar.getText().toString(),
+                wsp = inputWhastAppClienteEditar.getText().toString(),
+                direccion = inputDireccionClienteEditar.getText().toString();
         int error = 0;
         // Validaciones
         if (ci.equals("") || ci.length() != 10) {
             error++;
-            inputCiRegistroCliente.setError("CI inválida");
-            inputCiRegistroCliente.requestFocus();
+            inputCedulaClienteEditar.setError("CI inválida");
+            inputCedulaClienteEditar.requestFocus();
         }
         if (nombre.equals("") || !isWord(nombre)) {
             error++;
-            txtNombreRegistrarProfesor.setError("Nombre inválido");
-            txtNombreRegistrarProfesor.requestFocus();
+            inputNombreClienteEditar.setError("Nombre inválido");
+            inputNombreClienteEditar.requestFocus();
         }
         if (apellido.equals("") || !isWord(apellido)) {
             error++;
-            txtApellidoRegistrarProfesor.setError("Apellido inválido");
-            txtApellidoRegistrarProfesor.requestFocus();
+            inputApellidoClienteEditar.setError("Apellido inválido");
+            inputApellidoClienteEditar.requestFocus();
         }
 
-        if (wsp.equals("") || !isNumberPhone(wsp)) {
+        if (wsp.equals("") || !isNumberPhone(wsp) || wsp.length() != 10) {
             error++;
-            txtTelefonoRegistrarProfesor.setError("Número de whatsapp inválido");
-            txtTelefonoRegistrarProfesor.requestFocus();
+            inputWhastAppClienteEditar.setError("Número de whatsapp inválido");
+            inputWhastAppClienteEditar.requestFocus();
         }
         if (direccion.equals("")) {
             error++;
-            txtClaveConfirmarRegistrarProfesor.setError("Direccion obligatoria");
-            txtClaveConfirmarRegistrarProfesor.requestFocus();
+            inputDireccionClienteEditar.setError("Direccion obligatoria");
+            inputDireccionClienteEditar.requestFocus();
         }
         //
         if (error == 0) {
             // Almacenamos el registro
             try {
-                bdd.actualizarCliente(id, ci, apellido, nombre, wsp, direccion);
-                volverListarProfesores(null);
-                Toast.makeText(this, "Cliente registrado con éxito!", Toast.LENGTH_SHORT).show();
+                bdd.actualizarCliente(idCli, ci, apellido, nombre, wsp, direccion);
+                volver(null);
+                Toast.makeText(this, "Información actualizada con éxito!", Toast.LENGTH_SHORT).show();
             } catch (Exception ex) {
                 Toast.makeText(this, "Huston, tenemos un problema...", Toast.LENGTH_SHORT).show();
             }
         }
-    }*/
+    }
 
     //Metodo para volver al la ventana ADMINISTRADOR:Listar profesore
-    public void volverListarProfesores(View vista) {
+    public void volver(View vista) {
         finish();//cerrando ventana de nueva venta
     }
 
     // Metodos de validacion
     private boolean isWord(String word) {
-        return Pattern.matches(".*[ a-zA-Z-ñÑáéíóúÁÉÍÓÚ].*", word);
-    }
-
-    public boolean isValidEmail(String email) {
-        return (!TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches());
+        return Pattern.matches(".*[ a-zA-Z-ñÑáéíóúÁÉÍÓÚ].*", word) && !Pattern.matches(".*[0-9].*", word);
     }
 
     // Validar que solo contenga texto y espacios
@@ -123,9 +135,5 @@ public class cli_editar_cliente extends AppCompatActivity {
         return Pattern.matches("^09.*[0-9]$", number);
     }
 
-    // validar que la contraseña tenga letras y numeros
-    private boolean isPassLetterNumber(String pass) {
-        return Pattern.matches(".*[a-zA-Z]+.*", pass) && Pattern.matches(".*[0-9]+.*", pass);
 
-    }
 }

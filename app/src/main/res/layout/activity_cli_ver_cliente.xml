@@ -102,7 +102,7 @@
                             android:layout_height="wrap_content"
                             android:background="@drawable/btncancelar"
                             android:fontFamily="@font/montserrat_alternates_bold"
-                            android:onClick="verMascotasa"
+                            android:onClick="verMascotas"
                             android:text="MASCOTAS"
                             android:textColor="@color/white" />
                     </LinearLayout>
