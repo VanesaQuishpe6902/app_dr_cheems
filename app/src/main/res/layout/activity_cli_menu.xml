@@ -66,8 +66,9 @@
 
                     <EditText
                         android:id="@+id/inputBuscarCliente"
-                        android:layout_width="278dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:ems="12"
                         android:hint="Cliente buscar"
                         android:inputType="textPersonName" />
 

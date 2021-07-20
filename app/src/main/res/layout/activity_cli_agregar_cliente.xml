@@ -171,15 +171,16 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:paddingBottom="20dp">
-            <android.widget.Button
-                android:id="@+id/btn_RegistrarCliente"
-                android:layout_width="154dp"
-                android:layout_height="wrap_content"
-                android:text="registrar"
-                android:textColor="@color/white"
-                android:background="@drawable/btncrear"
-                android:fontFamily="@font/montserrat_alternates_bold"
-                />
+
+                <android.widget.Button
+                    android:id="@+id/btn_RegistrarCliente"
+                    android:layout_width="154dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btncrear"
+                    android:fontFamily="@font/montserrat_alternates_bold"
+                    android:onClick="agregarCliente"
+                    android:text="registrar"
+                    android:textColor="@color/white" />
 
                 <Space
                     android:layout_width="wrap_content"
@@ -190,10 +191,11 @@
                     android:id="@+id/btn_CancelarClienteAgregar"
                     android:layout_width="154dp"
                     android:layout_height="match_parent"
-                    android:text="cancelar"
-                    android:textColor="@color/white"
                     android:background="@drawable/btncancelar"
-                    android:fontFamily="@font/montserrat_alternates_bold"/>
+                    android:fontFamily="@font/montserrat_alternates_bold"
+                    android:onClick="volverListarClientes"
+                    android:text="cancelar"
+                    android:textColor="@color/white" />
 
             </LinearLayout>
 
