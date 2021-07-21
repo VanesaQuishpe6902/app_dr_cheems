@@ -103,7 +103,7 @@
                             android:background="@drawable/btncrear"
                             android:fontFamily="@font/montserrat_alternates_bold"
                             android:onClick="verMascotas"
-                            android:text="MASCOTAS"
+                            android:text="VER MASCOTAS"
                             android:textColor="@color/white" />
                     </LinearLayout>
 

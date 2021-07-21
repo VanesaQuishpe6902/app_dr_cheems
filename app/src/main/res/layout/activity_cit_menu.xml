@@ -13,27 +13,56 @@
         android:orientation="vertical"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp"
-        android:padding="20dp">
-
+        android:padding="20dp"
+        android:background="@color/papeltapiz">
         <TextView
             android:id="@+id/textView42"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Menu citas"
-            android:textSize="34sp"/>
-
-        <Button
+            android:text="Menú citas"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/montserrat_alternates_bold"
+            android:gravity="center"
+            android:textColor="@color/primario"
+            android:textSize="28dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="15dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+        <android.widget.Button
             android:id="@+id/btn_NuevaCita"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nueva cita" />
+            android:text="Nueva cita"
+            android:background="@drawable/btncrear"
+            android:fontFamily="@font/montserrat_alternates_bold"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@drawable/bg_card_login">
+
+
+
+
 
         <TextView
             android:id="@+id/textView31"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Historial de citas"
-            android:textSize="18sp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/primario"
+            android:fontFamily="@font/montserrat_alternates"
             android:gravity="center"/>
 
         <LinearLayout
@@ -41,18 +70,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginBottom="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/txtVercitasMascota"
-                android:layout_width="159dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="Seleccione una fecha:"
-                android:textSize="18sp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:gravity="center_horizontal">
 
             <Button
                 android:id="@+id/btn_SeleccionarFechaCita"
@@ -62,15 +82,43 @@
                 android:layout_gravity="center"
                 android:gravity="center_vertical"
                 android:text="01-01-2021"
+                android:fontFamily="@font/montserrat_alternates"
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtVercitasMascota"/>
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <android.widget.Button
+
+                android:id="@+id/btn_FechasCitas"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/primario"
+                android:drawableTop="@android:drawable/ic_menu_search"
+                android:textColorHighlight="@color/primario" />
+
         </LinearLayout>
 
         <ListView
             android:layout_width="match_parent"
-            android:layout_height="216dp" />
+            android:layout_height="200dp"
+            android:background="@drawable/tarjetalistview"/>
+
+        </LinearLayout>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <android.widget.Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btncancelar"
+            android:fontFamily="@font/montserrat_alternates_bold"
+            android:text="VOLVER"
+            android:textColor="@color/white"  />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
