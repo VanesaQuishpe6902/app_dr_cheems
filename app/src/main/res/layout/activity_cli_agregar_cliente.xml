@@ -18,7 +18,7 @@
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp"
         android:padding="20dp"
-        android:background="@color/primario">
+        android:background="@color/papeltapiz">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -64,8 +64,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/montserrat_alternates"
-                        android:text="Ingresar el número de CI:"
-                        android:textSize="16sp"/>
+                        android:text="Número de CI:"
+                        android:textSize="16sp"
+                        android:backgroundTint="@color/primario"/>
 
                     <EditText
                         android:id="@+id/inputCedulaClienteAgregar"
@@ -175,7 +176,7 @@
 
                 <android.widget.Button
                     android:id="@+id/btn_RegistrarCliente"
-                    android:layout_width="154dp"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/btncrear"
                     android:fontFamily="@font/montserrat_alternates_bold"
@@ -190,7 +191,7 @@
 
                 <android.widget.Button
                     android:id="@+id/btn_CancelarClienteAgregar"
-                    android:layout_width="154dp"
+                    android:layout_width="150dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/btncancelar"
                     android:fontFamily="@font/montserrat_alternates_bold"
