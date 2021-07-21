@@ -41,14 +41,15 @@
             android:paddingRight="20dp"
             android:paddingLeft="20dp">
 
-        <android.widget.Button
-            android:id="@+id/btn_AgregarMascotaCliente"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="AGREGAR MASCOTA"
-            android:background="@drawable/btncrear"
-            android:fontFamily="@font/montserrat_alternates_bold"
-            android:textColor="@color/white"/>
+            <android.widget.Button
+                android:id="@+id/btn_AgregarMascotaCliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btncrear"
+                android:fontFamily="@font/montserrat_alternates_bold"
+                android:onClick="agregarMascota"
+                android:text="AGREGAR MASCOTA"
+                android:textColor="@color/white" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -80,6 +81,7 @@
                     android:layout_height="50dp"
                     android:backgroundTint="@color/primario"
                     android:drawableTop="@android:drawable/ic_menu_search"
+                    android:onClick="buscarMascota"
                     android:textColorHighlight="@color/primario" />
 
             </LinearLayout>
@@ -99,14 +101,16 @@
         <Space
             android:layout_width="match_parent"
             android:layout_height="30dp" />
+
         <android.widget.Button
             android:id="@+id/bnt_VolverCliVerMascota"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="volver"
             android:background="@drawable/btncancelar"
             android:fontFamily="@font/montserrat_alternates_bold"
-            android:textColor="@color/white"/>
+            android:onClick="volver"
+            android:text="volver"
+            android:textColor="@color/white" />
 
     </LinearLayout>
     </ScrollView>

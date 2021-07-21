@@ -313,6 +313,20 @@ public class BaseDatos extends SQLiteOpenHelper {
 
     }
 
+    public Cursor verMascota(String id) {
+        SQLiteDatabase db = getReadableDatabase(); //Llamando a la base de datos
+        String sql = "SELECT * FROM mascota " +
+                "WHERE id_mas = '" + id + "'";
+        Cursor mascotas = db.rawQuery(sql, null);
+        if (mascotas.moveToFirst()) {//verificando que el objeto usuario tenga resultados
+            return mascotas; //retornamos datos encontrados
+        } else {
+            //Nose encuentra el usuario ..Porque no eexiste el email y congtrase{a
+            return null;
+        }
+
+    }
+
     public Cursor buscarMascota(String id_cli, String criterio) {
         SQLiteDatabase db = getReadableDatabase(); //Llamando a la base de datos
         String sql = "SELECT * FROM mascota " +

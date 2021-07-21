@@ -5,240 +5,270 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".mas_ver_mascota">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
-        tools:ignore="MissingConstraints"
-        android:background="@color/primario">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="163dp"
-            android:background="@color/white"
-            android:orientation="horizontal"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp">
-
-            <ImageView
-                android:id="@+id/imageView15"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                app:srcCompat="@drawable/bienvenida" />
-
-            <TextView
-                android:id="@+id/textView24"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:fontFamily="@font/montserrat_alternates_bold"
-                android:text="Información de la mascota"
-                android:textAlignment="center"
-                android:textColor="@color/boton1"
-                android:textSize="28sp" />
-        </LinearLayout>
-
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_wave2" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/primario"
             android:orientation="vertical"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp">
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="163dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView15"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    app:srcCompat="@drawable/bienvenida" />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_alternates_bold"
+                    android:text="Información de la mascota"
+                    android:textAlignment="center"
+                    android:textColor="@color/boton1"
+                    android:textSize="28sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_wave2" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:padding="20dp"
-                android:background="@drawable/bg_card_login">
-
-            <android.widget.Button
-            android:id="@+id/btn_EditarInfoMascotaVer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="editar información"
-                android:background="@drawable/btncrear"
-                android:textColor="@color/white"
-                android:fontFamily="@font/montserrat_alternates_bold"/>
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingBottom="15dp"
-                    android:paddingTop="20dp">
-                <TextView
-                    android:id="@+id/textView22"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nombre:   "
-                    android:textSize="16sp"
-                    android:fontFamily="@font/montserrat_alternates"/>
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_card_login"
+                    android:orientation="vertical"
+                    android:padding="20dp">
 
-                <TextView
-            android:id="@+id/txtNombreMascotaVer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Nombre de la mascota"
-                    android:textColor="@color/black"
-            android:textSize="18sp"/>
-                </LinearLayout>
+                    <android.widget.Button
+                        android:id="@+id/btn_EditarInfoMascotaVer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btncrear"
+                        android:fontFamily="@font/montserrat_alternates_bold"
+                        android:onClick="editarMascota"
+                        android:text="editar información"
+                        android:textColor="@color/white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:id="@+id/textView22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_alternates"
+                            android:text="Nombre:   "
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txtNombreMascotaVer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Nombre de la mascota"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:id="@+id/textView2122"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_alternates"
+                            android:text="Nick:   "
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txtNickMascotaVer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Nick de la mascota"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView64"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_alternates"
+                            android:paddingBottom="15dp"
+                            android:text="Tipo: "
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txtTipoMascotaVer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Tipo de mascota"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:layout_width="161dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Fecha nacimiento:"
+                            android:textSize="18sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtFechaNacimientoMascotaVer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:hint="Fecha nacimiento"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:id="@+id/textView65"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_alternates"
+                            android:text="Rasgos:   "
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txtRasgosMascotaVer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Rasgos de la mascota"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView35"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Historial de la mascota"
+                        android:textColor="@color/primario"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
 
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/textView64"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tipo: "
-                    android:fontFamily="@font/montserrat_alternates"
-                    android:textSize="16sp"
-                    android:paddingBottom="15dp"/>
-
-                <TextView
-            android:id="@+id/txtTipoMascotaVer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Tipo de mascota"
-                    android:textColor="@color/black"
-            android:textSize="18sp"/>
-                </LinearLayout>
-
-                <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginBottom="15dp"
-            android:orientation="horizontal">
-
-            <TextView
-
-                android:layout_width="161dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="Fecha nacimiento:"
-                android:textSize="18sp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/txtFechaNacimientoMascotaVer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:gravity="center"
-                android:hint="Fecha nacimiento"
-                android:textSize="18sp" />
-        </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingBottom="15dp">
-                <TextView
-                    android:id="@+id/textView65"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Rasgos:   "
-                    android:fontFamily="@font/montserrat_alternates"
-                    android:textSize="16sp"/>
-
-                <TextView
-            android:id="@+id/txtRasgosMascotaVer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Rasgos de la mascota"
-                    android:textColor="@color/black"
-            android:textSize="18sp"/>
-                </LinearLayout>
-
-                <TextView
-            android:id="@+id/textView35"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Historial de la mascota"
-            android:gravity="center"
-            android:textSize="24sp"
-                    android:textColor="@color/primario"
-                    android:textStyle="bold"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:paddingTop="15dp">
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginBottom="10dp"
-            android:orientation="horizontal"
-            android:paddingTop="15dp"
-            android:gravity="center_horizontal">
+                        <Button
+                            android:id="@+id/btn_SeleccionarFechaMascotaVer"
+                            style="?android:spinnerStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/montserrat_alternates"
+                            android:text="01-01-2021"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent" />
 
+                        <android.widget.Button
+                            android:id="@+id/btn_BuscarHistorialMascota"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:backgroundTint="@color/primario"
+                            android:drawableTop="@android:drawable/ic_menu_search"
+                            android:textColorHighlight="@color/primario" />
+                    </LinearLayout>
 
-            <Button
-                android:id="@+id/btn_SeleccionarFechaMascotaVer"
-                style="?android:spinnerStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="01-01-2021"
-                android:fontFamily="@font/montserrat_alternates"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent" />
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/tarjetalistview" />
 
-            <android.widget.Button
-                android:id="@+id/btn_BuscarHistorialMascota"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:backgroundTint="@color/primario"
-                android:drawableTop="@android:drawable/ic_menu_search"
-                android:textColorHighlight="@color/primario" />
-        </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="vertical">
 
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:background="@drawable/tarjetalistview"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:orientation="vertical">
-        <android.widget.Button
-            android:id="@+id/btn_VolverMascotaVer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="volver"
-            android:fontFamily="@font/montserrat_alternates_bold"
-            android:textColor="@color/white"
-            android:background="@drawable/btncancelar"/>
+                        <android.widget.Button
+                            android:id="@+id/btn_VolverMascotaVer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btncancelar"
+                            android:fontFamily="@font/montserrat_alternates_bold"
+                            android:onClick="volver"
+                            android:text="volver"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

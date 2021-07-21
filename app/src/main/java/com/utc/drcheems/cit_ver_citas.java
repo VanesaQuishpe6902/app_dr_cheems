@@ -20,7 +20,7 @@ public class cit_ver_citas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cit_ver_citas);
         //Mapeo
-        txtFechaCitaVer = (TextView) findViewById(R.id.txtFechaCitaVer);
+//        txtFechaCitaVer = (TextView) findViewById(R.id.txtFechaCitaVer);
         txtServicioCitaVer = (TextView) findViewById(R.id.txtServicioCitaVer);
         txtSolucionCitaVer = (TextView) findViewById(R.id.txtSolucionCitaVer);
 
