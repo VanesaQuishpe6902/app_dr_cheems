@@ -14,15 +14,15 @@ import android.widget.TextView;
  *
  */
 public class mas_ver_mascota extends AppCompatActivity {
-    TextView  txtNicknameMascotaVer, txtNombreMascotaVer, txtTipoMascotaVer, txtFechaNacimientoMascotaVer, txtRasgosMascotaVer;
+    TextView txtNicknameMascotaVer, txtNombreMascotaVer, txtTipoMascotaVer, txtFechaNacimientoMascotaVer, txtRasgosMascotaVer;
 
     BaseDatos bdd;
-
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_mas_ver_mascota);
         //Mapeo
         txtNicknameMascotaVer = (TextView) findViewById(R.id.txtNicknameMascotaVer);
         txtNombreMascotaVer = (TextView) findViewById(R.id.txtNombreMascotaVer);

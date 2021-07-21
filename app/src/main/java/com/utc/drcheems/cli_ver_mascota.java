@@ -2,8 +2,12 @@ package com.utc.drcheems;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -47,5 +51,37 @@ public class cli_ver_mascota extends AppCompatActivity {
     public void obtenerMascotas() {
         listaMascotas.clear();
         datosMascotas = bdd.listarMascotas(idCli);
+        if (datosMascotas != null) {
+            do {
+                String nombreMas = datosMascotas.getString(1).toString();
+                listaMascotas.add(nombreMas);
+                ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listaMascotas);
+                lstMascotas.setAdapter(adapter);
+            } while (datosMascotas.moveToNext());
+            listaSeleccionable();
+        }
+    }
+
+    public void listaSeleccionable() {
+        lstMascotas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                datosMascotas.moveToPosition(position);
+                Intent verMascota = new Intent(getApplicationContext(), mas_ver_mascota.class);
+//                verMascota.putExtra("iDMas", datosMascotas.getString(0));
+                startActivity(verMascota);
+//                Toast.makeText(cli_ver_mascota.this, "Nombre mas: " + datosMascotas.getString(1).toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    public void volver(View vista) {
+        finish();
+    }
+
+    public void agregarMascota(View vista) {
+        Intent agregarMascota = new Intent(getApplicationContext(), mas_agregar_mascota.class);
+        agregarMascota.putExtra("idCli", idCli);
+        startActivity(agregarMascota);
     }
 }

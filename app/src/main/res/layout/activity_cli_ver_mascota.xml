@@ -25,6 +25,7 @@
             android:id="@+id/btn_AgregarMascotaCliente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="agregarMascota"
             android:text="AGREGAR MASCOTA" />
 
         <TextView
@@ -42,6 +43,7 @@
             android:id="@+id/bnt_VolverCliVerMascota"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="volver"
             android:text="volver" />
 
     </LinearLayout>
