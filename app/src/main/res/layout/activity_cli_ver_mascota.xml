@@ -5,27 +5,84 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".cli_ver_mascota">
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp"
-        android:padding="20dp">
+        android:padding="20dp"
+        android:background="@color/papeltapiz">
+
+
 
         <TextView
             android:id="@+id/textView19"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Macotas del cliente"
-            android:textSize="34sp"/>
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/montserrat_alternates_bold"
+            android:gravity="center"
+            android:textColor="@color/primario"
+            android:textSize="28dp"/>
 
-        <Button
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp">
+
+        <android.widget.Button
             android:id="@+id/btn_AgregarMascotaCliente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="AGREGAR MASCOTA" />
+            android:text="AGREGAR MASCOTA"
+            android:background="@drawable/btncrear"
+            android:fontFamily="@font/montserrat_alternates_bold"
+            android:textColor="@color/white"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@drawable/bg_card_login">
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="15dp"
+                android:gravity="center">
+
+                <EditText
+
+                    android:id="@+id/inputBuscarMascota"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ems="12"
+                    android:hint="Buscar mascota"
+                    android:inputType="textPersonName" />
+
+                <android.widget.Button
+                    android:id="@+id/btn_BuscarMascota"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/primario"
+                    android:drawableTop="@android:drawable/ic_menu_search"
+                    android:textColorHighlight="@color/primario" />
+
+            </LinearLayout>
 
         <TextView
             android:id="@+id/textView20"
@@ -33,16 +90,23 @@
             android:layout_height="wrap_content"
             android:text="Macotas" />
 
-        <ListView
-            android:id="@+id/lstMascotasCliente"
+            <ListView
+                android:id="@+id/lstMascotasCliente"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+        </LinearLayout>
+        <Space
             android:layout_width="match_parent"
-            android:layout_height="106dp" />
-
-        <Button
+            android:layout_height="30dp" />
+        <android.widget.Button
             android:id="@+id/bnt_VolverCliVerMascota"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="volver" />
+            android:text="volver"
+            android:background="@drawable/btncancelar"
+            android:fontFamily="@font/montserrat_alternates_bold"
+            android:textColor="@color/white"/>
 
     </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

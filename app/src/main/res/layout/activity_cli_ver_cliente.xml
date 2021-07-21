@@ -82,7 +82,7 @@
 
                         <android.widget.Button
                             android:id="@+id/btn_EditarClienteVer"
-                            android:layout_width="152dp"
+                            android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:background="@drawable/btncrear"
                             android:fontFamily="@font/montserrat_alternates_bold"
@@ -98,9 +98,9 @@
 
                         <android.widget.Button
                             android:id="@+id/btn_MascotasClienteVer"
-                            android:layout_width="152dp"
+                            android:layout_width="150dp"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/btncancelar"
+                            android:background="@drawable/btncrear"
                             android:fontFamily="@font/montserrat_alternates_bold"
                             android:onClick="verMascotas"
                             android:text="MASCOTAS"
@@ -127,7 +127,6 @@
                             android:id="@+id/txtCedulaClienteVer"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/montserrat_alternates"
                             android:hint="Número de cedula"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
@@ -160,7 +159,6 @@
                                 android:id="@+id/txtApellidoClienteVer"
                                 android:layout_width="164dp"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/montserrat_alternates"
                                 android:hint="Apellido"
                                 android:textColor="@color/black"
                                 android:textSize="18sp" />
@@ -169,7 +167,6 @@
                                 android:id="@+id/txtNombreClienteVer"
                                 android:layout_width="164dp"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/montserrat_alternates"
                                 android:hint="Nombre"
                                 android:textColor="@color/black"
                                 android:textSize="18sp" />
@@ -197,7 +194,6 @@
                             android:id="@+id/txtWhastAppClienteVer"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/montserrat_alternates"
                             android:hint="WhatsApp"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
@@ -221,7 +217,6 @@
                             android:id="@+id/txtDireccionClienteVer"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/montserrat_alternates"
                             android:hint="Dirección"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
