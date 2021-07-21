@@ -83,7 +83,8 @@
                         android:ems="12"
                         android:hint="Cliente buscar"
                         android:layout_gravity="center"
-                        android:inputType="textPersonName" />
+                        android:inputType="textPersonName"
+                        android:backgroundTint="@color/primario"/>
 
                     <android.widget.Button
                         android:id="@+id/btn_BuscarCliente"
@@ -110,9 +111,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:layout_marginBottom="20dp"
-                    android:background="@drawable/tarjetalistview"
-                    android:backgroundTint="@color/primario"
-                    android:cacheColorHint="#FFFFFF" />
+                    android:background="@drawable/tarjetalistview" />
 
 
             </LinearLayout>
@@ -130,6 +129,9 @@
                 android:onClick="volver"
                 android:text="VOLVER"
                 android:textColor="@color/white" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

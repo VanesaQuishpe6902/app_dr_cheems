@@ -5,64 +5,157 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".mas_editar_mascota">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp"
-        android:padding="20dp">
+        android:padding="20dp"
+        android:background="@color/papeltapiz">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@drawable/bg_card_login">
 
         <TextView
             android:id="@+id/textView27"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Editar información de la mascota"
-            android:textSize="34sp"/>
+            android:fontFamily="@font/montserrat_alternates_bold"
+            android:gravity="center"
+            android:hapticFeedbackEnabled="false"
+            android:paddingBottom="20dp"
+            android:textColor="@color/primario"
+            android:textSize="28sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="15dp">
+
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/bienvenida"
+                android:layout_marginRight="5dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="15dp"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:id="@+id/textView28"
+                            android:layout_width="74dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="ID:   "
+                            android:textSize="16sp"
+                            android:fontFamily="@font/montserrat_alternates"
+                            />
+
+                        <TextView
+                            android:id="@+id/txtIdMascotaEditar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="id"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"/>
+                    </LinearLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/textView70"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre de la mascota: " />
+
+                    <EditText
+                        android:id="@+id/inputNombreMascotaEditar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nombre de la mascota"
+                        android:fontFamily="@font/montserrat_alternates"
+                        android:backgroundTint="@color/primario"
+                        android:textColor="@color/black"
+                        android:inputType="textPersonName"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="15sp">
+
+        <TextView
+            android:id="@+id/inputTipoMascotaEditar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tipo de mascota:"
+            android:textSize="16sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView28"
-                android:layout_width="74dp"
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="id:"
-                android:textSize="18sp"/>
+                android:text="Perro"
+                android:textColor="@color/primario"
+                android:textSize="18sp"
+                app:buttonTint="@color/primario"/>
 
-            <TextView
-                android:id="@+id/txtIdMascotaEditar"
-                android:layout_width="match_parent"
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="id"
-                android:textSize="18sp"/>
+                android:text="Gato"
+                android:textColor="@color/primario"
+                android:textSize="18sp"
+                app:buttonTint="@color/primario"/>
+
+            <CheckBox
+                android:id="@+id/checkBox3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Otro"
+                android:textColor="@color/primario"
+                android:textSize="18sp"
+                app:buttonTint="@color/primario"/>
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/inputNicknameMascotaEditar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="nickname"
-            android:textSize="18sp"/>
-
-        <TextView
-            android:id="@+id/inputNombreMascotaEditar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="nombre"
-            android:textSize="18sp"/>
-
-        <TextView
-            android:id="@+id/inputTipoMascotaEditar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="tipo"
-            android:textSize="18sp"/>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -73,11 +166,12 @@
 
             <TextView
                 android:id="@+id/txtFechaNacimientoMascotaEditar"
-                android:layout_width="159dp"
+                android:layout_width="164dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:text="Fecha de nacimiento:"
-                android:textSize="18sp"
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat_alternates"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -85,11 +179,12 @@
             <Button
                 android:id="@+id/btn_FechaNacimientoMascotaEditar"
                 style="?android:spinnerStyle"
-                android:layout_width="154dp"
+                android:layout_width="164dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center_vertical"
                 android:text="01-01-2021"
+                android:fontFamily="@font/montserrat_alternates"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -97,23 +192,58 @@
                 app:layout_constraintTop_toBottomOf="@+id/txtFechaNacimientoMascotaEditar" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
         <TextView
+            android:id="@+id/textView71"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rasgos de la mascota:"
+            android:fontFamily="@font/montserrat_alternates"
+            android:textSize="16sp"/>
+
+        <EditText
             android:id="@+id/inputRasgosMascotaEditar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="rasgos"
-            android:textSize="18sp"/>
-
-        <Button
+            android:hint="Descripción de la mascota"
+            android:backgroundTint="@color/primario"
+            android:textColor="@color/black"
+            android:inputType="textPersonName"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+        <android.widget.Button
             android:id="@+id/btn_ActualizarMascotaEditar"
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="ACTUALIZAR" />
+            android:text="ACTUALIZAR"
+            android:background="@drawable/btncrear"
+            android:fontFamily="@font/montserrat_alternates_bold"
+            android:textColor="@color/white"/>
 
-        <Button
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <android.widget.Button
             android:id="@+id/btn_VolverMascotaEditar"
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="VOLVER" />
+            android:text="VOLVER"
+            android:background="@drawable/btncancelar"
+            android:fontFamily="@font/montserrat_alternates_bold"
+            android:textColor="@color/white"/>
+        </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
