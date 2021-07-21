@@ -89,9 +89,9 @@ public class mas_agregar_mascota extends AppCompatActivity {
             String last_ci = clienteInfo.getString(1).toString().substring(6, 10);
             nick = last_ci + "-" + nombre;
             if (chbxIsDog.isChecked()) {
-                tipo = "perro";
+                tipo = "canino";
             } else if (chbxIsCat.isChecked()) {
-                tipo = "gato";
+                tipo = "felino";
             } else {
                 tipo = "otro";
             }

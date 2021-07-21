@@ -346,7 +346,7 @@ public class BaseDatos extends SQLiteOpenHelper {
     public boolean actualizarMascota(String id, String nick, String nombre, String tipo, String fecha_nac, String rasgos) {
         SQLiteDatabase db = getWritableDatabase();
         if (db != null) {
-            String updateMascota = "UPDATE cliente " +
+            String updateMascota = "UPDATE mascota " +
                     "SET nick_mas = '" + nick + "'," +
                     " nombre_mas = '" + nombre + "' ," +
                     " tipo_mas = '" + tipo + "' ," +

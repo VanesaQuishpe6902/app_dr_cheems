@@ -47,12 +47,7 @@ public class mas_ver_mascota extends AppCompatActivity {
         if (parametrosExtra != null) {
             try {
                 idMas = parametrosExtra.getString("idMas");
-                datosMascota = bdd.verMascota(idMas);
-                txtNickMascotaVer.setText(datosMascota.getString(1));
-                txtNombreMascotaVer.setText(datosMascota.getString(2));
-                txtTipoMascotaVer.setText(datosMascota.getString(3));
-                txtFechaNacimientoMascotaVer.setText(datosMascota.getString(4));
-                txtRasgosMascotaVer.setText(datosMascota.getString(5));
+                obtenerDatosMascota();
 //                Toast.makeText(this, "ID mas:" + idMas, Toast.LENGTH_SHORT).show();
 
             } catch (Exception ex) {
@@ -60,6 +55,22 @@ public class mas_ver_mascota extends AppCompatActivity {
 
             }
         }
+    }
+
+    private void obtenerDatosMascota() {
+        datosMascota = bdd.verMascota(idMas);
+        txtNickMascotaVer.setText(datosMascota.getString(1));
+        txtNombreMascotaVer.setText(datosMascota.getString(2));
+        txtTipoMascotaVer.setText(datosMascota.getString(3));
+        txtFechaNacimientoMascotaVer.setText(datosMascota.getString(4));
+        txtRasgosMascotaVer.setText(datosMascota.getString(5));
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        obtenerDatosMascota();
+
     }
 
     public void editarMascota(View vista) {
