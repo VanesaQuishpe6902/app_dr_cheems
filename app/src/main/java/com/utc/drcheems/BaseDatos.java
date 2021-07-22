@@ -48,7 +48,7 @@ public class BaseDatos extends SQLiteOpenHelper {
             "fk_id_cli INTEGER," +
             "FOREIGN KEY (fk_id_cli) REFERENCES cliente (id_cli));";
 
-    private static final String tablaCita = " CREATE TABLE cite(" +
+    private static final String tablaCita = " CREATE TABLE cita(" +
             "id_cit INTEGER PRIMARY KEY AUTOINCREMENT," +
             "fecha_cit DATETIME," +
             "servicio_cit TEXT," +
@@ -413,6 +413,21 @@ public class BaseDatos extends SQLiteOpenHelper {
                 "INNER JOIN usuario ON usuario.id_usu = cliente.fk_id_usu " +
                 "WHERE usuario.id_usu = '" + id_usu + "' " +
                 "AND cita.fecha_cit LIKE '%" + fecha + "%' ";
+        Cursor citas = db.rawQuery(sql, null);
+        if (citas.moveToFirst()) {//verificando que el objeto usuario tenga resultados
+            return citas; //retornamos datos encontrados
+        } else {
+            //Nose encuentra el usuario ..Porque no eexiste el email y congtrase{a
+            return null;
+        }
+
+    }
+
+    public Cursor listarCitaPorFechaMascota(String id_mas, String fecha_criterio) {
+        SQLiteDatabase db = getReadableDatabase(); //Llamando a la base de datos
+        String sql = "SELECT * FROM cita " +
+                "WHERE fk_id_mas = '" + id_mas + "' " +
+                "AND fecha_cit LIKE '%" + fecha_criterio + "%' ";
         Cursor citas = db.rawQuery(sql, null);
         if (citas.moveToFirst()) {//verificando que el objeto usuario tenga resultados
             return citas; //retornamos datos encontrados

@@ -230,6 +230,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:fontFamily="@font/montserrat_alternates"
+                            android:onClick="OpenDatePickerBuscarCitaCliente"
                             android:text="01-01-2021"
                             android:textColor="@color/black"
                             android:textSize="18sp"
@@ -242,10 +243,12 @@
                             android:layout_height="50dp"
                             android:backgroundTint="@color/primario"
                             android:drawableTop="@android:drawable/ic_menu_search"
+                            android:onClick="buscarCitasCliente"
                             android:textColorHighlight="@color/primario" />
                     </LinearLayout>
 
                     <ListView
+                        android:id="@+id/lstCitas"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:background="@drawable/tarjetalistview" />
