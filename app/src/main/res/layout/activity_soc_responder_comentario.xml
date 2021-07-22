@@ -5,84 +5,188 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".soc_responder_comentario">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp"
-        android:padding="20dp">
+        android:padding="20dp"
+        android:background="@color/papeltapiz">
 
         <TextView
             android:id="@+id/textView7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Responder comentario"
-            android:textSize="34sp"/>
+            android:text="Comentarios de la web"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/montserrat_alternates_bold"
+            android:gravity="center"
+            android:textColor="@color/primario"
+            android:textSize="28dp"/>
 
-        <TextView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@drawable/bg_card_login">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="15dp">
+
+            <TextView
+                android:id="@+id/textView74"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Fecha:"
+                android:fontFamily="@font/montserrat_alternates"
+                android:textSize="16sp"/>
+
+            <TextView
             android:id="@+id/txtFechaResponder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Fecha"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+                android:textColor="@color/black"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="15dp">
+            <TextView
+                android:id="@+id/textView75"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Nombre:"
+                android:fontFamily="@font/montserrat_alternates"
+                android:textSize="16sp"/>
 
-        <TextView
+            <TextView
             android:id="@+id/txtNombreResponder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nombre"
+                android:textColor="@color/black"
             android:textSize="18sp"/>
+            </LinearLayout>
 
-        <TextView
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="15dp">
+            <TextView
+                android:id="@+id/textView76"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Celular:"
+                android:fontFamily="@font/montserrat_alternates"
+                android:textSize="16sp"/>
+
+            <TextView
             android:id="@+id/txtWhatsAppResponder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="WhatsApp"
+                android:textColor="@color/black"
             android:textSize="18sp"/>
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/txtComentarioResponder"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Comentario"
-            android:textSize="18sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:orientation="vertical"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:id="@+id/txtComentarioResponder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_alternates"
+                    android:text="Comentario:"
+                    android:textSize="16sp" />
 
 
-        <TextView
-            android:id="@+id/txtComentarioObtenidoWeb"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="comentario traido de la app web"
-            android:textSize="18sp"
-            android:gravity="center"/>
-
+                <TextView
+                    android:id="@+id/txtComentarioObtenidoWeb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="comentario traido de la app web"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:orientation="vertical"
+                android:paddingBottom="15dp">
         <TextView
             android:id="@+id/textView66"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Responder"
-            android:textSize="18sp"/>
+            android:text="Responder:"
+            android:fontFamily="@font/montserrat_alternates"
+            android:textSize="16sp"/>
 
         <EditText
             android:id="@+id/inputResponderComentario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:backgroundTint="@color/primario"
             android:inputType="textPersonName"
+            android:textColor="@color/black"
              />
+            </LinearLayout>
 
-        <Button
-            android:id="@+id/btn_ResponderCometario"
+
+
+
+        </LinearLayout>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Responder" />
+            android:orientation="horizontal"
+            android:paddingBottom="20dp">
+            <android.widget.Button
+                android:id="@+id/btn_VolverResponderComentario"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Volver"
+                android:fontFamily="@font/montserrat_alternates_bold"
+                android:background="@drawable/btncancelar"
+                android:textColor="@color/white"/>
 
-        <Button
-            android:id="@+id/btn_VolverResponderComentario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Volver" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1" />
+
+            <android.widget.Button
+                android:id="@+id/btn_ResponderCometario"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Responder"
+                android:fontFamily="@font/montserrat_alternates_bold"
+                android:background="@drawable/btncrear"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
     </LinearLayout>
+</ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
