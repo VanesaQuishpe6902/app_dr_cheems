@@ -100,7 +100,7 @@
                             android:id="@+id/btn_MascotasClienteVer"
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/tarjetapagina"
+                            android:background="@drawable/btn_vermascota"
                             android:fontFamily="@font/montserrat_alternates_bold"
                             android:onClick="verMascotas"
                             android:text="VER MASCOTAS"

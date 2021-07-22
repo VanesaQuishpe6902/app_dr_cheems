@@ -100,7 +100,7 @@
                         android:layout_width="160dp"
                         android:layout_height="wrap_content"
                         android:text="respondidos"
-                        android:background="@drawable/tarjetacitas"
+                        android:background="@drawable/btn_respondidos"
                         android:fontFamily="@font/montserrat_alternates_bold"
                         android:textColor="@color/white"/>
 
@@ -114,7 +114,7 @@
                         android:layout_width="160dp"
                         android:layout_height="wrap_content"
                         android:text="Sin responder"
-                        android:background="@drawable/tarjetacliente"
+                        android:background="@drawable/btn_sinresponder"
                         android:fontFamily="@font/montserrat_alternates_bold"
                         android:textColor="@color/white"/>
                     <Space
@@ -127,7 +127,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Todos"
-                        android:background="@drawable/tarjetacitas"
+                        android:background="@drawable/btn_vermascota"
                         android:fontFamily="@font/montserrat_alternates_bold"
                         android:textColor="@color/white"/>
 

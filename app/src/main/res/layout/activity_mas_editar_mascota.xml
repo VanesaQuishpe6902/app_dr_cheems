@@ -123,43 +123,103 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <RadioGroup
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp">
 
-                            <RadioButton
-                                android:id="@+id/chbxEditarTipoDog"
-                                android:layout_width="wrap_content"
+                            <RadioGroup
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="Perro"
-                                android:textColor="@color/primario"
-                                android:textSize="18sp"
-                                app:buttonTint="@color/primario" />
+                                android:orientation="horizontal">
 
-                            <RadioButton
-                                android:id="@+id/chbxEditarTipoCat"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="Gato"
-                                android:textColor="@color/primario"
-                                android:textSize="18sp"
-                                app:buttonTint="@color/primario" />
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
 
-                            <RadioButton
-                                android:id="@+id/chbxEditarTipoOther"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="Otro"
-                                android:textColor="@color/primario"
-                                android:textSize="18sp"
-                                app:buttonTint="@color/primario" />
-                        </RadioGroup>
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        app:srcCompat="@drawable/bienvenida"></ImageView>
+
+                                    <RadioButton
+                                        android:id="@+id/chbxEditarTipoDog"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="10dp"
+                                        android:text="Perro"
+                                        android:fontFamily="@font/montserrat_alternates"
+                                        android:textColor="@color/primario"
+                                        android:textSize="18sp"
+                                        app:buttonTint="@color/primario"></RadioButton>
+                                </LinearLayout>
+
+                                <Space
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        app:srcCompat="@drawable/bienvenida"></ImageView>
+
+                                    <RadioButton
+                                        android:id="@+id/chbxEditarTipoCat"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="10dp"
+                                        android:text="Gato"
+                                        android:textColor="@color/primario"
+                                        android:textSize="18sp"
+                                        android:fontFamily="@font/montserrat_alternates"
+                                        app:buttonTint="@color/primario"></RadioButton>
+                                </LinearLayout>
+
+                                <Space
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        app:srcCompat="@drawable/bienvenida"></ImageView>
+
+                                    <RadioButton
+                                        android:id="@+id/chbxEditarTipoOther"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="10dp"
+                                        android:text="Otro"
+                                        android:textColor="@color/primario"
+                                        android:textSize="18sp"
+                                        android:fontFamily="@font/montserrat_alternates"
+                                        app:buttonTint="@color/primario"></RadioButton>
+                                </LinearLayout>
+                            </RadioGroup>
+                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -190,6 +250,8 @@
                         android:gravity="center_vertical"
                         android:onClick="OpenDatePickerFechaNacimiento"
                         android:text="01-01-2021"
+                        android:ems="12"
+                        android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="18sp"
                         app:layout_constraintLeft_toLeftOf="parent"
@@ -228,6 +290,19 @@
                     android:orientation="horizontal">
 
                     <android.widget.Button
+                        android:id="@+id/btn_VolverMascotaEditar"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btncancelar"
+                        android:fontFamily="@font/montserrat_alternates_bold"
+                        android:onClick="volver"
+                        android:text="VOLVER"
+                        android:textColor="@color/white" />
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                    <android.widget.Button
                         android:id="@+id/btn_ActualizarMascotaEditar"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
@@ -237,20 +312,7 @@
                         android:text="ACTUALIZAR"
                         android:textColor="@color/white" />
 
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
 
-                    <android.widget.Button
-                        android:id="@+id/btn_VolverMascotaEditar"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/btncancelar"
-                        android:fontFamily="@font/montserrat_alternates_bold"
-                        android:onClick="volver"
-                        android:text="VOLVER"
-                        android:textColor="@color/white" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

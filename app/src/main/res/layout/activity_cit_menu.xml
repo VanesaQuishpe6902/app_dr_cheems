@@ -84,6 +84,8 @@
                 android:background="@drawable/tarjetahora"
                 android:fontFamily="@font/montserrat_alternates"
                 android:text="aaaa-mm-dd"
+                android:ems="12"
+                android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 app:backgroundTint="#F9C454"
