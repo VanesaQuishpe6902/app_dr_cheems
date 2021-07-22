@@ -407,7 +407,7 @@ public class BaseDatos extends SQLiteOpenHelper {
     //     Listar citas por dia
     public Cursor listarCitaHoy(String id_usu, String fecha) {
         SQLiteDatabase db = getReadableDatabase(); //Llamando a la base de datos
-        String sql = "SELECT cita.* FROM cita " +
+        String sql = "SELECT * FROM cita " +
                 "INNER JOIN mascota ON mascota.id_mas = cita.fk_id_mas " +
                 "INNER JOIN cliente ON cliente.id_cli = mascota.fk_id_cli " +
                 "INNER JOIN usuario ON usuario.id_usu = cliente.fk_id_usu " +
@@ -453,12 +453,13 @@ public class BaseDatos extends SQLiteOpenHelper {
     }
 
     // Update
-    public boolean actualizarCita(String id, String fecha, String servicio) {
+    public boolean actualizarCita(String id, String fecha, String servicio, String solucion) {
         SQLiteDatabase db = getWritableDatabase();
         if (db != null) {
             String updateCita = "UPDATE cita " +
                     "SET fecha_cit = '" + fecha + "'," +
                     " servicio_cit = '" + servicio + "' ," +
+                    " solucion_cit = '" + solucion + "' " +
                     "WHERE id_cit = '" + id + "'";
             db.execSQL(updateCita);
             db.close();
@@ -467,18 +468,6 @@ public class BaseDatos extends SQLiteOpenHelper {
         return false;
     }
 
-    public boolean solucionCita(String id, String solucion) {
-        SQLiteDatabase db = getWritableDatabase();
-        if (db != null) {
-            String updateCita = "UPDATE cita " +
-                    "SET solucion_cit = '" + solucion + "'," +
-                    "WHERE id_cit = '" + id + "'";
-            db.execSQL(updateCita);
-            db.close();
-            return true;
-        }
-        return false;
-    }
 
     // Delete
     public boolean eliminarCita(String id) {

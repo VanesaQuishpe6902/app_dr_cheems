@@ -52,11 +52,16 @@ public class cit_menu extends AppCompatActivity {
         obtenerCitasHoy();
     }
 
-    public void nuevaCita(View vista) {
-        Intent nuevaCita = new Intent(getApplicationContext(), cit_seleccionar_mascota.class);
-        startActivity(nuevaCita);
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        obtenerCitasHoy();
     }
-    //
+
+    public void abrirNuevaCita(View vista) {
+        Intent irNuevaCita = new Intent(getApplicationContext(), cit_seleccionar_mascota.class);
+        startActivity(irNuevaCita);
+    }
 
     private void obtenerCitasHoy() {
         listaCitas.clear();
@@ -70,7 +75,7 @@ public class cit_menu extends AppCompatActivity {
             do {
                 String str_fecha = datosCitas.getString(1);
                 String[] vec_fecha = str_fecha.split(" ");
-                listaCitas.add("Fecha: " + vec_fecha[0] + " Hora: " + vec_fecha[1]);
+                listaCitas.add(" Hora: " + vec_fecha[1] + " Mascota: " + datosCitas.getString(6));
                 ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listaCitas);
                 lstCitas.setAdapter(adapter);
             } while (datosCitas.moveToNext());
@@ -91,10 +96,10 @@ public class cit_menu extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 datosCitas.moveToPosition(position);
-//                Intent verCita = new Intent(getApplicationContext(), cli_ver_cliente.class);
-//                verCita.putExtra("idCit", datosCitas.getString(0).toString());
-//                startActivity(verCita);
-                Toast.makeText(cit_menu.this, "ID CIT: " + datosCitas.getString(0), Toast.LENGTH_SHORT).show();
+                Intent verCita = new Intent(getApplicationContext(), cit_ver_citas.class);
+                verCita.putExtra("idCit", datosCitas.getString(0).toString());
+                startActivity(verCita);
+//                Toast.makeText(cit_menu.this, "ID CIT: " + datosCitas.getString(0), Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -110,7 +115,7 @@ public class cit_menu extends AppCompatActivity {
                 do {
                     String str_fecha = datosCitas.getString(1);
                     String[] vec_fecha = str_fecha.split(" ");
-                    listaCitas.add("Fecha: " + vec_fecha[0] + " Hora: " + vec_fecha[1]);
+                    listaCitas.add(" Hora: " + vec_fecha[1] + " Mascota: " + datosCitas.getString(6));
                     ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listaCitas);
                     lstCitas.setAdapter(adapter);
                 } while (datosCitas.moveToNext());

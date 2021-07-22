@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/btncrear"
             android:fontFamily="@font/montserrat_alternates_bold"
-            android:onClick="nuevaCita"
+            android:onClick="abrirNuevaCita"
             android:text="Nueva cita"
             android:textColor="@color/white" />
     </LinearLayout>

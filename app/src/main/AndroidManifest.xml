@@ -30,6 +30,7 @@
         <activity android:name=".cli_editar_cliente" />
         <activity android:name=".cli_ver_cliente" />
         <activity android:name=".cli_agregar_cliente" />
+        <activity android:name=".cit_seleccionar_mascota" />
         <activity android:name=".cli_menu" />
         <activity android:name=".Login" />
         <activity android:name=".Dashboard" />

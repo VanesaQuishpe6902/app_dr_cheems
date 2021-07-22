@@ -186,6 +186,7 @@
                                 android:id="@+id/button13"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:onClick="volver"
                                 android:text="Revisión Odontológica" />
 
                             <Button
@@ -229,6 +230,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/btncrear"
                         android:fontFamily="@font/montserrat_alternates_bold"
+                        android:onClick="registrarCita"
                         android:text="agregar"
                         android:textColor="@color/white" />
                 </LinearLayout>
