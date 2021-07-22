@@ -15,99 +15,30 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
-        android:padding="20dp"
         android:background="@color/papeltapiz">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="20dp"
-            android:background="@drawable/bg_card_login">
-
-        <TextView
-            android:id="@+id/textView59"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Navegador web"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
-            android:fontFamily="@font/montserrat_alternates_bold"
-            android:gravity="center"
-            android:textColor="@color/primario"
-            android:textSize="28dp"
-            />
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <EditText
-                android:id="@+id/txtUrl"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:backgroundTint="@color/primario"
-                android:ems="12"
-                android:hint="Ingrese una Url"
-                android:inputType="textPersonName" />
-
-            <android.widget.Button
-                android:id="@+id/btn_BuscarWeb"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:backgroundTint="@color/primario"
-                android:drawableTop="@android:drawable/ic_menu_search"
-                android:textColorHighlight="@color/primario" />
-
-        </LinearLayout>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="15dp" />
-
         <android.widget.Button
-            android:id="@+id/button7"
+            android:id="@+id/button8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/btncrear"
+            android:text="VOLVER"
             android:fontFamily="@font/montserrat_alternates_bold"
-            android:onClick="BuscarPaginaWeb"
-            android:text="Buscar"
-            android:textColor="@color/white" />
+            android:background="@drawable/btncancelar"
+            android:textColor="@color/white"/>
         <Space
             android:layout_width="match_parent"
-            android:layout_height="15dp" />
+            android:layout_height="15dp"
+            android:layout_weight="1" />
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-            <WebView
-                android:id="@+id/webView"
-                android:layout_width="match_parent"
-                android:layout_height="280dp"
-                android:background="@drawable/bg_card_login" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="15dp" />
 
-            <android.widget.Button
-                android:id="@+id/button8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="VOLVER"
-                android:fontFamily="@font/montserrat_alternates_bold"
-                android:background="@drawable/btncancelar"
-                android:textColor="@color/white"/>
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="15dp" />
 
-        </LinearLayout>
+
+
+
     </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
