@@ -170,36 +170,41 @@
                                 android:id="@+id/button9"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:onClick="opRapBtn1"
                                 android:text="Vanuca mensual" />
 
                             <Button
                                 android:id="@+id/button14"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:onClick="opRapBtn2"
                                 android:text="Desparacitación" />
 
                             <Button
                                 android:id="@+id/button10"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:onClick="opRapBtn3"
                                 android:text="Tratamiento Vitamínico" />
 
                             <Button
                                 android:id="@+id/button13"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:onClick="volver"
+                                android:onClick="opRapBtn4"
                                 android:text="Revisión Odontológica" />
 
                             <Button
                                 android:id="@+id/button11"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:onClick="opRapBtn5"
                                 android:text="Revisión Post-operatorio" />
 
                             <Button
                                 android:id="@+id/button12"
                                 android:layout_width="match_parent"
+                                android:onClick="opRapBtn6"
                                 android:layout_height="wrap_content"
                                 android:text="Revisión Post-Esterilización" />
                         </LinearLayout>

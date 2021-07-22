@@ -161,6 +161,23 @@ public class mas_editar_mascota extends AppCompatActivity {
         return Pattern.matches(".*[ a-zA-Z-ñÑáéíóúÁÉÍÓÚ].*", word) && !Pattern.matches(".*[0-9].*", word);
     }
 
+    public void selectDog(View vista) {
+        chbxEditarTipoDog.setChecked(true);
+        chbxEditarTipoCat.setChecked(false);
+        chbxEditarTipoOther.setChecked(false);
+    }
+
+    public void selectCat(View vista) {
+        chbxEditarTipoDog.setChecked(false);
+        chbxEditarTipoCat.setChecked(true);
+        chbxEditarTipoOther.setChecked(false);
+    }
+
+    public void selectOther(View vista) {
+        chbxEditarTipoDog.setChecked(false);
+        chbxEditarTipoCat.setChecked(false);
+        chbxEditarTipoOther.setChecked(true);
+    }
 
     public void volver(View vista) {
         finish();

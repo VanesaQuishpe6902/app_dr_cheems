@@ -163,14 +163,16 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:paddingBottom="20dp">
+
             <android.widget.Button
                 android:id="@+id/btn_VolverResponderComentario"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="Volver"
-                android:fontFamily="@font/montserrat_alternates_bold"
                 android:background="@drawable/btncancelar"
-                android:textColor="@color/white"/>
+                android:fontFamily="@font/montserrat_alternates_bold"
+                android:onClick="volver"
+                android:text="Volver"
+                android:textColor="@color/white" />
 
             <Space
                 android:layout_width="wrap_content"

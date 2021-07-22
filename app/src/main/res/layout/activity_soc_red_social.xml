@@ -5,158 +5,180 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".soc_red_social">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
-        android:background="@color/primario">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="163dp"
-            android:background="@color/white"
-            android:orientation="horizontal"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp">
-
-            <ImageView
-                android:id="@+id/imageView15"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                app:srcCompat="@drawable/bienvenida" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textView24"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/montserrat_alternates_bold"
-                    android:text="Red Social"
-                    android:textAlignment="center"
-                    android:textColor="@color/primario"
-                    android:textSize="28sp" />
-
-                <TextView
-                    android:id="@+id/textView33"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/montserrat_alternates_bold"
-                    android:gravity="center"
-                    android:text="Dr.Cheems"
-                    android:textColor="@color/boton1"
-                    android:textSize="28sp" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_wave2" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/primario"
             android:orientation="vertical"
-            android:padding="20dp">
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="163dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView15"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    app:srcCompat="@drawable/bienvenida" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_alternates_bold"
+                        android:text="Red Social"
+                        android:textAlignment="center"
+                        android:textColor="@color/primario"
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:id="@+id/textView33"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_alternates_bold"
+                        android:gravity="center"
+                        android:text="Dr.Cheems"
+                        android:textColor="@color/boton1"
+                        android:textSize="28sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_wave2" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:padding="20dp"
-                android:background="@drawable/bg_card_login">
-                <HorizontalScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:layout_marginBottom="20dp">
+                android:padding="20dp">
+
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:background="@color/white"
-                    >
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_card_login"
+                    android:orientation="vertical"
+                    android:padding="20dp">
 
-                    <android.widget.Button
-                        android:id="@+id/btn_RespondidoRedSocial"
-                        android:layout_width="160dp"
-                        android:layout_height="wrap_content"
-                        android:text="respondidos"
-                        android:background="@drawable/btn_respondidos"
-                        android:fontFamily="@font/montserrat_alternates_bold"
-                        android:textColor="@color/white"/>
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginBottom="20dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="horizontal">
+
+                            <android.widget.Button
+                                android:id="@+id/btn_TodosRedSocial"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_vermascota"
+                                android:fontFamily="@font/montserrat_alternates_bold"
+                                android:text="Todos"
+                                android:textColor="@color/white" />
+
+                            <Space
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <android.widget.Button
+                                android:id="@+id/btn_RespondidoRedSocial"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_respondidos"
+                                android:fontFamily="@font/montserrat_alternates_bold"
+                                android:text="respondidos"
+                                android:textColor="@color/white" />
+
+                            <Space
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <android.widget.Button
+                                android:id="@+id/btn_SinResponderRedSocial"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_sinresponder"
+                                android:fontFamily="@font/montserrat_alternates_bold"
+                                android:text="Sin responder"
+                                android:textColor="@color/white" />
+
+                            <Space
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <android.widget.Button
+                                android:id="@+id/btn_Prueba"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_respondidos"
+                                android:fontFamily="@font/montserrat_alternates_bold"
+                                android:onClick="verComentario"
+                                android:text="Ir a comentario"
+                                android:textColor="@color/white" />
+
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/tarjetalistview" />
 
                     <Space
-                        android:layout_width="20dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp" />
 
                     <android.widget.Button
-                        android:id="@+id/btn_SinResponderRedSocial"
-                        android:layout_width="160dp"
-                        android:layout_height="wrap_content"
-                        android:text="Sin responder"
-                        android:background="@drawable/btn_sinresponder"
-                        android:fontFamily="@font/montserrat_alternates_bold"
-                        android:textColor="@color/white"/>
-                    <Space
-                        android:layout_width="20dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <android.widget.Button
-                        android:id="@+id/btn_TodosRedSocial"
+                        android:id="@+id/bnt_VolverRedSocial"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Todos"
-                        android:background="@drawable/btn_vermascota"
+                        android:background="@drawable/btncancelar"
                         android:fontFamily="@font/montserrat_alternates_bold"
-                        android:textColor="@color/white"/>
-
+                        android:onClick="volver"
+                        android:text="VOLVER"
+                        android:textColor="@color/white" />
                 </LinearLayout>
-            </HorizontalScrollView>
-
-
-                <ListView
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:background="@drawable/tarjetalistview"/>
 
                 <Space
                     android:layout_width="match_parent"
                     android:layout_height="30dp" />
-
-                <android.widget.Button
-            android:id="@+id/bnt_VolverRedSocial"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="VOLVER"
-                    android:background="@drawable/btncancelar"
-                    android:fontFamily="@font/montserrat_alternates_bold"
-                    android:textColor="@color/white"/>
             </LinearLayout>
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="30dp" />
-    </LinearLayout>
-    </LinearLayout>
+        </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

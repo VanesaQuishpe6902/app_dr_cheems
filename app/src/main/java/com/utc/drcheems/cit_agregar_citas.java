@@ -56,6 +56,30 @@ public class cit_agregar_citas extends AppCompatActivity {
         initTimePicker();
     }
 
+    public void opRapBtn1(View vista) {
+        inputServicioAgregarCita.setText("Vacuna Mensual");
+    }
+
+    public void opRapBtn2(View vista) {
+        inputServicioAgregarCita.setText("Desparacitación");
+    }
+
+    public void opRapBtn3(View vista) {
+        inputServicioAgregarCita.setText("Tratamiento vitamínico");
+    }
+
+    public void opRapBtn4(View vista) {
+        inputServicioAgregarCita.setText("Revisión Odontológica");
+    }
+
+    public void opRapBtn5(View vista) {
+        inputServicioAgregarCita.setText("Revisión Post-Operatoria");
+    }
+
+    public void opRapBtn6(View vista) {
+        inputServicioAgregarCita.setText("Revisión Post-Esterilización");
+    }
+
     public void registrarCita(View vista) {
         String fecha = btn_SeleccionarFechaCitaAgregar.getText().toString(),
                 hora = btn_SeleccionarHoraCitaAgregar.getText().toString(),

@@ -2,7 +2,9 @@ package com.utc.drcheems;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 /*
@@ -19,5 +21,14 @@ public class soc_red_social extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_soc_red_social);
+    }
+
+    public void verComentario(View vista) {
+        Intent irComentario = new Intent(getApplicationContext(), soc_responder_comentario.class);
+        startActivity(irComentario);
+    }
+
+    public void volver(View vista) {
+        finish();
     }
 }
