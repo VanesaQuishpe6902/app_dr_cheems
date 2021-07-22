@@ -52,6 +52,12 @@ public class cit_menu extends AppCompatActivity {
         obtenerCitasHoy();
     }
 
+    public void nuevaCita(View vista) {
+        Intent nuevaCita = new Intent(getApplicationContext(), cit_seleccionar_mascota.class);
+        startActivity(nuevaCita);
+    }
+    //
+
     private void obtenerCitasHoy() {
         listaCitas.clear();
         String fechaHoy = "";

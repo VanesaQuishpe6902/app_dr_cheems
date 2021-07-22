@@ -67,8 +67,6 @@ public class mas_agregar_mascota extends AppCompatActivity {
         chbxIsDog.setChecked(true);
         chbxIsCat.setChecked(false);
         chbxIsOther.setChecked(false);
-
-
     }
 
     public void selectCat(View vista) {

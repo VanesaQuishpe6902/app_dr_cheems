@@ -36,13 +36,15 @@
         android:layout_marginBottom="15dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp">
+
         <android.widget.Button
             android:id="@+id/btn_NuevaCita"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nueva cita"
             android:background="@drawable/btncrear"
             android:fontFamily="@font/montserrat_alternates_bold"
+            android:onClick="nuevaCita"
+            android:text="Nueva cita"
             android:textColor="@color/white" />
     </LinearLayout>
 
