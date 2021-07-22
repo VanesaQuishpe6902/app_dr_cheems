@@ -8,8 +8,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.DrCheems">
-        <activity android:name=".cit_seleccionar_mascota"></activity>
+        android:theme="@style/Theme.DrCheems"
+        android:usesCleartextTraffic="true">
+
+        <activity android:name=".web_api"></activity>
+        <activity android:name=".web_menu" />
         <activity android:name=".usu_cambiar_contrasena" />
         <activity android:name=".usu_registro" />
         <activity android:name=".mas_ver_historial_mascota" />
@@ -43,5 +46,6 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
 </manifest>
