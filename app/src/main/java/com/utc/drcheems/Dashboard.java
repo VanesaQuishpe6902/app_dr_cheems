@@ -67,7 +67,7 @@ public class Dashboard extends AppCompatActivity {
     }
 
     public void irVentanaComentarios(View vista) {
-        Intent ventanaComentarios = new Intent(getApplicationContext(), soc_red_social.class);
+        Intent ventanaComentarios = new Intent(getApplicationContext(), web_menu.class);
         startActivity(ventanaComentarios);
     }
 
