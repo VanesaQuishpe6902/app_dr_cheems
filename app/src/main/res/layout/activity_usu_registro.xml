@@ -205,20 +205,7 @@
                 android:orientation="horizontal"
                 android:paddingBottom="20dp">
 
-            <android.widget.Button
-                android:id="@+id/btn_RegistrarUsuario"
-                android:layout_width="154dp"
-                android:layout_height="wrap_content"
-                android:onClick="registrarUsuario"
-                android:fontFamily="@font/montserrat_alternates_bold"
-                android:text="registrar"
-                android:textColor="@color/white"
-                android:background="@drawable/btncrear"/>
 
-                <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
 
                 <android.widget.Button
                 android:id="@+id/btn_VolverRegistro"
@@ -229,6 +216,20 @@
                     android:textColor="@color/white"
                     android:background="@drawable/btncancelar"
                     android:fontFamily="@font/montserrat_alternates_bold"/>
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+                <android.widget.Button
+                    android:id="@+id/btn_RegistrarUsuario"
+                    android:layout_width="154dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="registrarUsuario"
+                    android:fontFamily="@font/montserrat_alternates_bold"
+                    android:text="registrar"
+                    android:textColor="@color/white"
+                    android:background="@drawable/btncrear"/>
+
 
             </LinearLayout>
 
