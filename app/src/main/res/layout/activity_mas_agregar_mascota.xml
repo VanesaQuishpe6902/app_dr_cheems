@@ -52,7 +52,7 @@
                         android:layout_height="120dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginRight="5dp"
-                        app:srcCompat="@drawable/bienvenida" />
+                        app:srcCompat="@drawable/mascotas2" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -126,7 +126,7 @@
                                     <ImageView
                                         android:layout_width="80dp"
                                         android:layout_height="80dp"
-                                        app:srcCompat="@drawable/bienvenida"></ImageView>
+                                        app:srcCompat="@drawable/dog"></ImageView>
 
                                     <RadioButton
                                         android:id="@+id/chbxIsDog"
@@ -157,7 +157,7 @@
                                     <ImageView
                                         android:layout_width="80dp"
                                         android:layout_height="80dp"
-                                        app:srcCompat="@drawable/bienvenida"></ImageView>
+                                        app:srcCompat="@drawable/cat"></ImageView>
 
                                     <RadioButton
                                         android:id="@+id/chbxIsCat"
@@ -188,7 +188,7 @@
                                     <ImageView
                                         android:layout_width="80dp"
                                         android:layout_height="80dp"
-                                        app:srcCompat="@drawable/bienvenida"></ImageView>
+                                        app:srcCompat="@drawable/other"></ImageView>
 
                                     <RadioButton
                                         android:id="@+id/chbxIsOther"

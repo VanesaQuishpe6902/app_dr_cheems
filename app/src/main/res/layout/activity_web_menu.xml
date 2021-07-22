@@ -44,7 +44,8 @@
                     android:orientation="vertical"
                     android:padding="20dp"
                     android:background="@drawable/tarjetapagina"
-                    android:backgroundTint="#EEC0C2">
+                    android:backgroundTint="#98DBAF"
+                    >
 
                     <TextView
                         android:id="@+id/textView34"
@@ -63,7 +64,7 @@
                         android:layout_width="120dp"
                         android:layout_height="150dp"
                         android:layout_gravity="center_horizontal"
-                        tools:srcCompat="@tools:sample/avatars" />
+                        app:srcCompat="@drawable/bienvenida" />
                 </LinearLayout>
 
                 <Space
@@ -77,7 +78,8 @@
                     android:orientation="vertical"
                     android:padding="20dp"
                     android:background="@drawable/tarjetapagina"
-                    android:backgroundTint="#98DBAF">
+
+                    android:backgroundTint="#EEC0C2">
 
                     <TextView
                         android:id="@+id/textView35"
@@ -96,7 +98,7 @@
                         android:layout_width="120dp"
                         android:layout_height="150dp"
                         android:layout_gravity="center_horizontal"
-                        tools:srcCompat="@tools:sample/avatars" />
+                        app:srcCompat="@drawable/comentarios" />
                 </LinearLayout>
 
             </LinearLayout>
