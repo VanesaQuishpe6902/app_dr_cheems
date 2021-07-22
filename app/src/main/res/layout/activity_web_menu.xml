@@ -41,11 +41,11 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/tarjetapagina"
-                    android:backgroundTint="#EEC0C2"
-                    android:onClick="comWeb"
                     android:orientation="vertical"
-                    android:padding="20dp">
+                    android:padding="20dp"
+                    android:background="@drawable/tarjetapagina"
+                    android:backgroundTint="#98DBAF"
+                    >
 
                     <TextView
                         android:id="@+id/textView34"
@@ -64,7 +64,7 @@
                         android:layout_width="120dp"
                         android:layout_height="150dp"
                         android:layout_gravity="center_horizontal"
-                        tools:srcCompat="@tools:sample/avatars" />
+                        app:srcCompat="@drawable/bienvenida" />
                 </LinearLayout>
 
                 <Space
@@ -75,11 +75,11 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/tarjetapagina"
-                    android:backgroundTint="#98DBAF"
-                    android:onClick="comAPI"
                     android:orientation="vertical"
-                    android:padding="20dp">
+                    android:padding="20dp"
+                    android:background="@drawable/tarjetapagina"
+
+                    android:backgroundTint="#EEC0C2">
 
                     <TextView
                         android:id="@+id/textView35"
@@ -98,7 +98,7 @@
                         android:layout_width="120dp"
                         android:layout_height="150dp"
                         android:layout_gravity="center_horizontal"
-                        tools:srcCompat="@tools:sample/avatars" />
+                        app:srcCompat="@drawable/comentarios" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -111,11 +111,10 @@
                 android:id="@+id/button6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="VOLVER"
                 android:background="@drawable/btncancelar"
                 android:fontFamily="@font/montserrat_alternates_bold"
-                android:onClick="volver"
-                android:text="VOLVER"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"/>
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

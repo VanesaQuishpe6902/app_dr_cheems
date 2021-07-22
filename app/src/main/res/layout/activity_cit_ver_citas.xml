@@ -21,8 +21,8 @@
             android:layout_height="163dp"
             android:background="@color/white"
             android:orientation="horizontal"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp">
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp">
 
             <ImageView
                 android:id="@+id/imageView15"
@@ -31,7 +31,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                app:srcCompat="@drawable/bienvenida" />
+                app:srcCompat="@drawable/cita" />
 
             <TextView
                 android:id="@+id/textView24"
