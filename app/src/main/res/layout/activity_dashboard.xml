@@ -29,7 +29,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/baloo_chettan"
-                    android:paddingTop="30dp"
                     android:text="Hola, bienvenido de nuevo"
                     android:textColor="@color/primario"
                     android:textSize="24sp" />
@@ -38,12 +37,12 @@
                     android:id="@+id/txtNombreDashboard"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
                     android:fontFamily="@font/baloo_bhai"
+                    android:gravity="center"
                     android:hint="Nombre Usuario"
                     android:textColor="@color/boton1"
                     android:textColorHint="@color/boton1"
-                    android:textSize="32sp" />
+                    android:textSize="34sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -165,13 +164,18 @@
                         </LinearLayout>
                     </HorizontalScrollView>
 
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
                     <TextView
                         android:id="@+id/textView2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/montserrat_alternates"
                         android:paddingBottom="10dp"
-                        android:text="Servicios rápidos"
+                        android:text="Opciones y servicios"
                         android:textColor="@color/boton1"
                         android:textSize="22sp"
                         android:textStyle="bold" />
@@ -209,7 +213,6 @@
                                             android:id="@+id/imageView10"
                                             android:layout_width="50dp"
                                             android:layout_height="50dp"
-                                            android:background="@drawable/btn_md_square_rounded"
                                             android:padding="5dp"
                                             app:srcCompat="@drawable/facebook" />
 
@@ -235,9 +238,8 @@
 
                                         <ImageView
                                             android:id="@+id/imageView11"
-                                            android:layout_width="match_parent"
+                                            android:layout_width="50dp"
                                             android:layout_height="50dp"
-                                            android:background="@drawable/btn_md_square_rounded"
                                             android:padding="5dp"
                                             app:srcCompat="@drawable/whatsapp" />
 
@@ -265,15 +267,14 @@
                                             android:id="@+id/imageView12"
                                             android:layout_width="50dp"
                                             android:layout_height="50dp"
-                                            android:background="@drawable/btn_md_square_rounded"
                                             android:padding="5dp"
-                                            app:srcCompat="@drawable/pinterest" />
+                                            app:srcCompat="@drawable/github" />
 
                                         <TextView
                                             android:id="@+id/textView12"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Pinterest"
+                                            android:text="GitHub"
                                             android:fontFamily="@font/montserrat_alternates"/>
                                     </LinearLayout>
 
