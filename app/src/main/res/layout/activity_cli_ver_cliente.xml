@@ -100,7 +100,7 @@
                             android:id="@+id/btn_MascotasClienteVer"
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/btncrear"
+                            android:background="@drawable/tarjetapagina"
                             android:fontFamily="@font/montserrat_alternates_bold"
                             android:onClick="verMascotas"
                             android:text="VER MASCOTAS"
@@ -116,10 +116,10 @@
 
                         <TextView
                             android:id="@+id/textView39"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/montserrat_alternates"
-                            android:text="CI:   "
+                            android:text="CI:"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
@@ -183,7 +183,7 @@
 
                         <TextView
                             android:id="@+id/textView52"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/montserrat_alternates"
                             android:text="Número de celular:    "
@@ -196,7 +196,8 @@
                             android:layout_height="wrap_content"
                             android:hint="WhatsApp"
                             android:textColor="@color/black"
-                            android:textSize="18sp" />
+                            android:textSize="18sp"
+                            android:layout_gravity="center_vertical"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -207,7 +208,7 @@
 
                         <TextView
                             android:id="@+id/textView53"
-                            android:layout_width="wrap_content"
+                            android:layout_width="100"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/montserrat_alternates"
                             android:text="Dirección:    "

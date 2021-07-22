@@ -70,6 +70,12 @@
             android:orientation="vertical"
             android:padding="20dp">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp">
+
             <TextView
                 android:id="@+id/textView63"
                 android:layout_width="match_parent"
@@ -93,25 +99,25 @@
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
-            <EditText
-                android:id="@+id/inputCorreoLogin"
-                android:layout_width="320dp"
-                android:layout_height="52dp"
-                android:layout_gravity="center"
-                android:background="@drawable/bt_login2"
-                android:drawableLeft="@android:drawable/ic_dialog_email"
-                android:ems="10"
-                android:textColorHint="@color/white"
-                android:textColor="@color/white"
-                android:hint="  Ingrese su correo"
-                android:inputType="textPersonName"
-                android:paddingLeft="20sp"
-                android:layout_marginBottom="20dp"/>
+                <EditText
+                    android:id="@+id/inputCorreoLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/bt_login2"
+                    android:drawableLeft="@android:drawable/ic_dialog_email"
+                    android:ems="10"
+                    android:hint="  Ingrese su correo"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="20sp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
 
-            <EditText
+                <EditText
                 android:id="@+id/inputClaveLogin"
-                android:layout_width="320dp"
-                android:layout_height="52dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:background="@drawable/bt_login2"
                 android:drawableLeft="@android:drawable/ic_lock_idle_lock"
@@ -136,7 +142,7 @@
 
             <android.widget.Button
                 android:id="@+id/button"
-                android:layout_width="320dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/bt_login"
@@ -155,7 +161,7 @@
 
                 <TextView
                     android:id="@+id/textView18"
-                    android:layout_width="164dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/montserrat_alternates"
@@ -166,7 +172,7 @@
 
                 <TextView
                     android:id="@+id/textView21"
-                    android:layout_width="170dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
@@ -178,7 +184,7 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
             </LinearLayout>
-
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
     </ScrollView>

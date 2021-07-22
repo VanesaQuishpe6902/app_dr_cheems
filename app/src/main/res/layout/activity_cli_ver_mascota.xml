@@ -71,8 +71,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:backgroundTint="@color/primario"
                     android:ems="12"
                     android:hint="Buscar mascota"
+                    android:textColor="@color/black"
                     android:inputType="textPersonName" />
 
                 <android.widget.Button

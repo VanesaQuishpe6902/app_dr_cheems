@@ -74,7 +74,7 @@
                     android:orientation="horizontal">
                     <TextView
                         android:id="@+id/textView72"
-                        android:layout_width="wrap_content"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:text="ID:   "
                         android:fontFamily="@font/montserrat_alternates"
@@ -99,7 +99,7 @@
 
             <TextView
                 android:id="@+id/textView34"
-                android:layout_width="164dp"
+                android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:text="Seleccione la fecha para la cita:    "
                 android:fontFamily="@font/montserrat_alternates"
@@ -115,13 +115,15 @@
                         <Button
                             android:id="@+id/btn_SeleccionarFechaMascotaVer"
                             style="?android:spinnerStyle"
-                            android:layout_width="164dp"
-                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center"
-                            android:text="01-01-2021"
+                            android:background="@drawable/tarjetahora"
                             android:fontFamily="@font/montserrat_alternates"
-                            android:textColor="@color/black"
+                            android:text="aaaa-mm-dd"
+                            android:textColor="@color/white"
                             android:textSize="18sp"
+                            app:backgroundTint="#F9C454"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toRightOf="parent" />
 
@@ -186,20 +188,8 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <android.widget.Button
-                        android:id="@+id/button5"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Guardar cambios"
-                        android:background="@drawable/btncrear"
-                        android:fontFamily="@font/montserrat_alternates_bold"
-                        android:textColor="@color/white"/>
 
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+
 
                     <android.widget.Button
             android:id="@+id/btn_VolverCitaVer"
@@ -207,6 +197,20 @@
             android:layout_height="wrap_content"
             android:text="Volver"
                         android:background="@drawable/btncancelar"
+                        android:fontFamily="@font/montserrat_alternates_bold"
+                        android:textColor="@color/white"/>
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                    <android.widget.Button
+                        android:id="@+id/button5"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Guardar cambios"
+                        android:background="@drawable/btncrear"
                         android:fontFamily="@font/montserrat_alternates_bold"
                         android:textColor="@color/white"/>
 

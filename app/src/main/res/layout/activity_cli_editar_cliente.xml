@@ -203,20 +203,7 @@
                 android:orientation="horizontal"
                 android:paddingBottom="20dp">
 
-                <android.widget.Button
-                    android:id="@+id/btn_ActualizarClienteEditar"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:onClick="editarCliente"
-                    android:text="Actualizar"
-                    android:background="@drawable/btncrear"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/montserrat_alternates_bold"/>
 
-                <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
 
                 <android.widget.Button
                     android:id="@+id/btn_CancelarClienteEditar"
@@ -228,7 +215,23 @@
                     android:textColor="@color/white"
                     android:fontFamily="@font/montserrat_alternates_bold"/>
 
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+                <android.widget.Button
+                    android:id="@+id/btn_ActualizarClienteEditar"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="editarCliente"
+                    android:text="Actualizar"
+                    android:background="@drawable/btncrear"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_alternates_bold"/>
+
             </LinearLayout>
+
+
 
 
         </LinearLayout>

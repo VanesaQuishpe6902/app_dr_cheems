@@ -76,10 +76,10 @@
 
                 <TextView
                     android:id="@+id/textView36"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat_alternates"
-                    android:text="Fecha:    "
+                    android:text="Fecha:"
                     android:textSize="16sp" />
 
                 <TextView
@@ -99,9 +99,9 @@
 
             <TextView
                 android:id="@+id/textView38"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="Servicio:     "
+                android:text="Servicio:"
                 android:textSize="16sp"
                 android:fontFamily="@font/montserrat_alternates" />
 
@@ -122,11 +122,11 @@
 
             <TextView
                 android:id="@+id/textView40"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="Solución: "
-                android:textSize="16sp"
-                android:fontFamily="@font/montserrat_alternates"/>
+                android:fontFamily="@font/montserrat_alternates"
+                android:text="Solución:"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/txtSolucionHistorialMas"
