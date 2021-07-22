@@ -313,6 +313,39 @@ public class BaseDatos extends SQLiteOpenHelper {
 
     }
 
+    public Cursor listarMascotasUsuario(String id_usu) {
+        SQLiteDatabase db = getReadableDatabase(); //Llamando a la base de datos
+        String sql = "SELECT * FROM mascota " +
+                "INNER JOIN cliente ON mascota.fk_id_cli = cliente.id_cli " +
+                "INNER JOIN usuario ON cliente.fk_id_usu = usuario.id_usu " +
+                "WHERE usuario.id_usu = '" + id_usu + "'";
+        Cursor mascotas = db.rawQuery(sql, null);
+        if (mascotas.moveToFirst()) {//verificando que el objeto usuario tenga resultados
+            return mascotas; //retornamos datos encontrados
+        } else {
+            //Nose encuentra el usuario ..Porque no eexiste el email y congtrase{a
+            return null;
+        }
+
+    }
+
+    public Cursor listarMascotasUsuarioBuscar(String id_usu, String criterio) {
+        SQLiteDatabase db = getReadableDatabase(); //Llamando a la base de datos
+        String sql = "SELECT * FROM mascota " +
+                "INNER JOIN cliente ON mascota.fk_id_cli = cliente.id_cli " +
+                "INNER JOIN usuario ON cliente.fk_id_usu = usuario.id_usu " +
+                "WHERE usuario.id_usu = '" + id_usu + "' " +
+                "AND mascota.nombre_mas LIKE '%" + criterio + "%' ;";
+        Cursor mascotas = db.rawQuery(sql, null);
+        if (mascotas.moveToFirst()) {//verificando que el objeto usuario tenga resultados
+            return mascotas; //retornamos datos encontrados
+        } else {
+            //Nose encuentra el usuario ..Porque no eexiste el email y congtrase{a
+            return null;
+        }
+
+    }
+
     public Cursor verMascota(String id) {
         SQLiteDatabase db = getReadableDatabase(); //Llamando a la base de datos
         String sql = "SELECT * FROM mascota " +

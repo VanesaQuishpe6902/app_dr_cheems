@@ -81,6 +81,7 @@
                             android:ems="12"
                             android:fontFamily="@font/montserrat_alternates"
                             android:gravity="center_vertical"
+                            android:onClick="OpenDatePickerFecha"
                             android:text="aaaa-mm-dd"
                             android:textAlignment="center"
                             android:textColor="@color/white"
@@ -110,6 +111,7 @@
                             android:ems="12"
                             android:fontFamily="@font/montserrat_alternates"
                             android:gravity="center_vertical"
+                            android:onClick="OpenTimePickerHora"
                             android:text="HH:mm"
                             android:textAlignment="center"
                             android:textColor="@color/white"
@@ -216,6 +218,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/btncancelar"
                         android:fontFamily="@font/montserrat_alternates_bold"
+                        android:onClick="volver"
                         android:text="volver"
                         android:textColor="@color/white" />
 

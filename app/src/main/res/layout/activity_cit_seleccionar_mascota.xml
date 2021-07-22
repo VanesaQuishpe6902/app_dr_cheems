@@ -78,7 +78,7 @@
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <EditText
-                            android:id="@+id/editTextTextPersonName"
+                            android:id="@+id/inputNombreMascotaBuscar"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="10dp"
@@ -105,6 +105,7 @@
                             android:ems="8"
                             android:fontFamily="@font/montserrat_alternates"
                             android:gravity="center_vertical"
+                            android:onClick="obtenerMascotasBuscar"
                             android:text="Buscar"
                             android:textAlignment="center"
                             android:textColor="@color/white"
@@ -135,6 +136,7 @@
                     android:textSize="16sp" />
 
                 <ListView
+                    android:id="@+id/lstMascotasNuevaCitas"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:background="@drawable/tarjetalistview" />
@@ -149,7 +151,7 @@
 
                 <android.widget.Button
                     android:id="@+id/btn_VolverCitaAgregar7"
-                    android:layout_width="150dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/btncancelar"
                     android:fontFamily="@font/montserrat_alternates_bold"
@@ -161,16 +163,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
-
-                <android.widget.Button
-                    android:id="@+id/btn_AgregarCita"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/btncrear"
-                    android:fontFamily="@font/montserrat_alternates_bold"
-                    android:onClick="agredarDatosCita"
-                    android:text="Siguiente"
-                    android:textColor="@color/white" />
 
 
             </LinearLayout>
