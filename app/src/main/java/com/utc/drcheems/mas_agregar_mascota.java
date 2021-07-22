@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
@@ -44,6 +45,7 @@ public class mas_agregar_mascota extends AppCompatActivity {
         chbxIsCat = (RadioButton) findViewById(R.id.chbxIsCat);
         chbxIsOther = (RadioButton) findViewById(R.id.chbxIsOther);
         chbxIsOther.setChecked(true);
+
         //Calendario
         initDatePicker();
         //Llamar Base Datos
@@ -59,6 +61,26 @@ public class mas_agregar_mascota extends AppCompatActivity {
             }
         }
 
+    }
+
+    public void selectDog(View vista) {
+        chbxIsDog.setChecked(true);
+        chbxIsCat.setChecked(false);
+        chbxIsOther.setChecked(false);
+
+
+    }
+
+    public void selectCat(View vista) {
+        chbxIsDog.setChecked(false);
+        chbxIsCat.setChecked(true);
+        chbxIsOther.setChecked(false);
+    }
+
+    public void selectOther(View vista) {
+        chbxIsDog.setChecked(false);
+        chbxIsCat.setChecked(false);
+        chbxIsOther.setChecked(true);
     }
 
     public void registrarMascota(View vista) {
