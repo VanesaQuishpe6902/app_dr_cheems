@@ -94,7 +94,7 @@
                         android:layout_height="wrap_content"
                         android:ems="10"
                         android:fontFamily="@font/montserrat_alternates"
-                        android:hint="tipo de mascota"
+                        android:hint="Tipo de mascota"
                         android:inputType="textPersonName"
                         android:textSize="16sp" />
 
@@ -103,41 +103,100 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <RadioGroup
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp">
 
-                            <RadioButton
-                                android:id="@+id/chbxIsDog"
-                                android:layout_width="106dp"
+                            <RadioGroup
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Perro"
-                                android:textColor="@color/primario"
-                                android:textSize="18sp"
-                                app:buttonTint="@color/primario" />
+                                android:orientation="horizontal">
 
-                            <RadioButton
-                                android:id="@+id/chbxIsCat"
-                                android:layout_width="106dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="Gato"
-                                android:textColor="@color/primario"
-                                android:textSize="18sp"
-                                app:buttonTint="@color/primario" />
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
 
-                            <RadioButton
-                                android:id="@+id/chbxIsOther"
-                                android:layout_width="106dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="Otro"
-                                android:textColor="@color/primario"
-                                android:textSize="18sp"
-                                app:buttonTint="@color/primario" />
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        app:srcCompat="@drawable/bienvenida"></ImageView>
 
-                        </RadioGroup>
+                                    <RadioButton
+                                        android:id="@+id/chbxDog"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="10dp"
+                                        android:text="Perro"
+                                        android:fontFamily="@font/montserrat_alternates"
+                                        android:textColor="@color/primario"
+                                        android:textSize="18sp"
+                                        app:buttonTint="@color/primario"></RadioButton>
+                                </LinearLayout>
+
+                                <Space
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        app:srcCompat="@drawable/bienvenida"></ImageView>
+
+                                    <RadioButton
+                                        android:id="@+id/chbxCat"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="10dp"
+                                        android:text="Gato"
+                                        android:textColor="@color/primario"
+                                        android:textSize="18sp"
+                                        android:fontFamily="@font/montserrat_alternates"
+                                        app:buttonTint="@color/primario"></RadioButton>
+                                </LinearLayout>
+
+                                <Space
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        app:srcCompat="@drawable/bienvenida"></ImageView>
+
+                                    <RadioButton
+                                        android:id="@+id/chbxOther"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="10dp"
+                                        android:text="Otro"
+                                        android:textColor="@color/primario"
+                                        android:textSize="18sp"
+                                        android:fontFamily="@font/montserrat_alternates"
+                                        app:buttonTint="@color/primario"></RadioButton>
+                                </LinearLayout>
+                            </RadioGroup>
+                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -150,7 +209,7 @@
 
                     <TextView
                         android:id="@+id/txtFechaNacimientoMascotaAgregar"
-                        android:layout_width="164dp"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:fontFamily="@font/montserrat_alternates"
@@ -167,12 +226,15 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:ems="12"
-                        android:fontFamily="@font/montserrat_alternates"
+                        android:textAlignment="center"
                         android:gravity="center_vertical"
                         android:onClick="OpenDatePickerFechaNacimiento"
+                        android:background="@drawable/tarjetahora"
+                        android:fontFamily="@font/montserrat_alternates"
                         android:text="aaaa-mm-dd"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="18sp"
+                        app:backgroundTint="#F9C454"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/txtFechaNacimientoMascotaAgregar" />
@@ -209,6 +271,22 @@
                     android:layout_marginBottom="20dp"
                     android:orientation="horizontal">
 
+
+
+                    <android.widget.Button
+                        android:id="@+id/btn_CancelarMascotaAgregar"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btncancelar"
+                        android:fontFamily="@font/montserrat_alternates_bold"
+                        android:onClick="volver"
+                        android:text="Cancelar"
+                        android:textColor="@color/white" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
                     <android.widget.Button
                         android:id="@+id/btn_RegistrarMascotaAgregar"
                         android:layout_width="150dp"
@@ -220,20 +298,7 @@
                         android:textColor="@color/white" />
 
 
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
 
-                    <android.widget.Button
-                        android:id="@+id/btn_CancelarMascotaAgregar"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/btncancelar"
-                        android:fontFamily="@font/montserrat_alternates_bold"
-                        android:onClick="volver"
-                        android:text="Cancelar"
-                        android:textColor="@color/white" />
 
                 </LinearLayout>
 

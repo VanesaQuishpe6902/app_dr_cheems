@@ -43,6 +43,16 @@
                         android:paddingRight="10dp"
                         android:text="Perro"></RadioButton>
                 </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/bienvenida"></ImageView>
 
                 <RadioButton
                     android:layout_width="wrap_content"
@@ -50,15 +60,25 @@
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
                     android:text="Gato"></RadioButton>
-
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:srcCompat="@drawable/bienvenida"></ImageView>
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
                     android:text="Otro"></RadioButton>
+                </LinearLayout>
             </RadioGroup>
         </LinearLayout>
-        >
+
     </HorizontalScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
