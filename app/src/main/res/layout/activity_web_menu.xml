@@ -41,11 +41,11 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp"
                     android:background="@drawable/tarjetapagina"
                     android:backgroundTint="#98DBAF"
-                    >
+                    android:onClick="comWeb"
+                    android:orientation="vertical"
+                    android:padding="20dp">
 
                     <TextView
                         android:id="@+id/textView34"
@@ -75,11 +75,12 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp"
                     android:background="@drawable/tarjetapagina"
+                    android:backgroundTint="#EEC0C2"
+                    android:onClick="comAPI"
 
-                    android:backgroundTint="#EEC0C2">
+                    android:orientation="vertical"
+                    android:padding="20dp">
 
                     <TextView
                         android:id="@+id/textView35"
@@ -111,10 +112,11 @@
                 android:id="@+id/button6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="VOLVER"
                 android:background="@drawable/btncancelar"
                 android:fontFamily="@font/montserrat_alternates_bold"
-                android:textColor="@color/white"/>
+                android:onClick="volver"
+                android:text="VOLVER"
+                android:textColor="@color/white" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
