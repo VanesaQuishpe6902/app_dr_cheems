@@ -134,7 +134,7 @@ public class mas_agregar_mascota extends AppCompatActivity {
         int day = cal.get(Calendar.DAY_OF_MONTH);
         int style = AlertDialog.THEME_DEVICE_DEFAULT_DARK;
         datePickerDialogFechaNacimiento = new DatePickerDialog(this, style, dateSetListener, year, month, day);
-//        datePickerDialogFechaNacimiento.getDatePicker().setMinDate(cal.getTimeInMillis());
+        datePickerDialogFechaNacimiento.getDatePicker().setMaxDate(cal.getTimeInMillis());
     }
 
     public void OpenDatePickerFechaNacimiento(View vista) {

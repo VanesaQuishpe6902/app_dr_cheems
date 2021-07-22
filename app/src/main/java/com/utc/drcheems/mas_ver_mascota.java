@@ -130,7 +130,7 @@ public class mas_ver_mascota extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 datosCitas.moveToPosition(position);
-                Intent verCita = new Intent(getApplicationContext(), cit_menu.class);
+                Intent verCita = new Intent(getApplicationContext(), mas_ver_historial_mascota.class);
                 verCita.putExtra("idCit", datosCitas.getString(0).toString());
                 startActivity(verCita);
 //                Toast.makeText(cli_menu.this, "ID: " + datosClientes.getString(0), Toast.LENGTH_SHORT).show();

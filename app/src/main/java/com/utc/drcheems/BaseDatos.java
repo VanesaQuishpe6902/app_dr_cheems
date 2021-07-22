@@ -66,7 +66,7 @@ public class BaseDatos extends SQLiteOpenHelper {
             "VALUES ('1415-chester','chester','canino','2021-01-01','Mestizo color cafe',1)";
 
     private static final String addCita = "INSERT INTO cita (fecha_cit, servicio_cit, solucion_cit, fk_id_mas) " +
-            "VALUES ('2021-07-16 16:00:00','Revision general','',1)";
+            "VALUES ('2021-07-16 16:00','Revision general','',1)";
 
 
     //CONSTRUCTOR
@@ -428,6 +428,20 @@ public class BaseDatos extends SQLiteOpenHelper {
         String sql = "SELECT * FROM cita " +
                 "WHERE fk_id_mas = '" + id_mas + "' " +
                 "AND fecha_cit LIKE '%" + fecha_criterio + "%' ";
+        Cursor citas = db.rawQuery(sql, null);
+        if (citas.moveToFirst()) {//verificando que el objeto usuario tenga resultados
+            return citas; //retornamos datos encontrados
+        } else {
+            //Nose encuentra el usuario ..Porque no eexiste el email y congtrase{a
+            return null;
+        }
+
+    }
+
+    public Cursor listarCitaId(String id_cit) {
+        SQLiteDatabase db = getReadableDatabase(); //Llamando a la base de datos
+        String sql = "SELECT * FROM cita " +
+                "WHERE id_cit = '" + id_cit + "' ";
         Cursor citas = db.rawQuery(sql, null);
         if (citas.moveToFirst()) {//verificando que el objeto usuario tenga resultados
             return citas; //retornamos datos encontrados
