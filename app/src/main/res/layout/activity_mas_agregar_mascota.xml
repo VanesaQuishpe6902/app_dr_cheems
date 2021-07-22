@@ -116,9 +116,11 @@
                                 android:orientation="horizontal">
 
                                 <LinearLayout
+                                    android:id="@+id/isDog"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
+                                    android:onClick="selectDog"
                                     android:orientation="vertical">
 
                                     <ImageView
@@ -127,13 +129,13 @@
                                         app:srcCompat="@drawable/bienvenida"></ImageView>
 
                                     <RadioButton
-                                        android:id="@+id/chbxDog"
+                                        android:id="@+id/chbxIsDog"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:fontFamily="@font/montserrat_alternates"
                                         android:paddingLeft="10dp"
                                         android:paddingRight="10dp"
                                         android:text="Perro"
-                                        android:fontFamily="@font/montserrat_alternates"
                                         android:textColor="@color/primario"
                                         android:textSize="18sp"
                                         app:buttonTint="@color/primario"></RadioButton>
@@ -145,9 +147,11 @@
                                     android:layout_weight="1" />
 
                                 <LinearLayout
+                                    android:id="@+id/isCat"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
+                                    android:onClick="selectCat"
                                     android:orientation="vertical">
 
                                     <ImageView
@@ -156,15 +160,15 @@
                                         app:srcCompat="@drawable/bienvenida"></ImageView>
 
                                     <RadioButton
-                                        android:id="@+id/chbxCat"
+                                        android:id="@+id/chbxIsCat"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:fontFamily="@font/montserrat_alternates"
                                         android:paddingLeft="10dp"
                                         android:paddingRight="10dp"
                                         android:text="Gato"
                                         android:textColor="@color/primario"
                                         android:textSize="18sp"
-                                        android:fontFamily="@font/montserrat_alternates"
                                         app:buttonTint="@color/primario"></RadioButton>
                                 </LinearLayout>
 
@@ -174,25 +178,28 @@
                                     android:layout_weight="1" />
 
                                 <LinearLayout
+                                    android:id="@+id/isOther"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
+                                    android:onClick="selectOther"
                                     android:orientation="vertical">
+
                                     <ImageView
                                         android:layout_width="80dp"
                                         android:layout_height="80dp"
                                         app:srcCompat="@drawable/bienvenida"></ImageView>
 
                                     <RadioButton
-                                        android:id="@+id/chbxOther"
+                                        android:id="@+id/chbxIsOther"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:fontFamily="@font/montserrat_alternates"
                                         android:paddingLeft="10dp"
                                         android:paddingRight="10dp"
                                         android:text="Otro"
                                         android:textColor="@color/primario"
                                         android:textSize="18sp"
-                                        android:fontFamily="@font/montserrat_alternates"
                                         app:buttonTint="@color/primario"></RadioButton>
                                 </LinearLayout>
                             </RadioGroup>
