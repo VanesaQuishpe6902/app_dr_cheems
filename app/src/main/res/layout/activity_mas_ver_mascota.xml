@@ -229,14 +229,15 @@
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
                             android:layout_gravity="center"
+                            android:background="@drawable/tarjetahora"
                             android:fontFamily="@font/montserrat_alternates"
+                            android:onClick="OpenDatePickerBuscarCitaCliente"
                             android:text="aaaa-mm-dd"
                             android:ems="12"
                             android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textSize="18sp"
                             app:backgroundTint="#F9C454"
-                            android:background="@drawable/tarjetahora"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toRightOf="parent" />
 
@@ -246,10 +247,12 @@
                             android:layout_height="50dp"
                             android:backgroundTint="@color/primario"
                             android:drawableTop="@android:drawable/ic_menu_search"
+                            android:onClick="buscarCitasCliente"
                             android:textColorHighlight="@color/primario" />
                     </LinearLayout>
 
                     <ListView
+                        android:id="@+id/lstCitas"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:background="@drawable/tarjetalistview" />
